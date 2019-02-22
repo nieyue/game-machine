@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <meta name="viewport"
+          content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"/>
+    <title>赤兔顺风车</title>
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="resources/css/base.css">
+    <style>
+        .address-name{
+            background-color:#fff;
+            padding:5px 15px;
+            border:1px solid #ececec;
+            cursor:pointer;
+        }
+        .address-name:hover{
+            background-color:#ccc;
+        }
+    </style>
+</head>
+<body>
+<div class="nav-wrap">
+    <span style="position:absolute;left:18px;top:0;" onclick="business.goback()"><</span>
+    <span >乘客列表</span>
+    <span style="cursor:pointer;position:absolute;right:8px;top:4px;color:#fff;background-color:#5a83f1;width:68px;height:30px;line-height: 30px;border-radius:3px;" id="flushUserTripList">刷新订单</span>
+</div>
+<div  style="margin:38px 0 100px 0;background-color:#fff;">
+
+      <div >
+          <div id="triplist">
+
+          </div>
+      </div>
+
+  </div>
+
+<!-- 固定栏-->
+<div class="mer-footer">
+    <div class ="mer-footer-div" style="width:33%;left:0;color:red;">
+        <a onclick="business.gonav('index',true)">
+            <i class="fa fa-home nav-active" style="font-size:26px;" ></i>
+            <span class="nav-active">首页</span>
+        </a>
+    </div>
+    <div class ="mer-footer-div" style="width:33%;left:33%">
+        <a onclick="business.gonav('selecttrip',true)">
+            <i class="fa fa-edit" style="font-size:26px;top:-22px;position:absolute;left:auto;margin-left:-25px;border-radius:30px;background-color:#fff;height:50px;width:50px;line-height:55px;border:1px solid #000;color:#000;"></i>
+            <span>发布</span>
+        </a>
+    </div>
+    <div class ="mer-footer-div" style="width:33%;left:66%">
+        <a onclick="business.gonav('user',true)">
+           <i class="fa fa-user-circle" style="font-size:26px;"></i>
+            <span>我的</span>
+        </a>
+    </div>
+
+</div>
+<!-- 固定栏 end-->
+<script src="resources/js/jquery1.12.2.js"></script>
+<script src="resources/js/base.js"></script>
+<script src="resources/js/address.js"></script>
+<script>
+    if(!business.getQueryString("startCity")
+    ){
+        location.href="index.html"
+    }
+
+    //行程列表
+    var pageNum=1;
+    var pageSize=10;
+    var currentPage=1;
+    var isBottom=false;
+    var tripList=[];
+    //var tempTripList=[];
+
+    function getTripList(){
+       /* if(tripList.length>=0&&tempTripList.length>=0){
+            tripList=tripList.concat(tempTripList);
+        }*/
+        pageNum=pageSize*(currentPage-1)+1;
+        currentPage++;
+        business.myPrevToast("努力加载中",function(){
+            business.ajax({
+                url:'/trip/search',
+                data:{
+                    type:2,
+                    startCity:business.getQueryString("startCity"),
+                    pageNum:pageNum,
+                    pageSize:pageSize,
+                },
+                success:function(data){
+                    business.myPrevToast("努力加载中",function(){
+                        //tripList=tripList.concat(data.data);
+                        tripList=data.data;
+                        //缓存
+                        /*if(tripList.length<=0){
+                            tripList=tripList.concat(data.data);
+                        }else if(tempTripList.length<=0){
+                            tempTripList=data.data;
+                            tripList=tripList.concat(tempTripList);
+                        }else{
+                            tempTripList=data.data;
+                        }*/
+                        console.log(data)
+                        var html="";
+                        for (var i = 0; i <tripList.length ; i++) {
+                            var trip=tripList[i];
+                            var datetime=trip.startDate;
+                            var startAddress=trip.startAddress;
+                            var endAddress=trip.endAddress;
+                            var phone=trip.account.phone;
+                            var resultstatus= '<a style="width:10%;display: inline-block;margin-top:1rem;background-color:red;color:#fff;line-height:2rem;vertical-align: top;text-align:center;" onClick="business.carPhone(\''+phone+'\')">'
+                                +'联系乘客'
+                                +'</a>';
+                            var sdarr = trip.startDate.split(/[- : \/]/);
+                                var sd = new Date(sdarr[0], sdarr[1]-1, sdarr[2], sdarr[3], sdarr[4], sdarr[5]);
+                            if(sd.getTime()<=new Date().getTime()){
+                                resultstatus='<a style="width:10%;display: inline-block;font-size:0.6rem;margin-top:1rem;background-color:#3c3c3c;color:#fff;line-height:2rem;vertical-align: top;text-align:center;">'
+                                    +'已出发'
+                                    +'</a>';
+                            }
+                        html+='<div style="border-bottom:1px solid #ececec;padding:10px;">'
+                                    +'<div style="width:30%;display: inline-block;">'
+                                            +'<div style="font-size:22px;font-weight: bold;margin-top:2px;">'+datetime.substr(11,2)+'时</div>'
+                                            +'<div style="font-size:14px;">'+datetime.substr(0,10)+'</div>'
+                                    +'</div>'
+                                    +'<div style="height:100%;background-color:#ececec;width:1%;display: inline-block;"></div>'
+                                    +'<div style="width:58%;display: inline-block;">'
+                                        +'<div style="width:100%;display: inline-block;">'
+                                            +'<span>出发地：</span>'
+                                            +'<span>'+startAddress+'</span>'
+                                        +'</div>'
+                                        +'<div style="width:100%;display: inline-block;">'
+                                            +'<span>目的地：</span>'
+                                            +'<span>'+endAddress+'</span>'
+                                        +'</div>'
+                                    +'</div>'
+                                    +resultstatus
+                                    +'</div>';
+
+                        }
+                        //for (var i = 0; i < 10; i++) {
+                            $("#triplist").append(html)
+                        //显示积分不够
+                        business.carPhone=function(phone){
+                            //如果不是车主调整认证
+                            var role=JSON.parse(localStorage.getItem("role"));
+                            if(role.name!='车主'){
+                                business.myLoadingToast("成为车主后才能接单",function(){
+                                    //business.gonav('auth',true);
+                                })
+                            }
+                            business.myLoadingToast("积分不够")
+                            //location.href="tel:"+phone;
+                        }
+
+                    },"remove");
+
+                    //}
+                },
+                fail:function(data){
+                    business.myPrevToast("努力加载中",function(){
+                        isBottom=true;
+                        if(data.code==30002&& tripList.length==0){
+                            $("#triplist").html('<div style="padding-top:200px;text-align: center;background-color: #f2f3f4;">暂无乘客</div>')
+                        }
+                    },"remove");
+                }
+            })
+
+        },"add");
+    }
+    getTripList();
+    //滚动刷新
+    $(window).scroll(function(){
+        if(!navigator.onLine){
+            business.myLoadingToast("请检查网络！");
+            return;
+        }
+        if(navigator.onLine&&!isBottom&& business.isScrollBottom(document)){
+            console.log(111)
+            getTripList()
+        }
+
+    });
+    //刷新
+    $("#flushUserTripList").on("click",function(){
+        pageNum=1;
+        pageSize=10;
+        currentPage=1;
+        isBottom=false;
+        tripList=[];
+        $("#triplist").html("")
+        getTripList();
+    })
+    //$("#triplist").
+</script>
+</body>
+</html>
