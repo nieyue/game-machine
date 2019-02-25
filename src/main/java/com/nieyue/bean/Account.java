@@ -45,11 +45,6 @@ public class Account implements Serializable {
 	@ApiModelProperty(value="昵称")
 	private String nickname;
 	/**
-	 * 剩余次数
-	 */
-	@ApiModelProperty(value="剩余次数")
-	private Integer number;
-	/**
 	 * 图像
 	 */
 	@ApiModelProperty(value="图像")
@@ -80,16 +75,10 @@ public class Account implements Serializable {
 	@ApiModelProperty(value="邀请码")
 	private String inviteCode;
 	/**
-	 * 收货地址
+	 * 身份证
 	 */
-	@ApiModelProperty(value="收货地址")
-	private String address;
-
-	/**
-	 * 认证，0没认证，1审核中，2已认证
-	 */
-	@ApiModelProperty(value="认证，0没认证，1审核中，2已认证")
-	private Integer auth;
+	@ApiModelProperty(value="身份证")
+	private String identityCards;
 	/**
 	 * 身份证正面
 	 */
@@ -100,6 +89,12 @@ public class Account implements Serializable {
 	 */
 	@ApiModelProperty(value="身份证反面")
 	private String identityCardsBackImg;
+
+	/**
+	 * 认证，0没认证，1审核中，2已认证
+	 */
+	@ApiModelProperty(value="认证，0没认证，1审核中，2已认证")
+	private Integer auth;
 	/**
 	 * 创建时间
 	 */

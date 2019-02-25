@@ -15,7 +15,7 @@ import java.io.IOException;
 /**
  * Bmob验证码
  */
-@Configuration
+//@Configuration
 public class BmobSms {
 
     /**发送验证码

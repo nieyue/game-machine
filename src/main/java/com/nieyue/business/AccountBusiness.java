@@ -47,8 +47,6 @@ public class AccountBusiness {
 	@Autowired
 	private StringRedisTemplate stringRedisTemplate;
 	@Autowired
-	BmobSms bmobSms;
-	@Autowired
 	OrderBusiness orderBusiness;
 	@Value("${myPugin.projectName}")
 	String projectName;
@@ -225,18 +223,9 @@ public class AccountBusiness {
 			}
 		}
 		//手机/邮箱验证码
-		if(adminName!=null){
-			//String vc = (String) session.getAttribute("validCode");
-			try {
-				//Boolean vc = true;
-				Boolean vc = bmobSms.verifySms(adminName, validCode);
-				if(!vc){
-					throw new VerifyCodeErrorException();//验证码错误
-				}
-			} catch (Exception e) {
-				throw new VerifyCodeErrorException();
-			}
-
+		String vc = (String) session.getAttribute("validCode");
+		if(validCode==null||!validCode.equals(vc)){
+			throw new VerifyCodeErrorException();//验证码错误
 		}
 		if(!Pattern.matches(MyValidator.REGEX_PHONE,adminName)
 				//&&!Pattern.matches(MyValidator.REGEX_EMAIL,adminName)
@@ -266,7 +255,7 @@ public class AccountBusiness {
 			}
 		}
 		//获取上级账户
-		Wrapper<Account> wrapper=new EntityWrapper<>();
+		/*Wrapper<Account> wrapper=new EntityWrapper<>();
 		Map<String,Object> map=new HashMap<String,Object>();
 		map.put("invite_code", inviteCode);
 		wrapper.allEq(MyDom4jUtil.getNoNullMap(map));
@@ -274,7 +263,7 @@ public class AccountBusiness {
 		if(masteraccountl.size()<=0){
 			throw new CommonRollbackException("邀请码错误");
 		}
-		account.setMasterId(masteraccountl.get(0).getAccountId());
+		account.setMasterId(masteraccountl.get(0).getAccountId());*/
 
 		account.setCreateDate(new Date());
 		account.setLoginDate(new Date());

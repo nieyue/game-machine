@@ -4,7 +4,7 @@
         <div class="topbar-left" :style="{width:topbarWidth}">
            <!-- <img src="/static/logo.png" style="width:76px;height:76px;"/> -->
             <!-- <span class="topbar-left-title" style="font-size:2rem;line-height:6rem;margin-left:2rem;" >学籍管理</span> -->
-            <span class="topbar-left-title" style="font-size:2rem;line-height:6rem;margin-left:2rem;"  :style="{fontSize:titleFontSize,marginLeft:titleMarginLeft}" >赤兔顺风车</span>
+            <span class="topbar-left-title" style="font-size:2rem;line-height:6rem;margin-left:2rem;"  :style="{fontSize:titleFontSize,marginLeft:titleMarginLeft}"  v-text="config.platformName||''"></span>
 
         </div>
         <div style="display:inline-block;height:82px;vertical-align:top;line-height:82px;" v-show="account.accountId">
@@ -32,6 +32,9 @@
         //是否登陆
         this.getIslogin();
        }
+       //获取配置
+       this.getConfig();
+       
     },
     watch: {
   //   //监听父组件的变量
@@ -51,6 +54,7 @@
         islogin:false,
         account:{},
         isCollapsed: false,//默认
+        config:{}
       }
     },
      computed: {
@@ -64,7 +68,7 @@
           return this.isCollapsed?'76px':'260px'
         },
         titleFontSize(){
-          return this.isCollapsed?'0.2rem':'2rem'
+          return this.isCollapsed?'0rem':'2rem'
         },
         titleMarginLeft(){
           return this.isCollapsed?'0.2rem':'2rem'
@@ -80,6 +84,23 @@
       //跳转到登陆页面
       gologinpage(){
         this.$router.push("/login");
+      },
+      //获取配置数据
+      getConfig(){
+        this.axios({
+                method:"get",
+                url:'/config/list',
+                withCredentials: true
+              }).
+              then(res => {
+                if (res.data.code == 200) {
+                  this.config=res.data.data[0];
+                  document.querySelector("title").innerText=this.config.platformName
+                } else {
+
+                }
+              }).catch(res => {
+              })
       },
       //退出登陆
      loginout(){

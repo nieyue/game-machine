@@ -40,16 +40,6 @@ const router= new Router({
           component: resolve=>require(['@/components/main/config/Config'],resolve)
         },
         {
-          path: 'contact/:pathParams',
-          name: '联系配置',
-          component: resolve=>require(['@/components/main/config/Contact'],resolve)
-        },
-        {
-          path: 'address/:pathParams',
-          name: '地址管理',
-          component: resolve=>require(['@/components/main/config/Address'],resolve)
-        },
-        {
           path: 'account/selfAccount',
           name: '个人信息',
           component: resolve=>require(['@/components/main/account/SelfAccount'],resolve),
@@ -60,14 +50,34 @@ const router= new Router({
           component: resolve=>require(['@/components/main/account/ManagerAccount'],resolve),
         },
         {
-          path: 'account/carAccount',
-          name: '车主',
-          component: resolve=>require(['@/components/main/account/CarAccount'],resolve),
-        },
-        {
           path: 'account/userAccount',
           name: '用户',
           component: resolve=>require(['@/components/main/account/UserAccount'],resolve),
+        },
+        {
+          path: 'finance/:pathParams',
+          name: '财务',
+          component: resolve=>require(['@/components/main/finance/Finance'],resolve),
+        },
+        {
+          path: 'rechargeTerm/:pathParams',
+          name: '充值项',
+          component: resolve=>require(['@/components/main/finance/RechargeTerm'],resolve),
+        },
+        {
+          path: 'rechargeRecord/:pathParams',
+          name: '充值记录',
+          component: resolve=>require(['@/components/main/finance/RechargeRecord'],resolve),
+        },
+        {
+          path: 'number/:pathParams',
+          name: '次数',
+          component: resolve=>require(['@/components/main/finance/Number'],resolve),
+        },
+        {
+          path: 'card/:pathParams',
+          name: '卡片',
+          component: resolve=>require(['@/components/main/account/Card'],resolve),
         },
         {
           path: 'integral/:pathParams',
@@ -75,9 +85,14 @@ const router= new Router({
           component: resolve=>require(['@/components/main/account/Integral'],resolve),
         },
         {
-          path: 'activationCode/:pathParams',
-          name: '激活码',
-          component: resolve=>require(['@/components/main/account/ActivationCode'],resolve),
+          path: 'mer/:pathParams',
+          name: '商品',
+          component: resolve=>require(['@/components/main/mer/Mer'],resolve),
+        },
+        {
+          path: 'merOrder/:pathParams',
+          name: '订单',
+          component: resolve=>require(['@/components/main/merOrder/MerOrder'],resolve),
         },
          {
           path: 'role/:pathParams',

@@ -1,5 +1,7 @@
 package com.nieyue.controller;
 
+import com.aliyuncs.dysmsapi.model.v20170525.SendSmsResponse;
+import com.aliyuncs.exceptions.ClientException;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.mapper.Wrapper;
 import com.nieyue.bean.Account;
@@ -10,7 +12,7 @@ import com.nieyue.exception.*;
 import com.nieyue.mail.SendMailDemo;
 import com.nieyue.service.AccountService;
 import com.nieyue.service.RoleService;
-import com.nieyue.thirdparty.sms.BmobSms;
+import com.nieyue.thirdparty.sms.AliyunSms;
 import com.nieyue.util.*;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -51,7 +53,7 @@ public class AccountController extends BaseController<Account, Long>{
 	@Autowired
 	private StringRedisTemplate stringRedisTemplate;
 	@Autowired
-	private BmobSms bmobSms;
+	private AliyunSms aliyunSms;
 
 	/**
 	 * 账户分页浏览
@@ -211,15 +213,9 @@ public class AccountController extends BaseController<Account, Long>{
 			throw new AccountIsNotExistException();//账户不存在
 		}
 		//手机验证码
-		//String vc=(String) session.getAttribute("validCode");
-		try {
-			//Boolean vc = true;
-			Boolean vc = bmobSms.verifySms(adminName, validCode);
-			if(!vc){
-				throw new VerifyCodeErrorException();//验证码错误
-			}
-		} catch (Exception e) {
-			throw new VerifyCodeErrorException();
+		String vc=(String) session.getAttribute("validCode");
+		if(!vc.equals(validCode)){
+			throw new VerifyCodeErrorException();//验证码错误
 		}
 		ac.setPassword(MyDESutil.getMD5(password));
 		StateResultList<List<Account>> u = super.update(ac);
@@ -332,17 +328,17 @@ public class AccountController extends BaseController<Account, Long>{
 	@ApiImplicitParams({
 			@ApiImplicitParam(name="accountId",value="账户ID",dataType="long", paramType = "query",required=true),
 			@ApiImplicitParam(name="realname",value="真实姓名",dataType="string", paramType = "query",required=true),
-			@ApiImplicitParam(name="address",value="收货地址",dataType="string", paramType = "query",required=true),
+			@ApiImplicitParam(name="identityCards",value="身份证",dataType="string", paramType = "query",required=true),
 			@ApiImplicitParam(name="identityCardsFrontImg",value="身份证正面",dataType="string", paramType = "query",required=true),
-			@ApiImplicitParam(name="identityCardsBackImg",value="身份证反面",dataType="string", paramType = "query")
+			@ApiImplicitParam(name="identityCardsBackImg",value="身份证反面",dataType="string", paramType = "query",required=true)
 	})
 	@RequestMapping(value = "/auth", method = {RequestMethod.GET,RequestMethod.POST})
 	public @ResponseBody StateResultList<List<Account>> authAccount(
 			@RequestParam("accountId") Long accountId,
 			@RequestParam("realname") String realname,
-			@RequestParam("address") String address,
-			@RequestParam(value="identityCardsFrontImg",required = false) String identityCardsFrontImg,
-			@RequestParam(value="identityCardsBackImg",required = false) String identityCardsBackImg,
+			@RequestParam("identityCards") String identityCards,
+			@RequestParam("identityCardsFrontImg") String identityCardsFrontImg,
+			@RequestParam("identityCardsBackImg") String identityCardsBackImg,
 			HttpSession session)  {
 		List<Account> list = new ArrayList<Account>();
 		Account account = accountService.load(accountId);
@@ -351,13 +347,9 @@ public class AccountController extends BaseController<Account, Long>{
 		if(account!=null &&!account.equals("")&& account.getAuth().equals(0)){
 			account.setAuth(1);//审核中
 			account.setRealname(realname);
-			account.setAddress(address);
-			if(identityCardsFrontImg!=null){
-				account.setIdentityCardsFrontImg(identityCardsFrontImg);
-			}
-			if(identityCardsBackImg!=null){
-				account.setIdentityCardsBackImg(identityCardsBackImg);
-			}
+			account.setIdentityCards(identityCards);
+			account.setIdentityCardsFrontImg(identityCardsFrontImg);
+			account.setIdentityCardsBackImg(identityCardsBackImg);
 			boolean b = accountService.update(account);
 			if(b){
 				list.add(account);
@@ -591,13 +583,11 @@ public class AccountController extends BaseController<Account, Long>{
 		//手机号发送验证码
 		if(Pattern.matches(MyValidator.REGEX_PHONE,adminName)){
 			try {
-				//SendSmsResponse res = aliyunSms.sendSms(userValidCode.toString(),adminName, templateCode);
-				//Boolean res=true;
-				Boolean res = bmobSms.sendSms(adminName);
-				if(res){
-					return ResultUtil.getSlefSRSuccessList(null);
+				SendSmsResponse res = aliyunSms.sendSms(userValidCode.toString(),adminName, templateCode);
+				if(res.getCode().equals("OK")){
+					return ResultUtil.getSlefSRSuccessList(l);
 				}
-			} catch (Exception e) {
+			} catch (ClientException e) {
 				throw new AccountMessageException();//短信发送异常
 			}
 		}else if(Pattern.matches(MyValidator.REGEX_EMAIL,adminName)){

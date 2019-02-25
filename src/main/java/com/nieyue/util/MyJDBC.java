@@ -1,7 +1,7 @@
 package com.nieyue.util;
 
 import com.mysql.jdbc.Connection;
-import com.nieyue.bean.ActivationCode;
+import com.nieyue.bean.Account;
 
 import java.io.File;
 import java.lang.reflect.InvocationTargetException;
@@ -9,8 +9,6 @@ import java.lang.reflect.Method;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * jdbc
@@ -204,9 +202,9 @@ public class MyJDBC {
         parameters.add(new java.util.Date());
         parameters.add(new java.util.Date());*/
         String sql="select * from activation_code_tb";
-        List<ActivationCode> activationCodes=new ArrayList<>();
+        List<Account> accounts=new ArrayList<>();
         try {
-            activationCodes=myJDBC.query(ActivationCode.class,sql,null);
+            accounts=myJDBC.query(Account.class,sql,null);
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         } catch (InvocationTargetException e) {
@@ -216,11 +214,11 @@ public class MyJDBC {
         } catch (InstantiationException e) {
             e.printStackTrace();
         }
-        for (int i = 0; i < activationCodes.size(); i++) {
-            System.out.println(activationCodes.get(i).getCode());
-            System.out.println(activationCodes.get(i).getIsUsered());
-            System.out.println(activationCodes.get(i).getCreateDate());
-            System.out.println(activationCodes.get(i).getUpdateDate());
+        for (int i = 0; i < accounts.size(); i++) {
+            System.out.println(accounts.get(i).getPhone());
+            System.out.println(accounts.get(i).getIcon());
+            System.out.println(accounts.get(i).getCreateDate());
+            System.out.println(accounts.get(i).getLoginDate());
             System.out.println("----------------");
         }
     }

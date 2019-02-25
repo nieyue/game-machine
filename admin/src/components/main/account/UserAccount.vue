@@ -241,6 +241,22 @@ export default {
             minWidth:100,
           align:'center'
         },
+        {
+        	title:'图像',
+            key:'icon',
+            minWidth:100,
+          align:'center',
+          render: (h, params) => {
+            return h('img', {
+              attrs: {
+                src: params.row.icon
+              },
+              style: {
+                width: '45px'
+              }
+            })
+          }
+        },
           {
         	title:'手机(登录账户)',
             key:'phone',
@@ -269,8 +285,8 @@ export default {
           }
         }, */
          {
-        	title:'收货地址',
-            key:'address',
+        	title:'身份证',
+            key:'identityCards',
             minWidth:100,
           align:'center'
         },
@@ -341,39 +357,6 @@ export default {
             })
           }
         }, 
-       {
-          title:'驾照正面',
-           key:'drivingLicenseFrontImg',
-            minWidth:100,
-          align:'center',
-          render: (h, params) => {
-            return h('img', {
-              attrs: {
-                src: params.row.drivingLicenseFrontImg
-              },
-              style: {
-                width: '80px'
-              }
-            })
-          }
-        }, 
-       {
-          title:'驾照反面',
-             key:'drivingLicenseBackImg',
-            minWidth:100,
-          align:'center',
-          render: (h, params) => {
-            return h('img', {
-              attrs: {
-                src: params.row.drivingLicenseBackImg
-              },
-              style: {
-                width: '80px'
-              }
-            })
-          }
-        }, 
-
         {
         	title:'状态',
             key:'status',
@@ -456,7 +439,7 @@ export default {
               }, '删除');
             var varhh21=  h('Button', {
                 props: {
-                  type: 'info',
+                  type: 'primary',
                   ghost:'',
                   size: 'small'
                 },
@@ -469,10 +452,68 @@ export default {
                       currentPage:1,//当前页
                       accountId:params.row.accountId
                     });
-                    this.$router.push('/main/integral/'+pp);
+                    this.$router.push('/main/finance/'+pp);
                   }
                 }
-              }, '积分');
+              }, '财务');
+            var varhh22=  h('Button', {
+                props: {
+                  type: 'error',
+                  ghost:'',
+                  size: 'small'
+                },
+                style: {
+                  margin: marginstyle
+                },
+                on: {
+                  click: () => {
+                      let  pp=JSON.stringify({
+                      currentPage:1,//当前页
+                      accountId:params.row.accountId
+                    });
+                    this.$router.push('/main/number/'+pp);
+                  }
+                }
+              }, '次数');
+            var varhh31=  h('Button', {
+                props: {
+                  type: 'info',
+                  ghost:'',
+                  size: 'small'
+                },
+                style: {
+                  margin: marginstyle
+                },
+                on: {
+                  click: () => {
+                      let  pp=JSON.stringify({
+                      currentPage:1,//当前页
+                      accountId:params.row.accountId,
+                    });
+                    this.$router.push('/main/card/'+pp);
+                  }
+                }
+              }, '卡片');
+              var s=h("div","");
+            var varhh32=  h('Button', {
+                props: {
+                  type: 'error',
+                  ghost:'',
+                  size: 'small'
+                },
+                style: {
+                  margin: marginstyle
+                },
+                on: {
+                  click: () => {
+                      let  pp=JSON.stringify({
+                      currentPage:1,//当前页
+                      accountId:params.row.accountId,
+                    });
+                    this.$router.push('/main/rechargeRecord/'+pp);
+                  }
+                }
+              }, '充值记录');
               var s=h("div","");
     
           if( this.business.getIsSuperAdmin()){
@@ -483,6 +524,11 @@ export default {
                         ]),
                         h("div",[
                           varhh21,
+                          varhh22,
+                        ]),
+                        h("div",[
+                          varhh31,
+                          varhh32,
                         ]),
                       
                       ]);
@@ -490,6 +536,11 @@ export default {
              s= h("div",[
                         h("div",[
                           varhh21,
+                          varhh22,
+                        ]),
+                        h("div",[
+                          varhh31,
+                          varhh32,
                         ]),
                       
                       ]);

@@ -23,7 +23,11 @@ public class AccountServiceImpl extends BaseServiceImpl<Account,Long> implements
 	@Autowired
 	RoleService roleService;
 	@Autowired
-	IntegralService integralService;
+	FinanceService financeService;
+	@Autowired
+	NumberService numberService;
+	@Autowired
+	ConfigService configService;
 	/**
 	 * 登录
 	 */
@@ -63,16 +67,38 @@ public class AccountServiceImpl extends BaseServiceImpl<Account,Long> implements
 		if(!b){
 			throw new CommonRollbackException();
 		}
-		//增加积分
-		Integral integral =new Integral();
-		integral.setAccountId(t.getAccountId());
-		integral.setBaseProfit(0.0);
-		integral.setIntegral(0.0);
-		integral.setRecharge(0.0);
-		integral.setConsume(0.0);
-		integral.setCreateDate(new Date());
-		integral.setUpdateDate(new Date());
-		b=integralService.add(integral);
+		//增加财务
+		Finance finance=new Finance();
+		finance.setRecharge(0.0);//充值金额
+		finance.setConsume(0.0);//消费金额
+		finance.setWithdrawals(0.0);//提现金额
+		Double unitBaseProfit=0.0;
+		finance.setBaseProfit(unitBaseProfit);
+		finance.setMoney(finance.getBaseProfit());//初始余额=基准收益+0.0
+		finance.setUpdateDate(t.getCreateDate());
+		finance.setPartnerProfit(0.0);
+		finance.setSelfProfit(0.0);
+		finance.setAccountId(t.getAccountId());
+		//增加财务
+		b=financeService.add(finance);
+		List<Config> cl = configService.simplelist(null);
+		if(cl.size()<=0){
+			throw new CommonRollbackException();
+		}
+		Config config =cl.get(0);
+		//增加次数
+		com.nieyue.bean.Number number=new com.nieyue.bean.Number();
+		number.setNickname(t.getNickname());
+		number.setIcon(t.getIcon());
+		number.setFreeNumber(config.getFreeNumber());
+		number.setBuyNumber(0);
+		number.setUseNumber(0);
+		number.setSurplusNumber(0);
+		number.setCreateDate(t.getCreateDate());
+		number.setUpdateDate(t.getCreateDate());
+		number.setAccountId(t.getAccountId());
+		//增加次数
+		b=numberService.add(number);
 		if(!b){
 			throw new CommonRollbackException();
 		}

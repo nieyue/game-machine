@@ -15,18 +15,6 @@
                         <Icon type="md-medical" />
                         <span>平台配置</span>
                     </MenuItem>
-                    <MenuItem :name="menu.config.activationCode" v-if="isSuperAdmin">
-                        <Icon type="md-medical" />
-                        <span>激活码</span>
-                    </MenuItem>
-                    <MenuItem :name="menu.config.contact" v-if="isSuperAdmin">
-                        <Icon type="md-medical" />
-                        <span>联系配置</span>
-                    </MenuItem>
-                    <MenuItem :name="menu.config.address" v-if="isSuperAdmin">
-                        <Icon type="md-medical" />
-                        <span>地址管理</span>
-                    </MenuItem>
                 </Submenu>
                 <MenuItem name="/main/account/selfAccount">
                     <Icon type="ios-man" />
@@ -37,14 +25,41 @@
                         <Icon type="md-person" />
                         <span>账户管理</span>
                     </template>
-                    <MenuItem name="/main/account/carAccount">
-                        <Icon type="ios-body" />
-                        <span>车主</span>
-                    </MenuItem>
                     <MenuItem name="/main/account/userAccount">
                         <Icon type="ios-body" />
                         <span>用户</span>
                     </MenuItem>
+                </Submenu>
+                  <Submenu name="finance">
+                    <template slot="title">
+                        <Icon type="logo-yen" />
+                        <span>财务管理</span>
+                    </template>
+                    <MenuItem :name="menu.finance.finance">
+                        <Icon type="logo-yen" />
+                        <span>财务</span>
+                    </MenuItem> 
+                    <MenuItem :name="menu.finance.rechargeTerm">
+                        <Icon type="logo-yen" />
+                        <span>充值项</span>
+                    </MenuItem> 
+                </Submenu>
+                <Submenu name="mer">
+                    <template slot="title">
+                        <Icon type="md-videocam" />
+                        <span>商品管理</span>
+                    </template>
+                    <MenuItem :name="menu.mer.mer">
+                        <Icon type="ios-browsers" />
+                        <span>商品</span>
+                    </MenuItem>
+                </Submenu>
+                <Submenu name="merOrder">
+                    <template slot="title">
+                        <Icon type="ios-cart"></Icon>
+                        商品订单管理
+                    </template>
+                    <MenuItem :name="menu.merOrder.merOrder">商品订单</MenuItem>
                 </Submenu>
                 <Submenu v-if="isSuperAdmin" name="managerAccount">
                     <template slot="title">
@@ -126,9 +141,19 @@
             config:{
                  welcome:"/main/welcome/"+pp,
                  config:"/main/config/"+pp,
-                 activationCode:"/main/activationCode/"+pp,
-                 contact:"/main/contact/"+pp,
-                 address:"/main/address/"+pp
+            },
+            //财务
+            finance:{
+                finance:"/main/finance/"+pp,
+                rechargeTerm:"/main/rechargeTerm/"+pp,
+            },
+            //商品
+            mer:{
+                mer:"/main/mer/"+pp
+            },
+            //商品订单
+            merOrder:{
+                merOrder:"/main/merOrder/"+pp
             },
             //角色权限
             rolePermission:{

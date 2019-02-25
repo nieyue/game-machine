@@ -45,35 +45,10 @@ public class Config implements Serializable{
 	@ApiModelProperty(value="平台联系qq")
 	private String serviceQq;
 	/**
-	 * 免费发布次数
+	 * 免费次数
 	 */
-	@ApiModelProperty(value="免费发布次数")
+	@ApiModelProperty(value="免费次数")
 	private Integer freeNumber;
-	/**
-	 * 每天首次最少发布数量
-	 */
-	@ApiModelProperty(value="每天首次最少发布数量")
-	private Integer perdayStartMinNum;
-	/**
-	 * 每天首次最大发布数量
-	 */
-	@ApiModelProperty(value="每天首次最大发布数量")
-	private Integer perdayStartMaxNum;
-	/**
-	 * 分隔多少秒发布
-	 */
-	@ApiModelProperty(value="分隔多少秒发布")
-	private Integer perSeconds;
-	/**
-	 * 分隔秒最少发布数量
-	 */
-	@ApiModelProperty(value="分隔秒最少发布数量")
-	private Integer perSecondsMinNum;
-	/**
-	 * 分隔秒最大发布数量
-	 */
-	@ApiModelProperty(value="分隔秒最大发布数量")
-	private Integer perSecondsMaxNum;
 	/**
 	 * 创建时间
 	 */
