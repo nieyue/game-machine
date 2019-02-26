@@ -2,9 +2,9 @@ var business={
 	//域名路径
 	//domainurl:'http://localhost:8080',
 
-    //domainurl:'',
+    domainurl:'',
 	//domainurl:'http://119.27.177.29:8080',
-	domainurl:'http://www.ctdc.xyz',
+	//domainurl:'http://www.ctdc.xyz',
     /**
      * 验证规则
      */
@@ -472,5 +472,8 @@ window.onload=function () {
             }
         }
     }
+
+    //解决背景高度的问题
+
 }
 //

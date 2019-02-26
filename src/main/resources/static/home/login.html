@@ -13,20 +13,20 @@
 </head>
 <body style="background-color: #fff">
     <div class="nav-wrap">
-        <span style="position:absolute;left:18px;top:0;cursor:pointer;" onclick="business.goback()"><</span>
-        <span>
+        <span class="nav-wrap-back" onclick="business.goback()"><</span>
+        <span class="nav-wrap-title">
           登录
         </span>
-        <span style="cursor:pointer;position:absolute;right:8px;top:4px;color:#fff;background-color:#5a83f1;width:38px;height:30px;line-height: 30px;border-radius:3px;" onclick="business.goregister()">注册</span>
+        <span style="cursor:pointer;position:absolute;right:8px;top:4px;color:#fff;background-color:#7365e2;width:38px;height:30px;line-height: 30px;border-radius:3px;" onclick="business.goregister()">注册</span>
     </div>
     <div style="margin:0 0 100px 0;background-color:#fff;padding:50px 15px 0 15px;height:100%;">
         <div style="height:50px;border-bottom:1px solid #ececec;">
-            <span style="display: inline-block;line-height: 48px;height:100%;">&#12288;账户：</span>
-            <input type="text" id="adminName" style="border:0 solid #ccc;height:100%;" placeholder="手机号">
+            <span style="display: inline-block;line-height: 48px;height:100%;width:70px;">&#12288;账户：</span>
+            <input type="text" id="adminName" style="border:0 solid #ccc;height:100%;width:calc(100% - 75px);" placeholder="手机号">
         </div>
         <div style="height:50px;border-bottom:1px solid #ececec;">
-            <span style="display: inline-block;line-height: 48px;height:100%;">&#12288;密码：</span>
-            <input type="password" style="border:0 solid #ccc;height:100%;" id="password" placeholder="6-20位密码">
+            <span style="display: inline-block;line-height: 48px;height:100%;width:70px;">&#12288;密码：</span>
+            <input type="password" style="border:0 solid #ccc;height:100%;width:calc(100% - 75px);" id="password" placeholder="6-20位密码">
         </div>
        <!-- <div style="height:50px;border-bottom:1px solid #ececec;">
             <span style="display: inline-block;line-height: 48px;height:100%;vertical-align:top;">验证码：</span>

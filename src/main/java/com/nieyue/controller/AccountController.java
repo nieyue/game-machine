@@ -580,16 +580,18 @@ public class AccountController extends BaseController<Account, Long>{
 			}
 		}
 		session.setAttribute("validCode", userValidCode.toString());
+		l.add(userValidCode.toString());
 		//手机号发送验证码
 		if(Pattern.matches(MyValidator.REGEX_PHONE,adminName)){
-			try {
+			/*try {
 				SendSmsResponse res = aliyunSms.sendSms(userValidCode.toString(),adminName, templateCode);
 				if(res.getCode().equals("OK")){
 					return ResultUtil.getSlefSRSuccessList(l);
 				}
 			} catch (ClientException e) {
 				throw new AccountMessageException();//短信发送异常
-			}
+			}*/
+			return ResultUtil.getSlefSRSuccessList(l);
 		}else if(Pattern.matches(MyValidator.REGEX_EMAIL,adminName)){
 			//模板码 1用户注册，2修改密码，3修改提现密码，4修改手机号，5身份验证
 			String content="";
@@ -627,7 +629,7 @@ public class AccountController extends BaseController<Account, Long>{
 			@ApiImplicitParam(name="verificationCode",value="图片验证码",dataType="string", paramType = "query"),
 			@ApiImplicitParam(name="password",value="密码",dataType="string", paramType = "query",required=true),
 			@ApiImplicitParam(name="validCode",value="手机号/邮箱号验证码",dataType="string", paramType = "query"),
-			@ApiImplicitParam(name="inviteCode",value="邀请码",dataType="string", paramType = "query",required=true),
+			@ApiImplicitParam(name="inviteCode",value="邀请码",dataType="string", paramType = "query"),
 	})
 	@RequestMapping(value = "/webregister", method = {RequestMethod.GET,RequestMethod.POST})
 	public @ResponseBody StateResultList<List<Map<String,Object>>> webRegisterAccount(
@@ -635,7 +637,7 @@ public class AccountController extends BaseController<Account, Long>{
 			@RequestParam(value="verificationCode",required = false) String verificationCode,
 			@RequestParam("password") String password,
 			@RequestParam("validCode") String validCode,
-			@RequestParam("inviteCode") String inviteCode,
+			@RequestParam(value="inviteCode",required = false) String inviteCode,
 			HttpServletRequest request,
 			HttpSession session) throws AccountIsExistException, VerifyCodeErrorException, CommonNotRollbackException {
 		List<Map<String,Object>> list = accountBusiness.webRegister(adminName, verificationCode, password, validCode,inviteCode, session);

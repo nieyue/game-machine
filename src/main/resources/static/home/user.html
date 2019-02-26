@@ -30,31 +30,37 @@
 </head>
 <body>
 <div class="nav-wrap">
-    <span>
+    <span class="nav-wrap-title">
         我的
     </span>
 </div>
     <div>
-        <div style="margin-top:38px;height: 200px;background-color: #fff;text-align: center;">
-            <div  style="padding-top:50px;">
-                <i class="fa fa-user-circle " style="font-size:55px;"></i>
-            </div>
-            <div style="margin-top:5px;">
-                <span id="phone"></span>
+        <div style="padding-top:68px;height: 130px;">
+            <div  style="padding-top:20px;color:#fff;">
+                <img src="resources/img/head_2.png" style="margin-left:30px;width:88px;" alt="">
+                <div style="width:calc(100% - 180px);font-size:1.6rem;display:inline-block;vertical-align:top;margin-top:16px;margin-left:20px;">
+                    <div id="phone"></div>
+                    <div >
+                        剩余：<span id="surplusNumber"></span>次
+                    </div>
+                </div>
+                <div style="display:inline-block;vertical-align:top;margin-top:30px;width:30px;">
+                    <span style="font-size:1.6rem;" onclick="business.goback()">&gt;</span>
+                </div>
             </div>
         </div>
-        <div >
-            <div class="address-name" id="auth">
-                <span>车主认证</span>
-                <span style="float: right">>></span>
+        <div style="width:96%;margin-left:2%;">
+            <div class="address-name" id="recharge">
+                <span>充值中心</span>
+                <span style="float:right;color:#999;">&gt;</span>
             </div>
             <div class="address-name" id="integral">
-                <span>我的积分</span>
-                <span style="float: right">>></span>
+                <span>配送中心</span>
+                <span style="float: right;color:#999;">&gt;</span>
             </div>
             <div class="address-name" id="welfare">
-                <span>我的补贴</span>
-                <span style="float: right">>></span>
+                <span>帮助</span>
+                <span style="float: right;color:#999;">&gt;</span>
             </div>
            <!-- <div class="address-name" id="contact">
                 <span>联系我们</span>
@@ -70,25 +76,23 @@
 
 <!-- 固定栏-->
 <div class="mer-footer">
-    <div class ="mer-footer-div" style="width:33%;left:0;color:red;">
-        <a onclick="business.gonav('index')">
-            <i class="fa fa-home" style="font-size:26px;" ></i>
-            <span >首页</span>
+    <div class ="mer-footer-div" style="width:25%;left:0;color:red;">
+        <a onclick="business.gonav('index')" style="background:url('resources/img/button_home.png');background-size:100% 100%;">
         </a>
     </div>
-    <div class ="mer-footer-div" style="width:33%;left:33%">
-        <a onclick="business.gonav('selecttrip')">
-            <i class="fa fa-edit" style="font-size:26px;top:-22px;position:absolute;left:auto;margin-left:-25px;border-radius:30px;background-color:#fff;height:50px;width:50px;line-height:55px;border:1px solid #000;color:#000;"></i>
-            <span>发布</span>
+    <div class ="mer-footer-div" style="width:25%;left:25%">
+        <a onclick="business.gonav('card')" style="background:url('resources/img/button_baobaoka.png');background-size:100% 100%;">
         </a>
     </div>
-    <div class ="mer-footer-div" style="width:33%;left:66%">
-        <a >
-           <i class="fa fa-user-circle nav-active" style="font-size:26px;"></i>
-            <span class="nav-active">我的</span>
+    <div class ="mer-footer-div" style="width:25%;left:50%">
+        <a onclick="business.gonav('recharge')" style="background:url('resources/img/button_chongzhi.png');background-size:100% 100%;">
         </a>
     </div>
-    
+    <div class ="mer-footer-div" style="width:25%;left:75%;opacity: 1;">
+        <a  style="background:url('resources/img/button_my.png');background-size:100% 100%;">
+        </a>
+    </div>
+
 </div>
 <!-- 固定栏 end-->
 <script src="resources/js/jquery1.12.2.js"></script>
@@ -115,16 +119,9 @@
     }
     $("#phone").text(account.phone)
 
-    //车主认证
-    $("#auth").click(function(){
-        //认证，0没认证，1审核中，2已认证
-        if(account.auth==1){
-            business.myLoadingToast("审核中")
-        }else if(account.auth==2){
-            business.myLoadingToast("已认证")
-        }else{
-            business.gonav("auth",true);
-        }
+    //充值中心
+    $("#recharge").click(function(){
+        business.gonav("recharge",true);
     })
     //我的积分
     $("#integral").click(function(){

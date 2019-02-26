@@ -13,36 +13,36 @@
 </head>
 <body style="background-color: #fff">
 <div class="nav-wrap">
-    <span style="position:absolute;left:18px;top:0;" onclick="business.goback()"><</span>
-    <span>
+    <span class="nav-wrap-back" onclick="business.goback()"><</span>
+    <span class="nav-wrap-title">
           注册
-        </span>
-    <span style="position:absolute;right:8px;top:4px;color:#fff;background-color:#5a83f1;width:38px;height:30px;line-height: 30px;border-radius:3px;" onclick="business.gologin()">登录</span>
+    </span>
+    <span style="position:absolute;right:8px;top:4px;color:#fff;background-color:#cc3b5c;width:38px;height:30px;line-height: 30px;border-radius:3px;" onclick="business.gologin()">登录</span>
 </div>
 <div style="margin:0 0 100px 0;background-color:#fff;padding:50px 15px 0 15px;height:100%;">
     <div style="height:50px;border-bottom:1px solid #ececec;">
-        <span style="display: inline-block;line-height: 48px;height:100%;">手机号码：</span>
-        <input type="text" id="adminName" style="border:0 solid #ccc;height:100%;" placeholder="手机号码">
+        <span style="display: inline-block;line-height: 48px;height:100%;width:70px;">手机号码：</span>
+        <input type="text" id="adminName" style="border:0 solid #ccc;height:100%;width:calc(100% - 75px)" placeholder="手机号码">
     </div>
     <div style="height:50px;border-bottom:1px solid #ececec;">
-        <span style="display: inline-block;line-height: 48px;height:100%;vertical-align:top;">短信验证：</span>
-        <input type="text" style="border:0 solid #ccc;display: inline-block;line-height: 48px;height:100%;width:46%;vertical-align:top;" id="validCode" placeholder="短信验证码">
-        <button style="display: inline-block;height:100%;width:26%;line-height: 48px;background-color:#ac40ca;border:1px solid #ac40ca;color:#fff;" src="" id="getValidCode">
+        <span style="display: inline-block;line-height: 48px;height:100%;vertical-align:top;width:70px;">短信验证：</span>
+        <input type="text" style="border:0 solid #ccc;display: inline-block;line-height: 48px;height:100%;width:calc(100% - 170px);vertical-align:top;" id="validCode" placeholder="短信验证码">
+        <button style="display: inline-block;height:100%;width:90px;line-height: 48px;background-color:#ac40ca;border:1px solid #ac40ca;color:#fff;" src="" id="getValidCode">
             发送验证码
         </button>
     </div>
     <div style="height:50px;border-bottom:1px solid #ececec;">
-        <span style="display: inline-block;line-height: 48px;height:100%;">输入密码：</span>
-        <input type="password" style="border:0 solid #ccc;height:100%;" id="password" placeholder="6-20位密码">
+        <span style="display: inline-block;line-height: 48px;height:100%;width:70px;">输入密码：</span>
+        <input type="password" style="border:0 solid #ccc;height:100%;width:calc(100% - 75px);" id="password" placeholder="6-20位密码">
     </div>
     <div style="height:50px;border-bottom:1px solid #ececec;">
-        <span style="display: inline-block;line-height: 48px;height:100%;">确认密码：</span>
-        <input type="password2" style="border:0 solid #ccc;height:100%;" id="password2" placeholder="确保两次密码相同">
+        <span style="display: inline-block;line-height: 48px;height:100%;width:70px;">确认密码：</span>
+        <input type="password" style="border:0 solid #ccc;height:100%;width:calc(100% - 75px);" id="password2" placeholder="确保两次密码相同">
     </div>
-    <div style="height:50px;border-bottom:1px solid #ececec;">
+    <!--<div style="height:50px;border-bottom:1px solid #ececec;">
         <span style="display: inline-block;line-height: 48px;height:100%;">&#12288;邀请码：</span>
         <input type="text" id="inviteCode" style="border:0 solid #ccc;height:100%;" placeholder="输入邀请码">
-    </div>
+    </div>-->
     <div style="height:20px;margin-top:20px;text-align:center;">
         <input type="checkbox" checked="checked" style="border:0 solid #ccc;height:100%;vertical-align:top;"/>
         <a style="display: inline-block;line-height: 20px;height:100%;color:#000;" href="protocol.html">同意平台协议</a>
@@ -112,11 +112,11 @@ $("#getValidCode").on("click",function(){
             business.myLoadingToast("请检查确认密码")
             return;
         }
-        var inviteCode=$("#inviteCode").val().trim();
+       /* var inviteCode=$("#inviteCode").val().trim();
         if(!inviteCode||inviteCode.length<4){
                     business.myLoadingToast("请填写正确邀请码")
                     return;
-                }
+                }*/
         business.myPrevToast("注册中",function(){
         business.ajax({
             url:'/account/webregister',
@@ -124,7 +124,7 @@ $("#getValidCode").on("click",function(){
                 adminName:adminName,
                 password:password,
                 validCode:validCode,
-                inviteCode:inviteCode,
+                //inviteCode:inviteCode,
             },
             success:function(data){
                 //自动登录

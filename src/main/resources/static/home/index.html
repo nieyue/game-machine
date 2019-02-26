@@ -8,7 +8,7 @@
     <meta http-equiv="Cache" content="no-cache">
     <meta name="viewport"
           content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"/>
-    <title>赤兔顺风车</title>
+    <title>欢乐抓包包</title>
     <link href="resources/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="resources/css/base.css">
     <style>
@@ -32,67 +32,84 @@
 <body>
 <div class="nav-wrap">
     <span>
-        选择当前城市
+        欢乐抓包包
     </span>
 </div>
-<div  style="margin:38px 0 100px 0;background-color:#fff;">
-
-      <div >
-          <div id="citys">
+<div  style="padding:38px 0;height:calc(100% - 76px);overflow: auto;">
+  <div style="background:url('resources/img/bg_banner.png');background-size:100% 100%;height:250px;">
+      <div style="background:url('resources/img/banner.png');background-size:100% 100%;height:200px;width:86%;margin-left:9%;"></div>
+  </div>
+  <div class="mer2-wrap">
+      <div class="mer2-item-wrap" style="background:url('resources/img/mer_wrap.png');background-size:100% 100%;height:200px;text-align: center;">
+          <div class="mer2-item" >
+              <img class="mer2-item-img"src="resources/img/bb.png"  alt="">
+              <div class="mer2-item-title">包包名称</div>
           </div>
       </div>
-      
-  </div>  
+      <div class="mer2-item-wrap "style="background:url('resources/img/mer_wrap.png');background-size:100% 100%;height:200px;text-align: center;">
+          <div class="mer2-item" >
+              <img class="mer2-item-img" src="resources/img/bb.png" alt="">
+              <div class="mer2-item-title">包包名称</div>
+          </div>
+      </div>
+      <div class="mer2-item-wrap "style="background:url('resources/img/mer_wrap.png');background-size:100% 100%;height:200px;text-align: center;">
+          <div class="mer2-item" >
+              <img class="mer2-item-img" src="resources/img/bb.png" alt="">
+              <div class="mer2-item-title">包包名称</div>
+          </div>
+      </div>
+      <div class="mer2-item-wrap "style="background:url('resources/img/mer_wrap.png');background-size:100% 100%;height:200px;text-align: center;">
+          <div class="mer2-item" >
+              <img class="mer2-item-img" src="resources/img/bb.png" alt="">
+              <div class="mer2-item-title">包包名称</div>
+          </div>
+      </div>
+      <div class="mer2-item-wrap "style="background:url('resources/img/mer_wrap.png');background-size:100% 100%;height:200px;text-align: center;">
+          <div class="mer2-item" >
+              <img class="mer2-item-img" src="resources/img/bb.png" alt="">
+              <div class="mer2-item-title">包包名称</div>
+          </div>
+      </div>
+      <div class="mer2-item-wrap "style="background:url('resources/img/mer_wrap.png');background-size:100% 100%;height:200px;text-align: center;">
+          <div class="mer2-item" >
+              <img class="mer2-item-img" src="resources/img/bb.png" alt="">
+              <div class="mer2-item-title">包包名称</div>
+          </div>
+      </div>
+      <div class="mer2-item-wrap "style="background:url('resources/img/mer_wrap.png');background-size:100% 100%;height:200px;text-align: center;">
+          <div class="mer2-item" >
+              <img class="mer2-item-img" src="resources/img/bb.png" alt="">
+              <div class="mer2-item-title">包包名称</div>
+          </div>
+      </div>
+  </div>
+
+</div>
 
 <!-- 固定栏-->
 <div class="mer-footer">
-    <div class ="mer-footer-div" style="width:33%;left:0;color:red;">
-        <a onclick="business.gonav('index',true)">
-            <i class="fa fa-home nav-active" style="font-size:26px;" ></i>
-            <span class="nav-active">首页</span>
+    <div class ="mer-footer-div" style="width:25%;left:0;color:red;opacity: 1;">
+        <a  style="background:url('resources/img/button_home.png');background-size:100% 100%;">
         </a>
     </div>
-    <div class ="mer-footer-div" style="width:33%;left:33%">
-        <a onclick="business.gonav('selecttrip',true)">
-            <i class="fa fa-edit" style="font-size:26px;top:-22px;position:absolute;left:auto;margin-left:-25px;border-radius:30px;background-color:#fff;height:50px;width:50px;line-height:55px;border:1px solid #000;color:#000;"></i>
-            <span>发布</span>
+    <div class ="mer-footer-div" style="width:25%;left:25%">
+        <a onclick="business.gonav('card')" style="background:url('resources/img/button_baobaoka.png');background-size:100% 100%;">
         </a>
     </div>
-    <div class ="mer-footer-div" style="width:33%;left:66%">
-        <a onclick="business.gonav('user',true)">
-           <i class="fa fa-user-circle" style="font-size:26px;"></i>
-            <span>我的</span>
+    <div class ="mer-footer-div" style="width:25%;left:50%">
+        <a onclick="business.gonav('recharge')" style="background:url('resources/img/button_chongzhi.png');background-size:100% 100%;">
         </a>
     </div>
-    
+    <div class ="mer-footer-div" style="width:25%;left:75%;">
+        <a onclick="business.gonav('user')" style="background:url('resources/img/button_my.png');background-size:100% 100%;">
+        </a>
+    </div>
+
 </div>
 <!-- 固定栏 end-->
 <script src="resources/js/jquery1.12.2.js"></script>
 <script src="resources/js/base.js"></script>
-<script src="resources/js/address.js"></script>
-<script src="resources/js/city.js"></script>
 <script>
-    //点击省跳转市
-  $(document).on("click",".address-name",function(){
-      //console.log($(this).text().trim())
-      location.href="selecttriplist.html?startCity="+$(this).text().trim();
-  })
-
-    for(var i=0;i<citys.length;i++){
-    var city=citys[i];
-    var html2=''
-
-    for(var j=0;j<city.cityList.length;j++){
-            var pbc=getProvinceByCity(city.cityList[j]);
-        if(pbc&&pbc!='澳门'&&pbc!='香港'&&pbc!='台湾省'){
-         html2+='<span class="address-name">'+city.cityList[j]+'</span>';
-         //console.log(getProvinceByCity(city.cityList[j]) +" "+city.cityList[j])
-        }
-    }
-    var html='<div  class="address-P">'+city.code+'</div>'
-              +'<div style="margin:auto;" >'+html2+'</div>';
-    $("#citys").append(html)
-    }
 
 
 </script>

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <meta name="viewport"
+          content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"/>
+    <title>充值</title>
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="resources/css/base.css">
+    <style>
+        .address-P{
+            background-color:#ececec;
+            padding:5px;
+        }
+        .address-name{
+            text-align:center;
+            display:inline-block;
+            width:20%;
+            background-color:#fff;
+            padding:2%;
+            cursor:pointer;
+        }
+        .address-name:hover{
+            background-color:#ccc;
+        }
+    </style>
+</head>
+<body>
+<div class="nav-wrap">
+    <span>
+        充值
+    </span>
+</div>
+<div  style="padding:38px 0;height:calc(100% - 76px);overflow: auto;">
+    <div style="background:url('resources/img/bg_huoqucishu.png');background-size:100% 100%;height:auto;width:90%;margin:5%;overflow:auto;">
+        <div style="height:80px;"></div>
+        <div id="rechargeTermList">
+          <!--  <div style="border:1px solid #7b72e9;border-radius:5px;width:80%;margin-top:5%;margin-left:8%;padding:2%;">
+                <img src="resources/img/icon_Coin.png"style="width:16%;" alt="">
+                <div style="display: inline-block;width:50%;vertical-align: top;margin-top:5%;margin-left:5%;font-size:1.6rem;">10次机会</div>
+                <div style="display: inline-block;background:linear-gradient(to top, #3023AE, #C86DD7);width:25%;color:#fff;vertical-align: top;margin-top:2%;padding:4% 0;text-align:center;border-radius:30px;">
+                    ￥ <span>20</span>
+                </div>
+            </div>-->
+
+        </div>
+        <div style="margin:30px 0;">
+            <div style="width:60%;height:60px;margin:auto;background:url('resources/img/button_close.png');background-size:100% 100%;"></div>
+        </div>
+
+    </div>
+</div>
+
+<!-- 固定栏-->
+<div class="mer-footer">
+    <div class ="mer-footer-div" style="width:25%;left:0;color:red;">
+        <a  onclick="business.gonav('index')" style="background:url('resources/img/button_home.png');background-size:100% 100%;">
+        </a>
+    </div>
+    <div class ="mer-footer-div" style="width:25%;left:25%">
+        <a onclick="business.gonav('card')" style="background:url('resources/img/button_baobaoka.png');background-size:100% 100%;">
+        </a>
+    </div>
+    <div class ="mer-footer-div" style="width:25%;left:50%;opacity: 1;">
+        <a  style="background:url('resources/img/button_chongzhi.png');background-size:100% 100%;">
+        </a>
+    </div>
+    <div class ="mer-footer-div" style="width:25%;left:75%;">
+        <a onclick="business.gonav('user')" style="background:url('resources/img/button_my.png');background-size:100% 100%;">
+        </a>
+    </div>
+
+</div>
+<!-- 固定栏 end-->
+<script src="resources/js/jquery1.12.2.js"></script>
+<script src="resources/js/base.js"></script>
+<script>
+    business.ajax({
+        url:'/rechargeTerm/list',
+        async:false,
+        data:{
+            orderWay:"asc",
+            accountId:JSON.parse(localStorage.getItem("account")).accountId,
+            status:1
+        },
+        success:function(data){
+            business.myPrevToast("努力加载中",function(){
+                var rechargeTermList=data.data;
+                var html="";
+                for (var i = 0; i <rechargeTermList.length ; i++) {
+                    var rechargeTerm=rechargeTermList[i];
+                    var title=rechargeTerm.title;
+                    var rechargeMoney=rechargeTerm.rechargeMoney;
+                    var giveNumber=rechargeTerm.giveNumber;
+                    var rechargeTermJson=JSON.stringify(rechargeTerm).replace(/\"/g,"'");
+                    console.log(rechargeTermJson)
+                    html+='<div onClick="business.recharge('+rechargeTermJson+')" style="border:1px solid #7b72e9;border-radius:5px;width:80%;margin-top:5%;margin-left:8%;padding:2%;">\n' +
+                        '                <img src="resources/img/icon_Coin.png"style="width:16%;" alt="">\n' +
+                        '                <div style="display: inline-block;width:50%;vertical-align: top;margin-top:5%;margin-left:5%;font-size:1.6rem;">'+title+'</div>\n' +
+                        '                <div style="display: inline-block;background:linear-gradient(to top, #3023AE, #C86DD7);width:25%;color:#fff;vertical-align: top;margin-top:2%;padding:4% 0;text-align:center;border-radius:30px;">\n' +
+                        '                    ￥ <span>'+rechargeMoney+'</span>\n' +
+                        '                </div>\n' +
+                        '            </div>'
+                }
+                $("#rechargeTermList").append(html);
+                business.recharge=function(rechargeTerm){
+                    console.log(rechargeTerm)
+                }
+            },"remove");
+        },
+        fail:function(data){
+        }
+    })
+
+</script>
+</body>
+</html>

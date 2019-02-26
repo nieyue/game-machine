@@ -1,16 +1,39 @@
+
+@font-face {
+    font-family: 'myFont';
+    src: url('../fonts/font.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /**
 **reset
 */
 html,body,div,span,a,img,input,button{
-margin:0;
-padding:0;
-list-style: none;
+    margin:0;
+    padding:0;
+    list-style: none;
+    font-family: myFont;
 }
 body,html{
 	background-color: #f2f3f4;
-	font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft YaHei","\9ED1\4F53","Arial,sans-serif";
+	/*font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft YaHei","\9ED1\4F53","Arial,sans-serif";*/
+	font-family: myFont;
     font-size:14px;
+    height: 100%;
+
 }
+body{
+    background:url("../img/backgroung.png");
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+}
+/**
+**清除input textarea原生样式
+*/
+ input,textarea{
+     outline:none;
+ }
 /* for Chrome */
 ::-webkit-scrollbar {/*滚动条整体样式*/
     width: 0px;     /*高宽分别对应横竖滚动条的尺寸*/
@@ -28,7 +51,7 @@ body,html{
 .nav-wrap{
     width:100%;
     height:38px;
-    background-color:red;
+    background-color:#242424;
     color:#fff;
     text-align:center;
     line-height:38px;
@@ -36,6 +59,21 @@ body,html{
     left:0;
     top:0;
     z-index: 99;
+}
+/**
+**顶部导航返回
+*/
+.nav-wrap-back{
+    position:absolute;
+    left:18px;
+    top:0;
+    font-size:1.6rem;
+}
+/**
+**顶部导航标题
+*/
+.nav-wrap-title{
+    font-size:1.2rem;
 }
 /**
 **框架
@@ -136,13 +174,10 @@ width:100%;
 .mer-footer{
     width:100% !important;
     height:50px;
-    border-top:1px solid #ececec;
     position: fixed;
-    box-shadow:0 0 2px #ccc;
     left: 50%;
     bottom:0;
     z-index: 99999;
-    background-color:#fff;
     max-width: 750px;
    transform: translate(-50%,0);
   }
@@ -153,6 +188,7 @@ width:100%;
   position: absolute;
   top:0;
   text-align: center;
+      opacity:0.3;
   
   }
   .mer-footer-div a{
@@ -430,13 +466,14 @@ width:100%;
 }
 .mer2-item-wrap{
     display: inline-block;
-    width:48%;
+    width:47%;
     margin:1%;
     font-size: 1rem;
 }
 .mer2-item{
     display: inline-block;
-    border:1px solid #ececec;
+    margin-top:30px;
+    /*border:1px solid #ececec;*/
 }
 .mer2-item-img{
 width:100%;
@@ -449,6 +486,7 @@ width:100%;
     display:-webkit-box;
     -webkit-box-orient:vertical;
     -webkit-line-clamp:2;
+    color:#fff;
 }
 .mer2-item-pricewrap{
     padding:3%;
