@@ -50,16 +50,12 @@
             </div>
         </div>
         <div style="width:96%;margin-left:2%;">
-            <div class="address-name" id="recharge">
-                <span>充值中心</span>
+            <div class="address-name" id="merOrder">
+                <span>订单中心</span>
                 <span style="float:right;color:#999;">&gt;</span>
             </div>
-            <div class="address-name" id="integral">
+            <div class="address-name" id="receiptInfo">
                 <span>配送中心</span>
-                <span style="float: right;color:#999;">&gt;</span>
-            </div>
-            <div class="address-name" id="welfare">
-                <span>帮助</span>
                 <span style="float: right;color:#999;">&gt;</span>
             </div>
            <!-- <div class="address-name" id="contact">
@@ -111,6 +107,19 @@
         fail:function(data){
         }
     })
+    business.ajax({
+        url:'/number/list',
+        async:false,
+        data:{
+            accountId:JSON.parse(localStorage.getItem("account")).accountId,
+        },
+        success:function(data){
+           var numberList=data.data;
+           $("#surplusNumber").text(numberList[0].surplusNumber);
+            },
+        fail:function(data){
+        }
+    })
     //初始化
     var account=JSON.parse(localStorage.getItem("account"));
     if(!account){
@@ -119,13 +128,13 @@
     }
     $("#phone").text(account.phone)
 
-    //充值中心
-    $("#recharge").click(function(){
-        business.gonav("recharge",true);
+    //订单中心
+    $("#merOrder").click(function(){
+        business.gonav("mer_order",true);
     })
-    //我的积分
-    $("#integral").click(function(){
-        business.gonav("integral",true);
+    //配送中心
+    $("#receiptInfo").click(function(){
+        business.gonav("receipt_info",true);
     })
     //我的福利
     $("#welfare").click(function(){

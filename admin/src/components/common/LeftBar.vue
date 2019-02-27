@@ -56,10 +56,13 @@
                 </Submenu>
                 <Submenu name="merOrder">
                     <template slot="title">
-                        <Icon type="ios-cart"></Icon>
-                        商品订单管理
+                        <Icon type="ios-cart"/>
+                        <span>商品订单管理</span>
                     </template>
-                    <MenuItem :name="menu.merOrder.merOrder">商品订单</MenuItem>
+                    <MenuItem :name="menu.merOrder.merOrder">
+                    <Icon type="ios-browsers" />
+                    <span>商品订单</span>
+                    </MenuItem>
                 </Submenu>
                 <Submenu v-if="isSuperAdmin" name="managerAccount">
                     <template slot="title">

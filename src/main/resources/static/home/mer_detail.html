@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <meta name="viewport"
+          content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"/>
+    <title>抓包包</title>
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="resources/css/base.css">
+</head>
+<body>
+<div class="nav-wrap">
+    <span class="nav-wrap-title">
+        抓包包
+    </span>
+</div>
+<!-- 游戏 -->
+<div  style="padding:38px 0;height:calc(100% - 76px);overflow: auto;">
+    <div style="background:url('resources/img/bg_zhuabaobao.png');background-size:100% 100%;height:100%;width:100%;">
+        <!-- 顶部按钮组 -->
+        <div style="height:13%;">
+            <img id="index" style="margin:2% 8%;width:16%;height:auto;display:inline-block;" src="resources/img/button_shouye.png" alt="">
+            <img id="user" style="margin:2% 8%;float:right;width:16%;height:auto;display:inline-block;" src="resources/img/button_wode.png" alt="">
+        </div>
+        <!-- 顶部按钮组 end-->
+        <div style="height:6%;"></div>
+        <div id="merDetailList"style="overflow:hidden;height:56%;width:70%;margin:0 15%;text-align:center;position:relative;left:0;top:0;">
+            <div style="color:#fff;position:absolute;left:0;top:50%;width:100%;">
+                剩余：<span id="surplusNumber"></span>次
+            </div>
+            <div style="position:absolute;left:0;top:0;width:100%;height: 100%;">
+               <!-- <div style="background:url('resources/img/claw.png');display:inline-block;background-size:100% 100%;height:100%;width:100%;margin-top:2%;">
+                </div>-->
+                <div style="height: 100%;">
+                    <div  id="clawline" style="width:2%;height:5%;border:2px solid #000;margin:auto;background-color: #fff;"></div>
+                    <img id="claw" style="position:absolute;left:42%;top:5%;width:16%;height:auto;display:inline-block;z-index:99" src="resources/img/claw.png" alt="">
+                </div>
+
+            </div>
+            <!-- 底部图片 -->
+           <div id="cardImgList" style="position:absolute;left:0;bottom:0;text-align:center;width:100%;">
+               <img  style="margin:2%;width:20%;height:auto;display:inline-block;" src="resources/img/card_daishen.png" alt="">
+               <img  style="margin:2%;width:20%;height:auto;display:inline-block;" src="resources/img/card_mianliao.png" alt="">
+               <img  style="margin:2%;width:20%;height:auto;display:inline-block;" src="resources/img/card_shouwan.png" alt="">
+               <img  style="margin:2%;width:20%;height:auto;display:inline-block;" src="resources/img/card_wujin.png" alt="">
+            </div>
+            <!-- 底部图片 end-->
+        </div>
+        <div style="height:6%;"></div>
+        <!-- 底部按钮组 -->
+        <div style="height:9%;">
+            <img id="card" style="margin:2% 0 3% 10%;width:20%;height:auto;display:inline-block;" src="resources/img/button_baobaoka2.png" alt="">
+            <img id="start" style="margin:2% 0 3% 5%;width:30%;height:auto;display:inline-block;" src="resources/img/button_startgame.png" alt="">
+            <img id="recharge" style="margin:2% 0 3% 5%;width:20%;height:auto;display:inline-block;" src="resources/img/button_recharge.png" alt="">
+        </div>
+        <!-- 底部按钮组 end-->
+
+    </div>
+</div>
+<!-- 游戏 end -->
+<!-- 弹窗-->
+<div id="popup" style="display:none;z-index:999;">
+    <div style="background-color: #ccc;position:fixed;left:0;top:0;height:100%;width:100%;opacity:0.8;z-index:999;"></div>
+    <div style="z-index:9999;position:fixed;left:0;top:0;width:100%;height:100%;">
+        <img id="cardImg" style="width:100%;position:absolute;left:0;top:12%;" src="resources/img/get_wujin.png" alt="">
+        <img id="closePopup" style="width:36%;position:absolute;left:32%;top:70%;" src="resources/img/button_lijilingqu.png" alt="">
+    </div>
+</div>
+<!-- 弹窗 end-->
+<script src="resources/js/jquery1.12.2.js"></script>
+<script src="resources/js/base.js"></script>
+<script>
+    business.ajax({
+        url:'/number/list',
+        async:false,
+        data:{
+            accountId:JSON.parse(localStorage.getItem("account")).accountId,
+        },
+        success:function(data){
+            var numberList=data.data;
+            $("#surplusNumber").text(numberList[0].surplusNumber);
+        },
+        fail:function(data){
+        }
+    })
+$("#index").on("click",function(){
+    business.gonav("index");
+})
+$("#user").on("click",function(){
+    business.gonav("user");
+})
+$("#card").on("click",function(){
+    business.gonav("card");
+})
+$("#recharge").on("click",function(){
+    business.gonav("recharge");
+})
+    //运动图片
+    business.imgSport=function(element){
+        var isOne=true;//第一个
+        var imgListleft=0;
+        $("#"+element).css("left",'0');
+        if($("#"+element+"2").length<=0){
+            var newCardImgList=$("#"+element).clone();
+            newCardImgList.attr("id",element+"2")
+            newCardImgList.css("left",'100%')
+            $("#"+element).after(newCardImgList)
+        }
+        var interval=setInterval(function(){
+            if(100+imgListleft==0){
+                //左边列表全部隐藏，右边追加
+                imgListleft=0;
+                $("#"+element).css("left",'100%');
+                if(isOne){
+                    $("#"+element+"2").after($("#"+element));
+                }else{
+                    $("#"+element).after($("#"+element+"2"));
+                }
+                isOne=!isOne;//置换过来
+            }else{
+            }
+            imgListleft-=1;
+            if(isOne){
+                $("#"+element).css("left",imgListleft+'%');
+                $("#"+element+"2").css("left",100+imgListleft+'%');
+            }else{
+                $("#"+element+"2").css("left",imgListleft+'%');
+                $("#"+element).css("left",100+imgListleft+'%');
+            }
+        },100);
+        return interval;
+    }
+    var interval=business.imgSport("cardImgList");
+    //卡片类型，1戴身卡，2面料卡，3手挽卡，4五金卡
+    var cardTyps=[
+        {id:1,value:"daishen"},
+        {id:2,value:"mianliao"},
+        {id:3,value:"shouwan"},
+        {id:4,value:"wujin"},
+        ]
+   //初始化
+   var  scale=5;
+    $("#clawline").css("height",scale+"%");
+    $("#claw").css("top",scale+"%");
+    var isStart=false;//是否已经开始
+//开始游戏
+$("#start").on("click",function(){
+    if(isStart){
+        return;
+    }
+    isStart=true;
+    var setinterval=setInterval(function(){
+        if(scale>=75){
+            scale=5;
+            clearInterval(setinterval);
+            //停止循环
+            clearInterval(interval);
+            //获取一张卡片
+            var card=cardTyps[Math.floor(Math.random()*cardTyps.length)];
+            $("#cardImg").attr("src","resources/img/get_"+card.value+".png");
+            //显示弹窗
+            $("#popup").show();
+            isStart=false;
+            return;
+        }
+        scale+=0.7;
+        $("#clawline").css("height",scale+"%")
+        $("#claw").css("top",scale+"%")
+    },10)
+
+})
+    //关闭弹窗
+    $("#closePopup").on("click",function(){
+        $("#popup").hide();
+        $("#clawline").css("height",scale+"%")
+        $("#claw").css("top",scale+"%")
+        //继续循环
+        interval=business.imgSport("cardImgList");
+    })
+
+</script>
+</body>
+</html>

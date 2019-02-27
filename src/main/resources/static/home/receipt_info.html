@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <meta name="viewport"
+          content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"/>
+    <title>配送中心</title>
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="resources/css/base.css">
+</head>
+<body>
+<div class="nav-wrap">
+    <span class="nav-wrap-back" onclick="business.goback()"><</span>
+    <span class="nav-wrap-title">
+        配送中心
+    </span>
+</div>
+<div style="padding-top:50px;"></div>
+<div style="background-color:#fff;height:auto;width:90%;margin:5%;">
+    <div style="height:50px;border-bottom:1px solid #ececec;">
+        <span style="display: inline-block;line-height: 48px;height:100%;width:70px;">&#12288;收货人：</span>
+        <input type="text" id="name" style="border:0 solid #ccc;height:100%;width:calc(100% - 75px);" placeholder="收货人">
+    </div>
+    <div style="height:50px;border-bottom:1px solid #ececec;">
+        <span style="display: inline-block;line-height: 48px;height:100%;width:70px;">&#12288;手机号：</span>
+        <input type="text" style="border:0 solid #ccc;height:100%;width:calc(100% - 75px);" id="phone" placeholder="手机号">
+    </div>
+    <div style="height:50px;border-bottom:1px solid #ececec;">
+        <span style="display: inline-block;line-height: 48px;height:100%;width:70px;">&#12288;&#12288;地区：</span>
+        <select name="" id="province" style="height:100%;width:calc(33% - 28px);">
+            <option value="0">请选择省</option>
+        </select>
+        <select name="" id="city" style="height:100%;width:calc(33% - 28px);">
+            <option value="0">请选择市</option>
+        </select>
+        <select name="" id="area" style="height:100%;width:calc(33% - 28px);">
+            <option value="0">请选择区</option>
+        </select>
+    </div>
+    <div style="height:50px;border-bottom:1px solid #ececec;">
+        <span style="display: inline-block;line-height: 48px;height:100%;width:70px;">详细地址：</span>
+        <input type="text" style="border:0 solid #ccc;height:100%;width:calc(100% - 75px);" id="addressDetail" placeholder="详细地址">
+    </div>
+    <div style="margin:15px 0;text-align:center;">
+        <div id="receiptInfoSubmit" style="width:60%;height:60px;margin:auto;background:url('resources/img/button_confirm.png');background-size:100% 100%;"></div>
+    </div>
+</div>
+
+
+<script src="resources/js/jquery1.12.2.js"></script>
+<script src="resources/js/address.js"></script>
+<script src="resources/js/base.js"></script>
+<script>
+    //初始化地址
+    initProvinceCityArea("#province","#city","#area");
+    var receiptInfo=null;
+    //获取收货地址
+    business.ajax({
+        url:'/receiptInfo/list',
+        async:false,
+        data:{
+            orderWay:"asc",
+            accountId:JSON.parse(localStorage.getItem("account")).accountId,
+            status:1
+        },
+        success:function(data){
+            business.myPrevToast("努力加载中",function(){
+                var receiptInfoList=data.data;
+                if(receiptInfoList.length>0){
+                    receiptInfo=receiptInfoList[0];
+                    $("#name").val(receiptInfo.name);
+                    $("#phone").val(receiptInfo.phone);
+                }
+            },"remove");
+        },
+        fail:function(data){
+        }
+    })
+    //收货地址提交s
+    $("#receiptInfoSubmit").on("click",function(){
+        var accountId=JSON.parse(localStorage.getItem("account")).accountId;
+        if($("#province").val()=='0'
+            ||$("#city").val()=='0'
+            ||$("#area").val()=='0'
+        ){
+            business.myLoadingToast("请选择地址")
+            return;
+        }
+        var address=$("#province").val()+$("#city").val()+$("#area").val()+$("#addressDetail").val();
+        var name=$("#name").val();
+        var phone=$("#phone").val();
+        if(!name||name.length<2||name.length>20){
+            business.myLoadingToast("姓名长度2-20")
+            return;
+        }
+        if(!business.userVerification.phone.test(phone)){
+            business.myLoadingToast("请检查手机号")
+            return;
+        }
+        var data={
+            name:name,
+            phone:phone,
+            address:address,
+            accountId:accountId
+        }
+        var url="/receiptInfo/add";
+        if(receiptInfo){
+            url= "/receiptInfo/update";
+            data.receiptInfoId=receiptInfo.receiptInfoId;
+        }
+        business.ajax({
+            url:url,
+            data:data,
+            success:function(data){
+                business.myLoadingToast(data.msg)
+                console.log(data)
+            },
+            fail:function(data){
+                business.myLoadingToast(data.msg)
+            }
+        })
+    })
+
+</script>
+</body>
+</html>

@@ -1,5 +1,6 @@
 package com.nieyue.bean;
 
+import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
 import io.swagger.annotations.ApiModel;
@@ -8,6 +9,7 @@ import lombok.Data;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * 商品订单
@@ -49,5 +51,11 @@ public class MerOrder implements Serializable {
 	 */
 	@ApiModelProperty(value="账户id")
 	private Long accountId;
+	/**
+	 * 订单详情
+	 */
+	@ApiModelProperty(value="订单详情")
+	@TableField(exist = false)
+	private List<MerOrderDetail> merOrderDetailList;
 
 }

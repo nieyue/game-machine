@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <meta name="viewport"
+          content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"/>
+    <title>订单中心</title>
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="resources/css/base.css">
+</head>
+<body>
+<div class="nav-wrap">
+    <span class="nav-wrap-back" onclick="business.goback()"><</span>
+    <span class="nav-wrap-title">
+        订单中心
+    </span>
+</div>
+<div style="padding-top:38px;"></div>
+<div style="height:calc(100% - 38px);overflow: auto;" id="merOrderList">
+    <!--<div style="margin:3%;height:100px;border-bottom:1px solid #ececec;color:#fff;padding:3% 0;">
+        <img src="resources/img/head_1.png" style="width:33%;height:100px;" alt="">
+        <div style="width:60%;display: inline-block;margin-left:5%;height:100px;vertical-align:top;position: relative;top:0;left:0;">
+            <div style="position:absolute;left:0;top:10px;">路易斯是的发生的</div>
+            <div style="position:absolute;left:0;bottom:10px;width:100%;" >
+                <div  style="display: inline-block;">2019-02-18</div>
+                <div style="display: inline-block;position:absolute;right:0;bottom:0px;background:linear-gradient(to top, blue, red);width:35%;color:#fff;vertical-align: top;margin-top:2%;padding:4% 0;text-align:center;border-radius:30px;">
+                    待发货
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="margin:3%;height:100px;border-bottom:1px solid #ececec;color:#fff;padding:3% 0;">
+        <img src="resources/img/head_1.png" style="width:33%;height:100px;" alt="">
+        <div style="width:60%;display: inline-block;margin-left:5%;height:100px;vertical-align:top;position: relative;top:0;left:0;">
+            <div style="position:absolute;left:0;top:10px;">路易斯是的发生的</div>
+            <div style="position:absolute;left:0;bottom:10px;width:100%;" >
+                <div  style="display: inline-block;">2019-02-18</div>
+                <div style="display: inline-block;position:absolute;right:0;bottom:0px;background:linear-gradient(to top, green, white);width:35%;color:#fff;vertical-align: top;margin-top:2%;padding:4% 0;text-align:center;border-radius:30px;">
+                    已发货
+                </div>
+            </div>
+        </div>
+    </div>-->
+</div>
+
+
+<script src="resources/js/jquery1.12.2.js"></script>
+<script src="resources/js/base.js"></script>
+<script>
+    //订单列表
+    var pageNum=1;
+    var pageSize=10;
+    var currentPage=1;
+    var isBottom=false;
+    var merOrderList=[];
+    business.getMerOrderList=function() {
+        pageNum=pageSize*(currentPage-1)+1;
+        currentPage++;
+        business.myPrevToast("努力加载中",function(){
+            business.ajax({
+                url: '/merOrder/list',
+                data: {
+                    pageNum:pageNum,
+                    pageSize:pageSize,
+                    accountId: JSON.parse(localStorage.getItem("account")).accountId,
+                },
+                success: function (data) {
+                    business.myPrevToast("努力加载中", function () {
+                        merOrderList = data.data;
+                        var html = "";
+                        for (var i = 0; i < merOrderList.length; i++) {
+                            var merOrder = merOrderList[i];
+                            var merName = merOrder.merOrderDetailList[0].merName;
+                            var imgAddress = merOrder.merOrderDetailList[0].imgAddress;
+                            var createDate = merOrder.merOrderDetailList[0].createDate;
+                            var status = merOrder.merOrderDetailList[0].status==1?'待发货':'已发货';
+
+                            var color1='blue';
+                            var color2='red';
+                            if(merOrder.merOrderDetailList[0].status==2){
+                                color1='green';
+                                color2='white';
+                            }
+                            var merOrderJson = JSON.stringify(merOrder).replace(/\"/g, "'");
+                            //console.log(merOrderJson)
+                            html += '<div style="margin:3%;height:100px;border-bottom:1px solid #ececec;color:#fff;padding:3% 0;">\n' +
+                                '        <img src="resources/img/head_1.png" style="width:33%;height:100px;" alt="">\n' +
+                                '        <div style="width:60%;display: inline-block;margin-left:5%;height:100px;vertical-align:top;position: relative;top:0;left:0;">\n' +
+                                '            <div style="position:absolute;left:0;top:10px;">'+merName+'</div>\n' +
+                                '            <div style="position:absolute;left:0;bottom:10px;width:100%;" >\n' +
+                                '                <div  style="display: inline-block;">'+createDate.substring(0,9)+'</div>\n' +
+                                '                <div style="display: inline-block;position:absolute;right:0;bottom:0px;background:linear-gradient(to top, blue, red);width:35%;color:#fff;vertical-align: top;margin-top:2%;padding:4% 0;text-align:center;border-radius:30px;">\n' +
+                                '                    '+status+'\n' +
+                                '                </div>\n' +
+                                '            </div>\n' +
+                                '        </div>\n' +
+                                '    </div>'
+                        }
+                        $("#merOrderList").append(html);
+                        business.merDetail = function (mer) {
+                            console.log(mer)
+                        }
+                    }, "remove");
+                },
+                fail: function (data) {
+                    business.myPrevToast("努力加载中",function(){
+                        isBottom=true;
+                        if((data.code==30002||data.code==30003)&& merOrderList.length==0){
+                            $("#merOrderList").html('<div style="padding-top:200px;text-align: center;">暂无</div>')
+                        }
+                    },"remove");
+                }
+            })
+        },"add");
+    };
+    business.getMerOrderList();
+
+    //滚动刷新
+    $("#merOrderList").scroll(function(){
+        if(!navigator.onLine){
+            business.myLoadingToast("请检查网络！");
+            return;
+        }
+        if(navigator.onLine&&!isBottom&& business.isScrollBottom(document)){
+            business.getMerOrderList();
+        }
+
+    });
+</script>
+</body>
+</html>

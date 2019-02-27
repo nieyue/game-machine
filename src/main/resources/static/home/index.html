@@ -35,53 +35,17 @@
         欢乐抓包包
     </span>
 </div>
-<div  style="padding:38px 0;height:calc(100% - 76px);overflow: auto;">
+<div  style="padding:38px 0;height:calc(100% - 76px);overflow: auto;"id="merListWrap">
   <div style="background:url('resources/img/bg_banner.png');background-size:100% 100%;height:250px;">
       <div style="background:url('resources/img/banner.png');background-size:100% 100%;height:200px;width:86%;margin-left:9%;"></div>
   </div>
-  <div class="mer2-wrap">
-      <div class="mer2-item-wrap" style="background:url('resources/img/mer_wrap.png');background-size:100% 100%;height:200px;text-align: center;">
+  <div class="mer2-wrap" id="merList">
+     <!-- <div class="mer2-item-wrap" style="background:url('resources/img/mer_wrap.png');background-size:100% 100%;height:200px;text-align: center;">
           <div class="mer2-item" >
               <img class="mer2-item-img"src="resources/img/bb.png"  alt="">
               <div class="mer2-item-title">包包名称</div>
           </div>
-      </div>
-      <div class="mer2-item-wrap "style="background:url('resources/img/mer_wrap.png');background-size:100% 100%;height:200px;text-align: center;">
-          <div class="mer2-item" >
-              <img class="mer2-item-img" src="resources/img/bb.png" alt="">
-              <div class="mer2-item-title">包包名称</div>
-          </div>
-      </div>
-      <div class="mer2-item-wrap "style="background:url('resources/img/mer_wrap.png');background-size:100% 100%;height:200px;text-align: center;">
-          <div class="mer2-item" >
-              <img class="mer2-item-img" src="resources/img/bb.png" alt="">
-              <div class="mer2-item-title">包包名称</div>
-          </div>
-      </div>
-      <div class="mer2-item-wrap "style="background:url('resources/img/mer_wrap.png');background-size:100% 100%;height:200px;text-align: center;">
-          <div class="mer2-item" >
-              <img class="mer2-item-img" src="resources/img/bb.png" alt="">
-              <div class="mer2-item-title">包包名称</div>
-          </div>
-      </div>
-      <div class="mer2-item-wrap "style="background:url('resources/img/mer_wrap.png');background-size:100% 100%;height:200px;text-align: center;">
-          <div class="mer2-item" >
-              <img class="mer2-item-img" src="resources/img/bb.png" alt="">
-              <div class="mer2-item-title">包包名称</div>
-          </div>
-      </div>
-      <div class="mer2-item-wrap "style="background:url('resources/img/mer_wrap.png');background-size:100% 100%;height:200px;text-align: center;">
-          <div class="mer2-item" >
-              <img class="mer2-item-img" src="resources/img/bb.png" alt="">
-              <div class="mer2-item-title">包包名称</div>
-          </div>
-      </div>
-      <div class="mer2-item-wrap "style="background:url('resources/img/mer_wrap.png');background-size:100% 100%;height:200px;text-align: center;">
-          <div class="mer2-item" >
-              <img class="mer2-item-img" src="resources/img/bb.png" alt="">
-              <div class="mer2-item-title">包包名称</div>
-          </div>
-      </div>
+      </div>-->
   </div>
 
 </div>
@@ -110,8 +74,71 @@
 <script src="resources/js/jquery1.12.2.js"></script>
 <script src="resources/js/base.js"></script>
 <script>
+    //商品列表
+    var pageNum=1;
+    var pageSize=10;
+    var currentPage=1;
+    var isBottom=false;
+    var merList=[];
+    business.getMerList=function() {
+        pageNum=pageSize*(currentPage-1)+1;
+        currentPage++;
+        business.myPrevToast("努力加载中",function(){
+            business.ajax({
+                url: '/mer/list',
+                data: {
+                    pageNum:pageNum,
+                    pageSize:pageSize,
+                    accountId: JSON.parse(localStorage.getItem("account")).accountId,
+                    status: 1
+                },
+                success: function (data) {
+                    business.myPrevToast("努力加载中", function () {
+                        merList = data.data;
+                        var html = "";
+                        for (var i = 0; i < merList.length; i++) {
+                            var mer = merList[i];
+                            var name = mer.name;
+                            var imgAddress = mer.imgAddress;
+                            var merJson = JSON.stringify(mer).replace(/\"/g, "'");
+                            //console.log(merJson)
+                            html += ' <div onclick="business.merDetail(' + merJson + ')" class="mer2-item-wrap" style="background:url(' + 'resources/img/mer_wrap.png' + ');background-size:100% 100%;height:200px;text-align: center;">\n' +
+                                '          <div class="mer2-item" >\n' +
+                                '              <img class="mer2-item-img" src="' + imgAddress + '"  alt="">\n' +
+                                '              <div class="mer2-item-title">' + name + '</div>\n' +
+                                '          </div>\n' +
+                                '      </div>'
+                        }
+                        $("#merList").append(html);
+                        business.merDetail = function (mer) {
+                            location.href="mer_detail.html?merId="+mer.merId;
+                        }
+                    }, "remove");
+                },
+                fail: function (data) {
+                    business.myPrevToast("努力加载中",function(){
+                        isBottom=true;
+                        if((data.code==30002||data.code==30003)&& merList.length==0){
+                            $("#merList").html('<div style="padding-top:200px;text-align: center;">暂无</div>')
+                        }
+                    },"remove");
+                }
+            })
+        },"add");
+    };
+    business.getMerList();
 
+    //滚动刷新
+    $("#merListWrap").scroll(function(){
+        if(!navigator.onLine){
+            business.myLoadingToast("请检查网络！");
+            return;
+        }
+        if(navigator.onLine&&!isBottom&& business.isScrollBottom(document)){
+            business.getMerList();
+        }
 
+    });
 </script>
 </body>
 </html>

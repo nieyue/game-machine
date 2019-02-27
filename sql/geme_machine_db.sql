@@ -250,4 +250,4 @@ INSERT IGNORE INTO finance_tb (money,recharge,consume,withdrawals,update_date,ac
 VALUES (0,0,0,0,now(),1000);
 #次数
 INSERT IGNORE INTO number_tb (nickname,free_number,buy_number,use_number,surplus_number,create_date,update_date,account_id)
-VALUES ('聂跃',3,0,0,0,now(),now(),1000);
+VALUES ('聂跃',3,0,0,3,now(),now(),1000);

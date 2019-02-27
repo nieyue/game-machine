@@ -3,21 +3,23 @@ package com.nieyue.controller;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.mapper.Wrapper;
 import com.nieyue.bean.MerOrder;
+import com.nieyue.bean.MerOrderDetail;
+import com.nieyue.exception.NotIsNotExistException;
+import com.nieyue.service.MerOrderDetailService;
 import com.nieyue.service.MerOrderService;
 import com.nieyue.util.MyDom4jUtil;
+import com.nieyue.util.ResultUtil;
 import com.nieyue.util.StateResultList;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 
 /**
@@ -31,6 +33,8 @@ import java.util.Map;
 public class MerOrderController extends BaseController<MerOrder,Long> {
 	@Resource
 	private MerOrderService merOrderService;
+	@Resource
+	private MerOrderDetailService merOrderDetailService;
 	
 	/**
 	 * 商品订单分页浏览
@@ -58,8 +62,23 @@ public class MerOrderController extends BaseController<MerOrder,Long> {
 			Map<String,Object> map=new HashMap<String,Object>();
 			map.put("account_id", accountId);
 			wrapper.allEq(MyDom4jUtil.getNoNullMap(map));
-			StateResultList<List<MerOrder>> rl = super.list(pageNum, pageSize, orderName, orderWay,wrapper);
-			return rl;
+		List<MerOrder> merOrderList = merOrderService.list(pageNum, pageSize, orderName, orderWay,wrapper);
+		if(merOrderList.size()>0){
+			for (int i = 0; i < merOrderList.size(); i++) {
+				MerOrder merOrder = merOrderList.get(i);
+				Wrapper<MerOrderDetail> wrapper2=new EntityWrapper<>();
+				Map<String,Object> map2=new HashMap<String,Object>();
+				map2.put("mer_order_id", merOrder.getMerOrderId());
+				wrapper.allEq(MyDom4jUtil.getNoNullMap(map));
+				List<MerOrderDetail> merOrderDetailList = merOrderDetailService.simplelist(wrapper2);
+				if(merOrderDetailList.size()>0){
+					merOrder.setMerOrderDetailList(merOrderDetailList);
+				}
+			}
+			return ResultUtil.getSlefSRSuccessList(merOrderList);
+		}else{
+			throw new NotIsNotExistException("");//不存在
+		}
 	}
 	/**
 	 * 商品订单修改
@@ -126,8 +145,22 @@ public class MerOrderController extends BaseController<MerOrder,Long> {
 		  })
 	@RequestMapping(value = "/load", method = {RequestMethod.GET,RequestMethod.POST})
 	public  StateResultList<List<MerOrder>> loadMerOrder(@RequestParam("merOrderId") Long merOrderId,HttpSession session)  {
-		 StateResultList<List<MerOrder>> l = super.load(merOrderId);
-		 return l;
+		MerOrder merOrder = merOrderService.load(merOrderId);
+		if(!ObjectUtils.isEmpty(merOrder)){
+			List<MerOrder> list = new ArrayList<>();
+			Wrapper<MerOrderDetail> wrapper=new EntityWrapper<>();
+			Map<String,Object> map=new HashMap<String,Object>();
+			map.put("mer_order_id", merOrder.getMerOrderId());
+			wrapper.allEq(MyDom4jUtil.getNoNullMap(map));
+			List<MerOrderDetail> merOrderDetailList = merOrderDetailService.simplelist(wrapper);
+			if(merOrderDetailList.size()>0){
+				merOrder.setMerOrderDetailList(merOrderDetailList);
+			}
+			list.add(merOrder);
+			return ResultUtil.getSlefSRSuccessList(list);
+		}else{
+			throw new NotIsNotExistException("");//不存在
+		}
 	}
 	
 }

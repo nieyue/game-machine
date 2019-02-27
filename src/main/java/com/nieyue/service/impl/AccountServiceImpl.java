@@ -93,7 +93,7 @@ public class AccountServiceImpl extends BaseServiceImpl<Account,Long> implements
 		number.setFreeNumber(config.getFreeNumber());
 		number.setBuyNumber(0);
 		number.setUseNumber(0);
-		number.setSurplusNumber(0);
+		number.setSurplusNumber(config.getFreeNumber());
 		number.setCreateDate(t.getCreateDate());
 		number.setUpdateDate(t.getCreateDate());
 		number.setAccountId(t.getAccountId());

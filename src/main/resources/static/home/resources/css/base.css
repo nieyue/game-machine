@@ -9,7 +9,7 @@
 /**
 **reset
 */
-html,body,div,span,a,img,input,button{
+html,body,div,span,a,img,input,button,select,option{
     margin:0;
     padding:0;
     list-style: none;
@@ -473,10 +473,12 @@ width:100%;
 .mer2-item{
     display: inline-block;
     margin-top:30px;
+    width:100%;
     /*border:1px solid #ececec;*/
 }
 .mer2-item-img{
-width:100%;
+width:60%;
+    height: 100px;
 
 }
 .mer2-item-title{

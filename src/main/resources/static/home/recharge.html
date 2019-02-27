@@ -11,27 +11,10 @@
     <title>充值</title>
     <link href="resources/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="resources/css/base.css">
-    <style>
-        .address-P{
-            background-color:#ececec;
-            padding:5px;
-        }
-        .address-name{
-            text-align:center;
-            display:inline-block;
-            width:20%;
-            background-color:#fff;
-            padding:2%;
-            cursor:pointer;
-        }
-        .address-name:hover{
-            background-color:#ccc;
-        }
-    </style>
 </head>
 <body>
 <div class="nav-wrap">
-    <span>
+    <span class="nav-wrap-title">
         充值
     </span>
 </div>
@@ -49,7 +32,8 @@
 
         </div>
         <div style="margin:30px 0;">
-            <div style="width:60%;height:60px;margin:auto;background:url('resources/img/button_close.png');background-size:100% 100%;"></div>
+            <!--<div style="width:60%;height:60px;margin:auto;background:url('resources/img/button_close.png');background-size:100% 100%;">
+            </div>-->
         </div>
 
     </div>
@@ -97,7 +81,7 @@
                     var rechargeMoney=rechargeTerm.rechargeMoney;
                     var giveNumber=rechargeTerm.giveNumber;
                     var rechargeTermJson=JSON.stringify(rechargeTerm).replace(/\"/g,"'");
-                    console.log(rechargeTermJson)
+                    //console.log(rechargeTermJson)
                     html+='<div onClick="business.recharge('+rechargeTermJson+')" style="border:1px solid #7b72e9;border-radius:5px;width:80%;margin-top:5%;margin-left:8%;padding:2%;">\n' +
                         '                <img src="resources/img/icon_Coin.png"style="width:16%;" alt="">\n' +
                         '                <div style="display: inline-block;width:50%;vertical-align: top;margin-top:5%;margin-left:5%;font-size:1.6rem;">'+title+'</div>\n' +
