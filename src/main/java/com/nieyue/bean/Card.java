@@ -1,5 +1,6 @@
 package com.nieyue.bean;
 
+import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
 import io.swagger.annotations.ApiModel;
@@ -30,14 +31,14 @@ public class Card implements Serializable {
 	@TableId("card_id")
 	private Long cardId;
 	/**
+	 * 袋身卡张数
+	 */
+	@ApiModelProperty(value="袋身卡张数")
+	private Integer cardNumber1;
+	/**
 	 * 面料卡张数
 	 */
 	@ApiModelProperty(value="面料卡张数")
-	private Integer cardNumber1;
-	/**
-	 * 五金卡张数
-	 */
-	@ApiModelProperty(value="五金卡张数")
 	private Integer cardNumber2;
 	/**
 	 * 手挽卡张数
@@ -45,9 +46,9 @@ public class Card implements Serializable {
 	@ApiModelProperty(value="手挽卡张数")
 	private Integer cardNumber3;
 	/**
-	 * 袋身卡张数
+	 * 五金卡张数
 	 */
-	@ApiModelProperty(value="袋身卡张数")
+	@ApiModelProperty(value="五金卡张数")
 	private Integer cardNumber4;
 	/**
 	 * 创建时间
@@ -69,5 +70,11 @@ public class Card implements Serializable {
 	 */
 	@ApiModelProperty(value="账户id外键")
 	private Long accountId;
+	/**
+	 * 商品
+	 */
+	@ApiModelProperty(value="商品")
+	@TableField(exist = false)
+	private Mer mer;
 
 }

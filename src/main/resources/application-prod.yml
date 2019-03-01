@@ -69,18 +69,17 @@ myPugin:
     rootPath: /home
     locationPath: /uploaderPath/img
   projectName: gameMachineProject
-  projectDomainUrl: http://localhost:8080
+  projectDomainUrl: http://zbb.tea18.cn
   alibaba:
     sms:
-      appkey: LTAIC9ZQBJZr7Gpz
-      appsecret: hHSkf87dAg1aQzQnBPNbH42oKiDdef
-      #signName: 欢乐抓包包
-      signName: 激活码商城
-      templateCodeAcountRegister: SMS_126363887
-      templateCodePasswordUpdate: SMS_18805473
-      templateCodeWithdrawalsPasswordUpdate: SMS_126620523
-      templateCodePhoneUpdate: SMS_126640526
-      templateCodeAuthenticationBind: SMS_126570469
+      appkey: LTAI8pvFPmyGx9Kg
+      appsecret: SyMF4xGS3WXJP5uNxr4rU6r91DrQy5
+      signName: 欢乐抓包包
+      templateCodeAcountRegister: SMS_158036761
+      templateCodePasswordUpdate: SMS_158051607
+      templateCodeWithdrawalsPasswordUpdate: SMS_158051607
+      templateCodePhoneUpdate: SMS_158051607
+      templateCodeAuthenticationBind: SMS_158051607
   shiro:
     anon:
       locations: / , /*.txt  , /swagger-resources/** , /swagger-ui.html , /webjars/** , /v2/** , /home/** , /resources/** ,/uploaderPath/**

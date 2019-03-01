@@ -1,10 +1,10 @@
 
-@font-face {
+/*@font-face {
     font-family: 'myFont';
     src: url('../fonts/font.ttf');
     font-weight: normal;
     font-style: normal;
-}
+}*/
 
 /**
 **reset
@@ -13,12 +13,12 @@ html,body,div,span,a,img,input,button,select,option{
     margin:0;
     padding:0;
     list-style: none;
-    font-family: myFont;
+   /* font-family: myFont;*/
 }
 body,html{
 	background-color: #f2f3f4;
 	/*font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft YaHei","\9ED1\4F53","Arial,sans-serif";*/
-	font-family: myFont;
+	/*font-family: myFont;*/
     font-size:14px;
     height: 100%;
 
@@ -188,7 +188,7 @@ width:100%;
   position: absolute;
   top:0;
   text-align: center;
-      opacity:0.3;
+      opacity:0.6;
   
   }
   .mer-footer-div a{

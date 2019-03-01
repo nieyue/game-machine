@@ -1,9 +1,9 @@
 package com.nieyue.util;
 
 
-import java.util.Date;
-
 import org.apache.commons.codec.digest.DigestUtils;
+
+import java.util.Date;
 
 
 /**
@@ -25,6 +25,16 @@ public class MyDESutil {
 	public static String getSHA(Object obj){
 	 String sha1 = DigestUtils.sha1Hex(obj+SHA_SLAT);
 		return sha1;
+	}
+	/**
+	 * 获取原生MD5
+	 * @param obj
+	 * @return
+	 * @throws Exception
+	 */
+	public static String getOriginMD5(Object obj){
+		String md5 = DigestUtils.md5Hex(String.valueOf(obj));
+		return md5;
 	}
 	/**
 	 * 获取MD5
@@ -71,7 +81,10 @@ public class MyDESutil {
 		String mddd2=getMD5(1000);
 				System.out.println(mddd);
 				System.out.println(mddd2);
-		
+
+		System.err.println(DigestUtils.md5Hex("sdfsdf"));
+		System.err.println(MyDESutil.getOriginMD5("sdfsdf"));
+
 		 
 	}
 }

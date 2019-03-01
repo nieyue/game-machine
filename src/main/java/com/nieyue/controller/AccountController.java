@@ -580,18 +580,18 @@ public class AccountController extends BaseController<Account, Long>{
 			}
 		}
 		session.setAttribute("validCode", userValidCode.toString());
-		l.add(userValidCode.toString());
+		//l.add(userValidCode.toString());
 		//手机号发送验证码
 		if(Pattern.matches(MyValidator.REGEX_PHONE,adminName)){
-			/*try {
+			try {
 				SendSmsResponse res = aliyunSms.sendSms(userValidCode.toString(),adminName, templateCode);
 				if(res.getCode().equals("OK")){
 					return ResultUtil.getSlefSRSuccessList(l);
 				}
 			} catch (ClientException e) {
 				throw new AccountMessageException();//短信发送异常
-			}*/
-			return ResultUtil.getSlefSRSuccessList(l);
+			}
+			//return ResultUtil.getSlefSRSuccessList(l);
 		}else if(Pattern.matches(MyValidator.REGEX_EMAIL,adminName)){
 			//模板码 1用户注册，2修改密码，3修改提现密码，4修改手机号，5身份验证
 			String content="";

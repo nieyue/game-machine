@@ -8,4 +8,8 @@ import com.nieyue.bean.Card;
  *
  */
 public interface CardDao extends BaseDao<Card> {
+    /**
+     * 卡片合成
+     */
+    Card compose(Long accountId, Long cardId);
 }

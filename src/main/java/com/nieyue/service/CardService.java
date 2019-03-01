@@ -8,4 +8,8 @@ import com.nieyue.bean.Card;
  *
  */
 public interface CardService extends BaseService<Card, Long>{
+    /**
+     * 卡片合成
+     */
+    Card compose(Long accountId, Long cardId);
 }

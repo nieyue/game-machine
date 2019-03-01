@@ -91,8 +91,23 @@
                         '            </div>'
                 }
                 $("#rechargeTermList").append(html);
+                //充值
                 business.recharge=function(rechargeTerm){
-                    console.log(rechargeTerm)
+                    business.ajax({
+                        url:'/payment/bYPay',
+                        data:{
+                            rechargeTermId:rechargeTerm.rechargeTermId,
+                            money:rechargeTerm.rechargeMoney,
+                            accountId:JSON.parse(localStorage.getItem("account")).accountId,
+                        },
+                        success:function(data){
+                            location.href=data;
+                        }
+                        ,
+                        fail:function(data){
+                            business.myLoadingToast(data.msg)
+                        }
+                    })
                 }
             },"remove");
         },

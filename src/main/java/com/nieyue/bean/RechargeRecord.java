@@ -30,9 +30,9 @@ public class RechargeRecord implements Serializable {
 	@TableId("recharge_record_id")
 	private Long rechargeRecordId;
 	/**
-	 * 充值类型，1支付宝支付，2微信支付，3银联支付
+	 * 支付类型，1支付宝，2微信,3百度钱包,4Paypal,5网银,6保盈
 	 */
-	@ApiModelProperty(value="充值类型，1支付宝支付，2微信支付，3银联支付")
+	@ApiModelProperty(value="支付类型，1支付宝，2微信,3百度钱包,4Paypal,5网银,6保盈付")
 	private Integer type;
 	/**
 	 * 充值真钱

@@ -72,13 +72,13 @@ export default {
             align:'center'
         },
         {
-        	title:'面料卡张数',
+        	title:'袋身卡张数',
             key:'cardNumber1',
              minWidth:100,
             align:'center'
         },
         {
-        	title:'五金卡张数',
+        	title:'面料卡张数',
             key:'cardNumber2',
             minWidth:100,
             align:'center'
@@ -90,7 +90,7 @@ export default {
             align:'center'
         },
         {
-        	title:'袋身卡张数',
+        	title:'五金卡张数',
             key:'cardNumber4',
             minWidth:100,
             align:'center'

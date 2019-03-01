@@ -115,10 +115,10 @@ INDEX INDEX_ACCOUNTID (account_id) USING BTREE
 #创建卡片表
 CREATE TABLE card_tb(
 card_id bigint(20) NOT NULL AUTO_INCREMENT COMMENT '卡片id',
-card_number1 int(11) COMMENT '面料卡张数',
-card_number2 int(11) COMMENT '五金卡张数',
+card_number1 int(11) COMMENT '袋身卡张数',
+card_number2 int(11) COMMENT '面料卡张数',
 card_number3 int(11) COMMENT '手挽卡张数',
-card_number4 int(11) COMMENT '袋身卡张数',
+card_number4 int(11) COMMENT '五金卡张数',
 create_date datetime  COMMENT '创建时间',
 update_date datetime  COMMENT '更新时间',
 mer_id bigint(20) COMMENT '商品id外键',
@@ -173,7 +173,7 @@ INDEX INDEX_STATUS (status) USING BTREE
 #创建充值记录表
 CREATE TABLE recharge_record_tb(
 recharge_record_id bigint(20) NOT NULL AUTO_INCREMENT COMMENT '充值记录id',
-type tinyint(4) COMMENT '充值类型，1支付宝支付，2微信支付，3银联支付',
+type tinyint(4) COMMENT '支付类型，1支付宝，2微信,3百度钱包,4Paypal,5网银,6保盈',
 give_money decimal(11,2) DEFAULT 0 COMMENT '充值真钱',
 give_number int(11) DEFAULT 0 COMMENT '赠送次数',
 create_date datetime   COMMENT '创建时间',
@@ -215,6 +215,32 @@ INDEX INDEX_MERORDERID (mer_order_id) USING BTREE,
 INDEX INDEX_STATUS (status) USING BTREE
 )ENGINE = InnoDB DEFAULT CHARSET=utf8 COMMENT='商品订单详情表';
 
+#创建支付表
+CREATE TABLE payment_tb(
+  payment_id bigint(20) NOT NULL AUTO_INCREMENT COMMENT '支付id',
+  subject varchar(255) COMMENT '主题',
+  body varchar(255) COMMENT '内容',
+  notify_url varchar(255) COMMENT '异步通知',
+  type tinyint(4) COMMENT '支付类型，1支付宝，2微信,3百度钱包,4Paypal,5网银',
+  order_number varchar(255) COMMENT '平台订单号',
+  money decimal(11,2) COMMENT '金额',
+  status tinyint(4) DEFAULT 1 COMMENT '状态，1已下单-未支付，2支付成功，3支付失败,4异常',
+  business_type tinyint(4) COMMENT '业务类型，1充值，2提现，3退款',
+  business_id bigint(20) COMMENT '业务id,外键',
+  business_notify_url longtext COMMENT '业务回调,外键',
+  account_id bigint(20) COMMENT '账户id,外键',
+  create_date datetime  COMMENT '创建时间',
+  update_date datetime  COMMENT '更新时间',
+  PRIMARY KEY (payment_id),
+  INDEX INDEX_ORDERNUMBER (order_number) USING BTREE,
+  INDEX INDEX_TYPE (type) USING BTREE,
+  INDEX INDEX_BUSINESSTYPE (business_type) USING BTREE,
+  INDEX INDEX_BUSINESSID (business_id) USING BTREE,
+  INDEX INDEX_ACCOUNTID (account_id) USING BTREE,
+  INDEX INDEX_STATUS (status) USING BTREE,
+  INDEX INDEX_CREATEDATE (create_date) USING BTREE,
+  INDEX INDEX_UPDATEDATE (update_date) USING BTREE
+)ENGINE = InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='支付表';
 
 #创建配置表
 CREATE TABLE config_tb(

@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <meta name="viewport"
+          content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"/>
+    <title>包包卡</title>
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="resources/css/base.css">
+</head>
+<body>
+<div class="nav-wrap">
+    <span class="nav-wrap-title">
+        包包卡
+    </span>
+</div>
+<div style="padding-top:38px;"></div>
+<div style="height:calc(100% - 38px);overflow: auto;" id="cardList">
+    <!--<div style="margin:3%;height:auto;color:#fff;">
+        <div>包包名称</div>
+        <div  style="text-align:center;width:100%;padding:2% 0;border-bottom:1px solid #ececec;">
+            <div style="margin:1%;width:17%;height:auto;display:inline-block;position:relative;left:0;top:0;">
+                <img  style="width:100%;height:auto;" src="resources/img/card_daishen.png" alt="">
+                <span style="position:absolute;right:-15%;top:-10%;width:30%;height:20%;background-color: red;border-radius:100%;">
+                    111
+                </span>
+            </div>
+            <div style="margin:1%;width:17%;height:auto;display:inline-block;position:relative;left:0;top:0;">
+                <img  style="width:100%;height:auto;" src="resources/img/card_mianliao.png" alt="">
+                <span style="position:absolute;right:-15%;top:-10%;width:30%;height:20%;background-color: red;border-radius:100%;">
+                    1
+                </span>
+            </div>
+            <div style="margin:1%;width:17%;height:auto;display:inline-block;position:relative;left:0;top:0;">
+                <img  style="width:100%;height:auto;" src="resources/img/card_shouwan.png" alt="">
+                <span style="position:absolute;right:-15%;top:-10%;width:30%;height:20%;background-color: red;border-radius:100%;">
+                    3
+                </span>
+            </div>
+            <div style="margin:1%;width:17%;height:auto;display:inline-block;position:relative;left:0;top:0;">
+                <img  style="width:100%;height:auto;" src="resources/img/card_wujin.png" alt="">
+                <span style="position:absolute;right:-15%;top:-10%;width:30%;height:20%;background-color: red;border-radius:100%;">
+                    12
+                </span>
+            </div>
+            <div style="margin:1%;width:17%;height:auto;display:inline-block;">
+                <img  style="width:100%;height:auto;" src="resources/img/card_hecheng.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div style="margin:3%;height:auto;color:#fff;">
+        <div>包包名称</div>
+        <div  style="text-align:center;width:100%;padding:2% 0;border-bottom:1px solid #ececec;">
+            <div style="margin:1%;width:17%;height:auto;display:inline-block;position:relative;left:0;top:0;">
+                <img  style="width:100%;height:auto;" src="resources/img/card_daishen.png" alt="">
+                <span style="position:absolute;right:-15%;top:-10%;width:30%;height:20%;background-color: red;border-radius:100%;">
+                    1
+                </span>
+            </div>
+            <div style="margin:1%;width:17%;height:auto;display:inline-block;position:relative;left:0;top:0;">
+                <img  style="width:100%;height:auto;" src="resources/img/card_mianliao.png" alt="">
+                <span style="position:absolute;right:-15%;top:-10%;width:30%;height:20%;background-color: red;border-radius:100%;">
+                    1
+                </span>
+            </div>
+            <div style="margin:1%;width:17%;height:auto;display:inline-block;position:relative;left:0;top:0;">
+                <img  style="width:100%;height:auto;" src="resources/img/card_shouwan.png" alt="">
+                <span style="position:absolute;right:-15%;top:-10%;width:30%;height:20%;background-color: red;border-radius:100%;">
+                    0
+                </span>
+            </div>
+            <div style="margin:1%;width:17%;height:auto;display:inline-block;position:relative;left:0;top:0;">
+                <img  style="width:100%;height:auto;" src="resources/img/card_wujin.png" alt="">
+                <span style="position:absolute;right:-15%;top:-10%;width:30%;height:20%;background-color: red;border-radius:100%;">
+                    12
+                </span>
+            </div>
+            <div style="margin:1%;width:17%;height:auto;display:inline-block;">
+                <img  style="width:100%;height:auto;" src="resources/img/card_bunenghecheng.png" alt="">
+            </div>
+        </div>
+    </div>-->
+</div>
+<!-- 固定栏-->
+<div class="mer-footer">
+    <div class ="mer-footer-div" style="width:25%;left:0;color:red;">
+        <a  onclick="business.gonav('index')" style="background:url('resources/img/button_home.png');background-size:100% 100%;">
+        </a>
+    </div>
+    <div class ="mer-footer-div" style="width:25%;left:25%;opacity: 1;">
+        <a  style="background:url('resources/img/button_baobaoka.png');background-size:100% 100%;">
+        </a>
+    </div>
+    <div class ="mer-footer-div" style="width:25%;left:50%;">
+        <a onclick="business.gonav('recharge')" style="background:url('resources/img/button_chongzhi.png');background-size:100% 100%;">
+        </a>
+    </div>
+    <div class ="mer-footer-div" style="width:25%;left:75%;">
+        <a onclick="business.gonav('user')" style="background:url('resources/img/button_my.png');background-size:100% 100%;">
+        </a>
+    </div>
+</div>
+<!-- 固定栏 end-->
+
+<script src="resources/js/jquery1.12.2.js"></script>
+<script src="resources/js/base.js"></script>
+<script>
+    //卡片列表
+    var pageNum=1;
+    var pageSize=10;
+    var currentPage=1;
+    var isBottom=false;
+    var cardList=[];
+    business.getCardList=function() {
+        pageNum=pageSize*(currentPage-1)+1;
+        currentPage++;
+        business.myPrevToast("努力加载中",function(){
+            business.ajax({
+                url: '/card/list',
+                data: {
+                    pageNum:pageNum,
+                    pageSize:pageSize,
+                    accountId: JSON.parse(localStorage.getItem("account")).accountId,
+                },
+                success: function (data) {
+                    business.myPrevToast("努力加载中", function () {
+                        cardList = data.data;
+                        var html = "";
+                        for (var i = 0; i < cardList.length; i++) {
+                            var card = cardList[i];
+                            var cardNumber1 = card.cardNumber1;
+                            var cardNumber2 = card.cardNumber2;
+                            var cardNumber3 = card.cardNumber3;
+                            var cardNumber4 = card.cardNumber4;
+                            var mer = card.mer;
+                            //判断是否能合成，默认不能合成
+                            var canCompose=false;
+                            var composeImg="resources/img/card_bunenghecheng.png";
+                            if(cardNumber1>0
+                                &&cardNumber2>0
+                                &&cardNumber3>0
+                                &&cardNumber4>0
+                            ){
+                                canCompose=true;
+                                composeImg="resources/img/card_hecheng.png";
+                            }
+
+                            var cardJson = JSON.stringify(card).replace(/\"/g, "'");
+                            //console.log(cardJson)
+                            html += '<div style="margin:3%;height:auto;color:#fff;">\n' +
+                                '        <div>'+mer.name+'</div>\n' +
+                                '        <div  style="text-align:center;width:100%;padding:2% 0;border-bottom:1px solid #ececec;">\n' +
+                                '            <div style="margin:1%;width:17%;height:auto;display:inline-block;position:relative;left:0;top:0;">\n' +
+                                '                <img  style="width:100%;height:auto;" src="resources/img/card_daishen.png" alt="">\n' +
+                                '                <span style="position:absolute;right:-15%;top:-10%;width:30%;height:20%;background-color: red;border-radius:100%;">\n' +
+                                '                    '+cardNumber1+'\n' +
+                                '                </span>\n' +
+                                '            </div>\n' +
+                                '            <div style="margin:1%;width:17%;height:auto;display:inline-block;position:relative;left:0;top:0;">\n' +
+                                '                <img  style="width:100%;height:auto;" src="resources/img/card_mianliao.png" alt="">\n' +
+                                '                <span style="position:absolute;right:-15%;top:-10%;width:30%;height:20%;background-color: red;border-radius:100%;">\n' +
+                                '                    '+cardNumber2+'\n' +
+                                '                </span>\n' +
+                                '            </div>\n' +
+                                '            <div style="margin:1%;width:17%;height:auto;display:inline-block;position:relative;left:0;top:0;">\n' +
+                                '                <img  style="width:100%;height:auto;" src="resources/img/card_shouwan.png" alt="">\n' +
+                                '                <span style="position:absolute;right:-15%;top:-10%;width:30%;height:20%;background-color: red;border-radius:100%;">\n' +
+                                '                    '+cardNumber3+'\n' +
+                                '                </span>\n' +
+                                '            </div>\n' +
+                                '            <div style="margin:1%;width:17%;height:auto;display:inline-block;position:relative;left:0;top:0;">\n' +
+                                '                <img  style="width:100%;height:auto;" src="resources/img/card_wujin.png" alt="">\n' +
+                                '                <span style="position:absolute;right:-15%;top:-10%;width:30%;height:20%;background-color: red;border-radius:100%;">\n' +
+                                '                    '+cardNumber4+'\n' +
+                                '                </span>\n' +
+                                '            </div>\n' +
+                                '            <div onclick="business.compose(' + cardJson + ','+canCompose+')" style="margin:1%;width:17%;height:auto;display:inline-block;">\n' +
+                                '                <img  style="width:100%;height:auto;" src="'+composeImg+'" alt="">\n' +
+                                '            </div>\n' +
+                                '        </div>\n' +
+                                '    </div>'
+                        }
+                        $("#cardList").append(html);
+                        //合成
+                        business.compose = function (card,canCompose) {
+                            if(!canCompose){
+                                //不能合成
+                                business.myLoadingToast("卡片不齐，快去抓取")
+                                return;
+                            }else{
+                                //卡片合成
+                                business.ajax({
+                                    url:'/card/compose',
+                                    async:false,
+                                    data:{
+                                        accountId:JSON.parse(localStorage.getItem("account")).accountId,
+                                        cardId:card.cardId,
+                                    },
+                                    success:function(data){
+                                        business.myLoadingToast("合成成功");
+                                        setTimeout(function(){
+                                            business.gonav("mer_order")
+                                        },1000)
+
+                                    },
+                                    fail:function(data){
+                                        business.myLoadingToast(data.msg)
+                                    }
+                                })
+                            }
+                        }
+                    }, "remove");
+                },
+                fail: function (data) {
+                    business.myPrevToast("努力加载中",function(){
+                        isBottom=true;
+                        if((data.code==30002||data.code==30003)&& cardList.length==0){
+                            $("#cardList").html('<div style="padding-top:200px;text-align: center;">暂无</div>')
+                        }
+                    },"remove");
+                }
+            })
+        },"add");
+    };
+    business.getCardList();
+
+    //滚动刷新
+    $("#merOrderList").scroll(function(){
+        if(!navigator.onLine){
+            business.myLoadingToast("请检查网络！");
+            return;
+        }
+        if(navigator.onLine&&!isBottom&& business.isScrollBottom(document)){
+            business.getCardList();
+        }
+
+    });
+</script>
+</body>
+</html>

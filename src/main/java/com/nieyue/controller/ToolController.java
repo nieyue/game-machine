@@ -1,18 +1,13 @@
 package com.nieyue.controller;
 
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.util.*;
-
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
 import com.nieyue.exception.CommonRollbackException;
 import com.nieyue.util.*;
+import com.nieyue.verification.VerificationCode;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.annotations.ApiOperation;
+import net.sf.json.JSONObject;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -20,19 +15,18 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.data.redis.core.BoundValueOperations;
 import org.springframework.data.redis.core.StringRedisTemplate;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.nieyue.verification.VerificationCode;
-
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.util.*;
 
 
 
@@ -150,19 +144,18 @@ public class ToolController extends BaseController<Object,Long>{
 	 */
 	@ApiOperation(value = "test", notes = "test")
 	@RequestMapping(value = "/test", method = {RequestMethod.GET,RequestMethod.POST})
-	public String test(
+	public  String test(
+			HttpServletRequest request,
 			HttpSession	 session
-			) throws InterruptedException{
-		BoundValueOperations<String, String> srt = stringRedisTemplate.boundValueOps("test");
-		Boolean r = srt.setIfAbsent("aaa11");
-        if(r){
-			srt.set("1234561111111");
-			System.out.println("success:"+srt.get());
-		}else{
-        	System.out.println("fail"+srt.get());
-        	//Thread.sleep(3000);
-        }
-		return srt.get();
+			) throws Exception{
+		BufferedReader br = request.getReader();
+		String str, wholeStr = "";
+		while((str = br.readLine()) != null){
+			wholeStr += str;
+		}
+		JSONObject json = JSONObject.fromObject(wholeStr);
+
+		return (String)json.get("orderId");
 	}
 	/**
 	 * 根据url获取内容

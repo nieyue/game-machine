@@ -34,7 +34,7 @@ var business={
             xhrFields: {withCredentials: true},
             success: function(data){
                 //business.myLoadingToast(data.msg)
-                if(data.code==200){
+                if(!data.code||data.code==200){
                     if(typeof param.success=='function'){
                         param.success(data);
                     }
@@ -402,46 +402,49 @@ var business={
 
 //初始化，所有用户必须登录后访问
 ;(function(){
-    if(location.href.indexOf("login.html")<=-1
-        &&location.href.indexOf("register.html")<=-1
-        &&location.href.indexOf("forget.html")<=-1
-        &&location.href.indexOf("protocol.html")<=-1
-    ){
-        //1自动登录
-        business.ajax({
-            url:"/account/islogin",
-            success:function(data){
-                localStorage.setItem("account",JSON.stringify(data.data[0]));
-                localStorage.setItem("role",JSON.stringify(data.data[0].role));
-            },
-            fail:function(){
-                //自动登录
-                business.ajax({
-                    url:'/account/weblogin',
-                    success:function(data){
-                        if(!data.data[0]){
-                            //没有就跳转
-                            business.myLoadingToast("登录后访问",function(){
-                                business.gologin()
-                            })
-                        }
-                        localStorage.setItem("account",JSON.stringify(data.data[0].account));
-                        localStorage.setItem("role",JSON.stringify(data.data[0].role));
-                        location.href='index.html';
-                    },
-                    fail:function(){
+})();
+if(location.href.indexOf("login.html")<=-1
+    &&location.href.indexOf("register.html")<=-1
+    &&location.href.indexOf("forget.html")<=-1
+    &&location.href.indexOf("protocol.html")<=-1
+    &&location.href.indexOf("index.html")<=-1
+    &&location.href.indexOf("mer_detail.html")<=-1
+    &&location.href.indexOf("demo.html")<=-1
+){
+    //1自动登录
+    business.ajax({
+        url:"/account/islogin",
+        success:function(data){
+            localStorage.setItem("account",JSON.stringify(data.data[0]));
+            localStorage.setItem("role",JSON.stringify(data.data[0].role));
+        },
+        fail:function(){
+            //自动登录
+            business.ajax({
+                url:'/account/weblogin',
+                success:function(data){
+                    if(!data.data[0]){
                         //没有就跳转
                         business.myLoadingToast("登录后访问",function(){
                             business.gologin()
                         })
                     }
-                })
-            }
-        })
+                    localStorage.setItem("account",JSON.stringify(data.data[0].account));
+                    localStorage.setItem("role",JSON.stringify(data.data[0].role));
+                    location.href='index.html';
+                },
+                fail:function(){
+                    //没有就跳转
+                    business.myLoadingToast("登录后访问",function(){
+                        business.gologin()
+                    })
+                }
+            })
+        }
+    })
 }else{
 
 }
-})();
 
 window.onload=function () {
 //解决ios缩放不生效

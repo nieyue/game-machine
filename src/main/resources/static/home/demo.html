@@ -8,14 +8,14 @@
     <meta http-equiv="Cache" content="no-cache">
     <meta name="viewport"
           content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"/>
-    <title>抓包包</title>
+    <title>抓包包试玩</title>
     <link href="resources/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="resources/css/base.css">
 </head>
 <body>
 <div class="nav-wrap">
     <span class="nav-wrap-title">
-        抓包包
+        抓包包试玩
     </span>
 </div>
 <!-- 游戏 -->
@@ -77,28 +77,9 @@
 <script src="resources/js/jquery1.12.2.js"></script>
 <script src="resources/js/base.js"></script>
 <script>
-    if(!localStorage.getItem("account")){
-        //没登陆,只能试玩
-       business.gonav("demo");
-    }
     //获取次数
-    business.getNumber=function(){
-        business.ajax({
-            url:'/number/list',
-            async:false,
-            data:{
-                accountId:JSON.parse(localStorage.getItem("account")).accountId,
-            },
-            success:function(data){
-                var numberList=data.data;
-                business.surplusNumber=numberList[0].surplusNumber;
-                $("#surplusNumber").text(business.surplusNumber);
-            },
-            fail:function(data){
-            }
-        })
-    }
-    business.getNumber();
+    business.surplusNumber=3;
+    $("#surplusNumber").text(business.surplusNumber);
 $("#index").on("click",function(){
     business.gonav("index");
 })
@@ -239,9 +220,9 @@ $("#start").on("click",function(){
         return;
     }
     if(business.surplusNumber<=0){
-        business.myLoadingToast("次数不够，充值获取！")
+        business.myLoadingToast("试玩结束，注册送3次机会！")
         setTimeout(function(){
-            business.gonav("recharge",true);
+            business.gonav("register");
         },2000)
         return;
     }
@@ -270,24 +251,6 @@ $("#start").on("click",function(){
                     return;
                 }
             })
-            //发送数据
-            business.ajax({
-                url:'/mer/catch',
-                async:false,
-                data:{
-                    accountId:JSON.parse(localStorage.getItem("account")).accountId,
-                    merId:business.getQueryString("merId"),
-                    cardType:catchCard==null?0:catchCard.id//0代表没有获取到
-                },
-                success:function(data){
-                    var numberList=data.data;
-                    business.surplusNumber=numberList[0].surplusNumber;
-                    $("#surplusNumber").text(business.surplusNumber);
-
-                },
-                fail:function(data){
-                }
-            })
             //显示弹窗
             if(!isEmpty){
                 $("#popup").show();
@@ -302,6 +265,9 @@ $("#start").on("click",function(){
 
             }
             isStart=false;
+            //更新次数
+            business.surplusNumber--;
+            $("#surplusNumber").text(business.surplusNumber);
             return;
         }
         scale+=0.7;

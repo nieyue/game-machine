@@ -3,8 +3,11 @@ package com.nieyue.controller;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.mapper.Wrapper;
 import com.nieyue.bean.Mer;
+import com.nieyue.bean.Number;
+import com.nieyue.exception.NotIsNotExistException;
 import com.nieyue.service.MerService;
 import com.nieyue.util.MyDom4jUtil;
+import com.nieyue.util.ResultUtil;
 import com.nieyue.util.StateResultList;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -14,10 +17,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 
 /**
@@ -31,7 +31,8 @@ import java.util.Map;
 public class MerController extends BaseController<Mer,Long> {
 	@Resource
 	private MerService merService;
-	
+
+
 	/**
 	 * 商品分页浏览
 	 * @param orderName 商品排序数据库字段
@@ -129,5 +130,30 @@ public class MerController extends BaseController<Mer,Long> {
 		 StateResultList<List<Mer>> l = super.load(merId);
 		 return l;
 	}
-	
+	/**
+	 * 商品抓取
+	 * @return
+	 */
+	@ApiOperation(value = "商品抓取", notes = "商品抓取")
+	@ApiImplicitParams({
+		  @ApiImplicitParam(name="accountId",value="账户id",dataType="long", paramType = "query",required=true),
+		  @ApiImplicitParam(name="merId",value="商品ID",dataType="long", paramType = "query",required=true),
+		  @ApiImplicitParam(name="cardType",value="卡片类型，0失败，1袋身卡，2面料卡，3手挽卡,4五金卡",dataType="int", paramType = "query",required=true)
+		  })
+	@RequestMapping(value = "/catch", method = {RequestMethod.GET,RequestMethod.POST})
+	public  StateResultList<List<Number>> merCatch(
+			@RequestParam("accountId") Long accountId,
+			@RequestParam("merId") Long merId,
+			@RequestParam("cardType") Integer cardType,
+			HttpSession session)  {
+		Number number = merService.merCatch(accountId, merId, cardType);
+		if(number!=null &&!number.equals("")){
+			List<Number> list = new ArrayList<>();
+			list.add(number);
+			return ResultUtil.getSlefSRSuccessList(list);
+		}else{
+			throw new NotIsNotExistException("");//不存在
+		}
+	}
+
 }
