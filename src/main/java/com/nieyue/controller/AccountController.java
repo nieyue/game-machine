@@ -589,6 +589,7 @@ public class AccountController extends BaseController<Account, Long>{
 					return ResultUtil.getSlefSRSuccessList(l);
 				}
 			} catch (ClientException e) {
+				System.out.println(e.getMessage());
 				throw new AccountMessageException();//短信发送异常
 			}
 			//return ResultUtil.getSlefSRSuccessList(l);

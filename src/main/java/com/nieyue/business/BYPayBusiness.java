@@ -138,7 +138,6 @@ public class BYPayBusiness {
                 wholeStr += str;
             }
             JSONObject params = JSONObject.fromObject(wholeStr);
-
             String orderId = String.valueOf( params.get("orderId"));
             Double amount = Double.valueOf(String.valueOf( params.get("amount"))) ;
             String cpid = String.valueOf(  params.get("cpid"));
@@ -147,12 +146,13 @@ public class BYPayBusiness {
             String pay_msg = String.valueOf( params.get("pay_msg"));
             //验证签名
             StringBuilder sb=new StringBuilder();
-            sb.append(amount.toString()+"|");
+            sb.append(params.get("amount")+"|");
             sb.append(cpid+"|");
             sb.append(orderId+"|");
             sb.append(pay_time+"|");
             sb.append(secret);
             String sign = MyDESutil.getOriginMD5(sb.toString());
+            System.out.println("sign="+sign);
             if(!pay_sign.equals(sign)){
                 return "FAIL   sign error";
             }

@@ -7,83 +7,83 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v2.1.3.RELEASE)
 
-2019-03-01 17:42:32.747  INFO 30339 --- [           main] com.nieyue.Application                   : Starting Application with PID 30339 (/home/default/game_machine/BOOT-INF/classes started by root in /)
-2019-03-01 17:42:32.751  INFO 30339 --- [           main] com.nieyue.Application                   : The following profiles are active: prod
-2019-03-01 17:42:34.704  INFO 30339 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2019-03-01 17:42:34.709  INFO 30339 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-03-01 17:42:34.778  INFO 30339 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48ms. Found 0 repository interfaces.
-2019-03-01 17:42:35.366  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'myLifecycleBeanPostProcessor' of type [com.nieyue.shiro.MyLifecycleBeanPostProcessor$$EnhancerBySpringCGLIB$$789070ab] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:35.437  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$1c012f1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:35.806  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-plus-com.baomidou.mybatisplus.spring.boot.starter.MybatisPlusProperties' of type [com.baomidou.mybatisplus.spring.boot.starter.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:35.823  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3b5454c3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:35.874  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'com.baomidou.mybatisplus.spring.boot.starter.MybatisPlusAutoConfiguration' of type [com.baomidou.mybatisplus.spring.boot.starter.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$88f3f320] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:35.881  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'druidConfiguration' of type [com.nieyue.druid.DruidConfiguration$$EnhancerBySpringCGLIB$$e1291e2a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:35.887  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'com.nieyue.druid.DruidConfiguration$IDataSourceProperties' of type [com.nieyue.druid.DruidConfiguration$IDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:35.961  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:35.994  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:36.003  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:36.409  INFO 30339 --- [           main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2019-03-01 17:42:36.785  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:36.791  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:36.853  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'permissionDao' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:36.858  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'permissionDao' of type [com.sun.proxy.$Proxy80] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:36.966  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'rolePermissionDao' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:36.969  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'rolePermissionDao' of type [com.sun.proxy.$Proxy85] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:36.970  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'rolePermissionServiceImpl' of type [com.nieyue.service.impl.RolePermissionServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:36.999  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroService' of type [com.nieyue.shiro.ShiroService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:37.005  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroUtil' of type [com.nieyue.shiro.ShiroUtil$$EnhancerBySpringCGLIB$$5aa481fc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:37.006  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'permissionServiceImpl' of type [com.nieyue.service.impl.PermissionServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:37.007  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfiguration' of type [com.nieyue.shiro.ShiroConfiguration$$EnhancerBySpringCGLIB$$4cd7968c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:37.202  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'accountDao' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:37.205  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'accountDao' of type [com.sun.proxy.$Proxy86] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:37.213  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'roleDao' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:37.216  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'roleDao' of type [com.sun.proxy.$Proxy87] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:37.217  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'roleServiceImpl' of type [com.nieyue.service.impl.RoleServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:37.284  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'financeDao' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:37.287  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'financeDao' of type [com.sun.proxy.$Proxy88] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:37.300  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'financeServiceImpl' of type [com.nieyue.service.impl.FinanceServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:37.363  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'numberDao' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:37.366  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'numberDao' of type [com.sun.proxy.$Proxy89] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:37.367  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'numberServiceImpl' of type [com.nieyue.service.impl.NumberServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:37.431  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'configDao' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:37.434  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'configDao' of type [com.sun.proxy.$Proxy90] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:37.435  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'configServiceImpl' of type [com.nieyue.service.impl.ConfigServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:37.442  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'accountServiceImpl' of type [com.nieyue.service.impl.AccountServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:37.447  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration$$EnhancerBySpringCGLIB$$30eb7fff] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:37.465  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:37.470  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration$$EnhancerBySpringCGLIB$$506e130d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:37.744  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'lettuceClientResources' of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:37.908  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:37.934  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'stringRedisTemplate' of type [org.springframework.data.redis.core.StringRedisTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:37.940  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'orderBusiness' of type [com.nieyue.business.OrderBusiness$$EnhancerBySpringCGLIB$$5bdff66a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:37.941  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'accountBusiness' of type [com.nieyue.business.AccountBusiness$$EnhancerBySpringCGLIB$$eb641e29] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:37.942  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'accountRealm' of type [com.nieyue.shiro.AccountRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:37.950  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'redisManager' of type [org.crazycake.shiro.RedisManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:37.951  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'redisSessionDAO' of type [org.crazycake.shiro.RedisSessionDAO] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:37.954  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'simpleCookie1' of type [org.apache.shiro.web.servlet.SimpleCookie] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:37.956  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'sessionManager' of type [org.apache.shiro.web.session.mgt.DefaultWebSessionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:37.960  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'cacheManager' of type [org.crazycake.shiro.RedisCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:37.963  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'simpleCookie2' of type [org.apache.shiro.web.servlet.SimpleCookie] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:37.965  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'rememberMeManager' of type [org.apache.shiro.web.mgt.CookieRememberMeManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:37.967  INFO 30339 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-01 17:42:38.685  INFO 30339 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-03-01 17:42:38.732  INFO 30339 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-03-01 17:42:38.733  INFO 30339 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
-2019-03-01 17:42:38.749  INFO 30339 --- [           main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
-2019-03-01 17:42:38.875  INFO 30339 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-03-01 17:42:38.875 DEBUG 30339 --- [           main] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
-2019-03-01 17:42:38.875  INFO 30339 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6047 ms
-2019-03-01 17:42:38.883  INFO 30339 --- [           main] com.nieyue.druid.DruidConfiguration      : init Druid Servlet Configuration 
-2019-03-01 17:42:40.923 DEBUG 30339 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 122 mappings in 'requestMappingHandlerMapping'
-2019-03-01 17:42:40.998  INFO 30339 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
-2019-03-01 17:42:41.099 DEBUG 30339 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/**] in 'resourceHandlerMapping'
-2019-03-01 17:42:41.234 DEBUG 30339 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2019-03-01 17:42:41.295 DEBUG 30339 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
-2019-03-01 17:42:41.952  INFO 30339 --- [           main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
-2019-03-01 17:42:41.972  INFO 30339 --- [           main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2019-03-01 17:42:41.974  INFO 30339 --- [           main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.2.1 created.
-2019-03-01 17:42:41.975  INFO 30339 --- [           main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
-2019-03-01 17:42:41.976  INFO 30339 --- [           main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.2.1) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+2019-03-04 17:49:43.035  INFO 19748 --- [           main] com.nieyue.Application                   : Starting Application with PID 19748 (/home/default/game_machine/BOOT-INF/classes started by root in /)
+2019-03-04 17:49:43.039  INFO 19748 --- [           main] com.nieyue.Application                   : The following profiles are active: prod
+2019-03-04 17:49:45.066  INFO 19748 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-04 17:49:45.071  INFO 19748 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-04 17:49:45.141  INFO 19748 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48ms. Found 0 repository interfaces.
+2019-03-04 17:49:45.735  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'myLifecycleBeanPostProcessor' of type [com.nieyue.shiro.MyLifecycleBeanPostProcessor$$EnhancerBySpringCGLIB$$c87fbc7c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:45.809  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$51af5ec2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:46.189  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-plus-com.baomidou.mybatisplus.spring.boot.starter.MybatisPlusProperties' of type [com.baomidou.mybatisplus.spring.boot.starter.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:46.210  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8b43a094] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:46.271  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'com.baomidou.mybatisplus.spring.boot.starter.MybatisPlusAutoConfiguration' of type [com.baomidou.mybatisplus.spring.boot.starter.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$d8e33ef1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:46.279  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'druidConfiguration' of type [com.nieyue.druid.DruidConfiguration$$EnhancerBySpringCGLIB$$311869fb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:46.287  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'com.nieyue.druid.DruidConfiguration$IDataSourceProperties' of type [com.nieyue.druid.DruidConfiguration$IDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:46.361  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:46.396  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:46.407  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:46.834  INFO 19748 --- [           main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-03-04 17:49:47.205  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:47.212  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:47.275  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'permissionDao' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:47.279  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'permissionDao' of type [com.sun.proxy.$Proxy80] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:47.388  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'rolePermissionDao' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:47.390  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'rolePermissionDao' of type [com.sun.proxy.$Proxy85] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:47.391  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'rolePermissionServiceImpl' of type [com.nieyue.service.impl.RolePermissionServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:47.421  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroService' of type [com.nieyue.shiro.ShiroService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:47.429  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroUtil' of type [com.nieyue.shiro.ShiroUtil$$EnhancerBySpringCGLIB$$aa93cdcd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:47.430  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'permissionServiceImpl' of type [com.nieyue.service.impl.PermissionServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:47.431  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfiguration' of type [com.nieyue.shiro.ShiroConfiguration$$EnhancerBySpringCGLIB$$9cc6e25d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:47.624  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'accountDao' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:47.627  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'accountDao' of type [com.sun.proxy.$Proxy86] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:47.635  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'roleDao' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:47.638  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'roleDao' of type [com.sun.proxy.$Proxy87] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:47.639  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'roleServiceImpl' of type [com.nieyue.service.impl.RoleServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:47.700  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'financeDao' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:47.703  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'financeDao' of type [com.sun.proxy.$Proxy88] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:47.716  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'financeServiceImpl' of type [com.nieyue.service.impl.FinanceServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:47.776  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'numberDao' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:47.778  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'numberDao' of type [com.sun.proxy.$Proxy89] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:47.779  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'numberServiceImpl' of type [com.nieyue.service.impl.NumberServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:47.841  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'configDao' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:47.843  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'configDao' of type [com.sun.proxy.$Proxy90] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:47.844  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'configServiceImpl' of type [com.nieyue.service.impl.ConfigServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:47.851  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'accountServiceImpl' of type [com.nieyue.service.impl.AccountServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:47.856  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration$$EnhancerBySpringCGLIB$$80dacbd0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:47.874  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:47.878  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration$$EnhancerBySpringCGLIB$$a05d5ede] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:48.153  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'lettuceClientResources' of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:48.317  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:48.342  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'stringRedisTemplate' of type [org.springframework.data.redis.core.StringRedisTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:48.349  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'orderBusiness' of type [com.nieyue.business.OrderBusiness$$EnhancerBySpringCGLIB$$abcf423b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:48.350  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'accountBusiness' of type [com.nieyue.business.AccountBusiness$$EnhancerBySpringCGLIB$$3b5369fa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:48.350  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'accountRealm' of type [com.nieyue.shiro.AccountRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:48.358  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'redisManager' of type [org.crazycake.shiro.RedisManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:48.360  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'redisSessionDAO' of type [org.crazycake.shiro.RedisSessionDAO] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:48.363  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'simpleCookie1' of type [org.apache.shiro.web.servlet.SimpleCookie] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:48.364  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'sessionManager' of type [org.apache.shiro.web.session.mgt.DefaultWebSessionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:48.369  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'cacheManager' of type [org.crazycake.shiro.RedisCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:48.372  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'simpleCookie2' of type [org.apache.shiro.web.servlet.SimpleCookie] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:48.374  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'rememberMeManager' of type [org.apache.shiro.web.mgt.CookieRememberMeManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:48.376  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-04 17:49:49.119  INFO 19748 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-03-04 17:49:49.170  INFO 19748 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-04 17:49:49.170  INFO 19748 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-04 17:49:49.189  INFO 19748 --- [           main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2019-03-04 17:49:49.320  INFO 19748 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-04 17:49:49.320 DEBUG 19748 --- [           main] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2019-03-04 17:49:49.320  INFO 19748 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6206 ms
+2019-03-04 17:49:49.351  INFO 19748 --- [           main] com.nieyue.druid.DruidConfiguration      : init Druid Servlet Configuration 
+2019-03-04 17:49:51.321 DEBUG 19748 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 122 mappings in 'requestMappingHandlerMapping'
+2019-03-04 17:49:51.399  INFO 19748 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-03-04 17:49:51.494 DEBUG 19748 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/**] in 'resourceHandlerMapping'
+2019-03-04 17:49:51.624 DEBUG 19748 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2019-03-04 17:49:51.689 DEBUG 19748 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2019-03-04 17:49:52.336  INFO 19748 --- [           main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2019-03-04 17:49:52.355  INFO 19748 --- [           main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-03-04 17:49:52.357  INFO 19748 --- [           main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.2.1 created.
+2019-03-04 17:49:52.358  INFO 19748 --- [           main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2019-03-04 17:49:52.359  INFO 19748 --- [           main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.2.1) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -91,122 +91,127 @@
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-2019-03-01 17:42:41.976  INFO 30339 --- [           main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-2019-03-01 17:42:41.976  INFO 30339 --- [           main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.2.1
-2019-03-01 17:42:41.976  INFO 30339 --- [           main] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@473b3b7a
-2019-03-01 17:42:41.999  INFO 30339 --- [           main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
-2019-03-01 17:42:42.164  INFO 30339 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2019-03-01 17:42:42.189  INFO 30339 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2019-03-01 17:42:42.214  INFO 30339 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2019-03-01 17:42:43.390  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_1
-2019-03-01 17:42:43.394  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_1
-2019-03-01 17:42:43.448  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingGET_1
-2019-03-01 17:42:43.455  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_1
-2019-03-01 17:42:43.479  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_2
-2019-03-01 17:42:43.485  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_2
-2019-03-01 17:42:43.494  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingGET_1
-2019-03-01 17:42:43.499  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingPOST_1
-2019-03-01 17:42:43.509  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_1
-2019-03-01 17:42:43.516  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingPOST_1
-2019-03-01 17:42:43.554  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingGET_1
-2019-03-01 17:42:43.560  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_1
-2019-03-01 17:42:43.571  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingGET_2
-2019-03-01 17:42:43.577  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_2
-2019-03-01 17:42:43.584  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_3
-2019-03-01 17:42:43.590  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_3
-2019-03-01 17:42:43.599  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingGET_2
-2019-03-01 17:42:43.604  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingPOST_2
-2019-03-01 17:42:43.613  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_2
-2019-03-01 17:42:43.619  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingPOST_2
-2019-03-01 17:42:43.656  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingGET_2
-2019-03-01 17:42:43.661  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_2
-2019-03-01 17:42:43.682  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingGET_3
-2019-03-01 17:42:43.687  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_3
-2019-03-01 17:42:43.693  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_4
-2019-03-01 17:42:43.698  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_4
-2019-03-01 17:42:43.705  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingGET_3
-2019-03-01 17:42:43.709  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingPOST_3
-2019-03-01 17:42:43.716  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_3
-2019-03-01 17:42:43.721  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingPOST_3
-2019-03-01 17:42:43.739  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingGET_3
-2019-03-01 17:42:43.744  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_3
-2019-03-01 17:42:43.754  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingGET_4
-2019-03-01 17:42:43.759  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_4
-2019-03-01 17:42:43.787  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_5
-2019-03-01 17:42:43.792  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_5
-2019-03-01 17:42:43.799  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingGET_4
-2019-03-01 17:42:43.803  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingPOST_4
-2019-03-01 17:42:43.812  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_4
-2019-03-01 17:42:43.817  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingPOST_4
-2019-03-01 17:42:43.835  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingGET_4
-2019-03-01 17:42:43.840  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_4
-2019-03-01 17:42:43.850  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingGET_5
-2019-03-01 17:42:43.855  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_5
-2019-03-01 17:42:43.862  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_6
-2019-03-01 17:42:43.866  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_6
-2019-03-01 17:42:43.873  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingGET_5
-2019-03-01 17:42:43.877  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingPOST_5
-2019-03-01 17:42:43.885  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_5
-2019-03-01 17:42:43.890  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingPOST_5
-2019-03-01 17:42:43.909  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingGET_5
-2019-03-01 17:42:43.914  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_5
-2019-03-01 17:42:43.982  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countAllUsingGET_1
-2019-03-01 17:42:43.988  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countAllUsingPOST_1
-2019-03-01 17:42:44.114  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_7
-2019-03-01 17:42:44.119  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_7
-2019-03-01 17:42:44.173  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingGET_6
-2019-03-01 17:42:44.177  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_6
-2019-03-01 17:42:44.184  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_8
-2019-03-01 17:42:44.188  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_8
-2019-03-01 17:42:44.194  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingGET_6
-2019-03-01 17:42:44.198  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingPOST_6
-2019-03-01 17:42:44.205  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_6
-2019-03-01 17:42:44.210  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingPOST_6
-2019-03-01 17:42:44.227  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingGET_6
-2019-03-01 17:42:44.231  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_6
-2019-03-01 17:42:44.244  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingGET_7
-2019-03-01 17:42:44.249  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_7
-2019-03-01 17:42:44.255  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_9
-2019-03-01 17:42:44.260  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_9
-2019-03-01 17:42:44.266  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingGET_7
-2019-03-01 17:42:44.270  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingPOST_7
-2019-03-01 17:42:44.277  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_7
-2019-03-01 17:42:44.281  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingPOST_7
-2019-03-01 17:42:44.298  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingGET_7
-2019-03-01 17:42:44.303  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_7
-2019-03-01 17:42:44.316  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingGET_8
-2019-03-01 17:42:44.320  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_8
-2019-03-01 17:42:44.326  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_10
-2019-03-01 17:42:44.330  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_10
-2019-03-01 17:42:44.336  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingGET_8
-2019-03-01 17:42:44.340  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingPOST_8
-2019-03-01 17:42:44.347  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_8
-2019-03-01 17:42:44.351  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingPOST_8
-2019-03-01 17:42:44.366  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingGET_8
-2019-03-01 17:42:44.371  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_8
-2019-03-01 17:42:44.379  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingGET_9
-2019-03-01 17:42:44.382  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_9
-2019-03-01 17:42:44.388  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_11
-2019-03-01 17:42:44.391  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_11
-2019-03-01 17:42:44.396  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingGET_9
-2019-03-01 17:42:44.400  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingPOST_9
-2019-03-01 17:42:44.406  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_9
-2019-03-01 17:42:44.409  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingPOST_9
-2019-03-01 17:42:44.423  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingGET_9
-2019-03-01 17:42:44.427  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_9
-2019-03-01 17:42:44.462  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countAllUsingGET_2
-2019-03-01 17:42:44.467  INFO 30339 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countAllUsingPOST_2
-2019-03-01 17:42:44.562  INFO 30339 --- [           main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
-2019-03-01 17:42:44.562  INFO 30339 --- [           main] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
-2019-03-01 17:42:44.625  INFO 30339 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2019-03-01 17:42:44.628  INFO 30339 --- [           main] com.nieyue.Application                   : Started Application in 12.607 seconds (JVM running for 13.292)
-2019-03-01 17:43:07.219  INFO 30339 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-03-01 17:43:07.220  INFO 30339 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-03-01 17:43:07.220 DEBUG 30339 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
-2019-03-01 17:43:07.240 DEBUG 30339 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-2019-03-01 17:43:07.241  INFO 30339 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 20 ms
-2019-03-01 17:43:07.276  INFO 30339 --- [nio-8080-exec-1] a.s.s.m.AbstractValidatingSessionManager : Enabling session validation scheduler...
-2019-03-01 17:43:07.291 ERROR 30339 --- [nio-8080-exec-1] redis.clients.jedis.HostAndPort          : cant resolve localhost address
+2019-03-04 17:49:52.359  INFO 19748 --- [           main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2019-03-04 17:49:52.359  INFO 19748 --- [           main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.2.1
+2019-03-04 17:49:52.359  INFO 19748 --- [           main] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@6ab72419
+2019-03-04 17:49:52.382  INFO 19748 --- [           main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-03-04 17:49:52.544  INFO 19748 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-03-04 17:49:52.568  INFO 19748 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-03-04 17:49:52.593  INFO 19748 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-03-04 17:49:53.629  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_1
+2019-03-04 17:49:53.633  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_1
+2019-03-04 17:49:53.681  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingGET_1
+2019-03-04 17:49:53.687  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_1
+2019-03-04 17:49:53.706  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_2
+2019-03-04 17:49:53.711  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_2
+2019-03-04 17:49:53.719  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingGET_1
+2019-03-04 17:49:53.724  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingPOST_1
+2019-03-04 17:49:53.732  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_1
+2019-03-04 17:49:53.738  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingPOST_1
+2019-03-04 17:49:53.770  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingGET_1
+2019-03-04 17:49:53.775  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_1
+2019-03-04 17:49:53.786  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingGET_2
+2019-03-04 17:49:53.791  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_2
+2019-03-04 17:49:53.797  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_3
+2019-03-04 17:49:53.802  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_3
+2019-03-04 17:49:53.809  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingGET_2
+2019-03-04 17:49:53.813  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingPOST_2
+2019-03-04 17:49:53.821  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_2
+2019-03-04 17:49:53.825  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingPOST_2
+2019-03-04 17:49:53.857  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingGET_2
+2019-03-04 17:49:53.861  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_2
+2019-03-04 17:49:53.881  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingGET_3
+2019-03-04 17:49:53.886  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_3
+2019-03-04 17:49:53.891  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_4
+2019-03-04 17:49:53.895  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_4
+2019-03-04 17:49:53.900  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingGET_3
+2019-03-04 17:49:53.904  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingPOST_3
+2019-03-04 17:49:53.910  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_3
+2019-03-04 17:49:53.914  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingPOST_3
+2019-03-04 17:49:53.929  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingGET_3
+2019-03-04 17:49:53.933  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_3
+2019-03-04 17:49:53.962  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingGET_4
+2019-03-04 17:49:53.965  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_4
+2019-03-04 17:49:53.971  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_5
+2019-03-04 17:49:53.974  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_5
+2019-03-04 17:49:53.979  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingGET_4
+2019-03-04 17:49:53.983  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingPOST_4
+2019-03-04 17:49:53.989  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_4
+2019-03-04 17:49:53.993  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingPOST_4
+2019-03-04 17:49:54.007  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingGET_4
+2019-03-04 17:49:54.011  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_4
+2019-03-04 17:49:54.019  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingGET_5
+2019-03-04 17:49:54.023  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_5
+2019-03-04 17:49:54.028  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_6
+2019-03-04 17:49:54.032  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_6
+2019-03-04 17:49:54.037  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingGET_5
+2019-03-04 17:49:54.040  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingPOST_5
+2019-03-04 17:49:54.047  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_5
+2019-03-04 17:49:54.051  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingPOST_5
+2019-03-04 17:49:54.066  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingGET_5
+2019-03-04 17:49:54.069  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_5
+2019-03-04 17:49:54.124  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countAllUsingGET_1
+2019-03-04 17:49:54.129  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countAllUsingPOST_1
+2019-03-04 17:49:54.232  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_7
+2019-03-04 17:49:54.235  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_7
+2019-03-04 17:49:54.282  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingGET_6
+2019-03-04 17:49:54.286  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_6
+2019-03-04 17:49:54.291  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_8
+2019-03-04 17:49:54.295  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_8
+2019-03-04 17:49:54.300  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingGET_6
+2019-03-04 17:49:54.304  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingPOST_6
+2019-03-04 17:49:54.310  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_6
+2019-03-04 17:49:54.314  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingPOST_6
+2019-03-04 17:49:54.327  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingGET_6
+2019-03-04 17:49:54.331  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_6
+2019-03-04 17:49:54.342  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingGET_7
+2019-03-04 17:49:54.346  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_7
+2019-03-04 17:49:54.351  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_9
+2019-03-04 17:49:54.355  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_9
+2019-03-04 17:49:54.360  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingGET_7
+2019-03-04 17:49:54.363  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingPOST_7
+2019-03-04 17:49:54.369  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_7
+2019-03-04 17:49:54.373  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingPOST_7
+2019-03-04 17:49:54.386  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingGET_7
+2019-03-04 17:49:54.390  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_7
+2019-03-04 17:49:54.402  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingGET_8
+2019-03-04 17:49:54.407  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_8
+2019-03-04 17:49:54.416  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_10
+2019-03-04 17:49:54.421  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_10
+2019-03-04 17:49:54.427  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingGET_8
+2019-03-04 17:49:54.430  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingPOST_8
+2019-03-04 17:49:54.435  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_8
+2019-03-04 17:49:54.438  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingPOST_8
+2019-03-04 17:49:54.449  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingGET_8
+2019-03-04 17:49:54.452  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_8
+2019-03-04 17:49:54.459  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingGET_9
+2019-03-04 17:49:54.461  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_9
+2019-03-04 17:49:54.465  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_11
+2019-03-04 17:49:54.468  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_11
+2019-03-04 17:49:54.472  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingGET_9
+2019-03-04 17:49:54.474  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingPOST_9
+2019-03-04 17:49:54.479  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_9
+2019-03-04 17:49:54.482  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingPOST_9
+2019-03-04 17:49:54.492  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingGET_9
+2019-03-04 17:49:54.495  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_9
+2019-03-04 17:49:54.523  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countAllUsingGET_2
+2019-03-04 17:49:54.526  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countAllUsingPOST_2
+2019-03-04 17:49:54.597  INFO 19748 --- [           main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2019-03-04 17:49:54.598  INFO 19748 --- [           main] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2019-03-04 17:49:54.657  INFO 19748 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-03-04 17:49:54.660  INFO 19748 --- [           main] com.nieyue.Application                   : Started Application in 12.302 seconds (JVM running for 12.986)
+2019-03-04 17:49:55.157  INFO 19748 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-04 17:49:55.158  INFO 19748 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-03-04 17:49:55.158 DEBUG 19748 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2019-03-04 17:49:55.171 DEBUG 19748 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2019-03-04 17:49:55.171  INFO 19748 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2019-03-04 17:49:55.200  INFO 19748 --- [nio-8080-exec-1] a.s.s.m.AbstractValidatingSessionManager : Enabling session validation scheduler...
+2019-03-04 17:49:55.217 DEBUG 19748 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/v2/api-docs", parameters={}
+2019-03-04 17:49:55.227 DEBUG 19748 --- [nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-03-04 17:49:55.492 DEBUG 19748 --- [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/hal+json]
+2019-03-04 17:49:55.495 DEBUG 19748 --- [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [springfox.documentation.spring.web.json.Json@2cfe9077]
+2019-03-04 17:49:55.513 DEBUG 19748 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-03-04 17:50:35.081 ERROR 19748 --- [nio-8080-exec-2] redis.clients.jedis.HostAndPort          : cant resolve localhost address
 
 java.net.UnknownHostException: mocarlmo5: mocarlmo5: Name or service not known
 	at java.net.InetAddress.getLocalHost(InetAddress.java:1506) ~[na:1.8.0_191]
@@ -279,503 +284,27 @@ Caused by: java.net.UnknownHostException: mocarlmo5: Name or service not known
 	at java.net.InetAddress.getLocalHost(InetAddress.java:1501) ~[na:1.8.0_191]
 	... 62 common frames omitted
 
-2019-03-01 17:43:07.381 DEBUG 30339 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/role/count", parameters={masked}
-2019-03-01 17:43:07.396 DEBUG 30339 --- [nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<java.lang.Integer>> com.nieyue.controller.RoleController.count(javax.servlet.http.HttpSession)
-2019-03-01 17:43:07.480 DEBUG 30339 --- [nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:43:07.481 DEBUG 30339 --- [nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@636c049c]
-2019-03-01 17:43:07.506 DEBUG 30339 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:43:07.696 DEBUG 30339 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/role/list", parameters={masked}
-2019-03-01 17:43:07.697 DEBUG 30339 --- [nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Role>> com.nieyue.controller.RoleController.list(int,int,java.lang.String,java.lang.String)
-2019-03-01 17:43:07.713 DEBUG 30339 --- [nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:43:07.713 DEBUG 30339 --- [nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@6f1db5be]
-2019-03-01 17:43:07.720 DEBUG 30339 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:43:08.568 DEBUG 30339 --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/permission/count", parameters={masked}
-2019-03-01 17:43:08.569 DEBUG 30339 --- [nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<java.lang.Integer>> com.nieyue.controller.PermissionController.count(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
-2019-03-01 17:43:08.579 DEBUG 30339 --- [nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:43:08.579 DEBUG 30339 --- [nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@62199a11]
-2019-03-01 17:43:08.580 DEBUG 30339 --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:43:08.763 DEBUG 30339 --- [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/permission/list", parameters={masked}
-2019-03-01 17:43:08.764 DEBUG 30339 --- [nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Permission>> com.nieyue.controller.PermissionController.browsePagingPermission(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,int,int,java.lang.String,java.lang.String)
-2019-03-01 17:43:08.777 DEBUG 30339 --- [nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:43:08.777 DEBUG 30339 --- [nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@a3d0c35]
-2019-03-01 17:43:08.782 DEBUG 30339 --- [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:43:10.477 DEBUG 30339 --- [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/role/count", parameters={masked}
-2019-03-01 17:43:10.478 DEBUG 30339 --- [nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<java.lang.Integer>> com.nieyue.controller.RoleController.count(javax.servlet.http.HttpSession)
-2019-03-01 17:43:10.480 DEBUG 30339 --- [nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:43:10.480 DEBUG 30339 --- [nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@6fbb5b38]
-2019-03-01 17:43:10.481 DEBUG 30339 --- [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:43:10.656 DEBUG 30339 --- [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : POST "/role/list", parameters={masked}
-2019-03-01 17:43:10.657 DEBUG 30339 --- [nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Role>> com.nieyue.controller.RoleController.list(int,int,java.lang.String,java.lang.String)
-2019-03-01 17:43:10.661 DEBUG 30339 --- [nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:43:10.661 DEBUG 30339 --- [nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@311bd700]
-2019-03-01 17:43:10.662 DEBUG 30339 --- [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:43:11.825 DEBUG 30339 --- [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/role/load?roleId=1001", parameters={masked}
-2019-03-01 17:43:11.828 DEBUG 30339 --- [nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Role>> com.nieyue.controller.RoleController.loadRole(java.lang.Long,javax.servlet.http.HttpSession)
-2019-03-01 17:43:11.861 DEBUG 30339 --- [nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:43:11.862 DEBUG 30339 --- [nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@56adf7a1]
-2019-03-01 17:43:11.863 DEBUG 30339 --- [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:43:12.046 DEBUG 30339 --- [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : POST "/permission/count", parameters={masked}
-2019-03-01 17:43:12.047 DEBUG 30339 --- [nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<java.lang.Integer>> com.nieyue.controller.PermissionController.count(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
-2019-03-01 17:43:12.060 DEBUG 30339 --- [nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:43:12.060 DEBUG 30339 --- [nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@25339dba]
-2019-03-01 17:43:12.061 DEBUG 30339 --- [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:43:12.234 DEBUG 30339 --- [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : POST "/permission/list", parameters={masked}
-2019-03-01 17:43:12.236 DEBUG 30339 --- [nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Permission>> com.nieyue.controller.PermissionController.browsePagingPermission(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,int,int,java.lang.String,java.lang.String)
-2019-03-01 17:43:12.253 DEBUG 30339 --- [nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:43:12.253 DEBUG 30339 --- [nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@7bc4c005]
-2019-03-01 17:43:12.260 DEBUG 30339 --- [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:43:12.471 DEBUG 30339 --- [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : POST "/rolePermission/count", parameters={masked}
-2019-03-01 17:43:12.473 DEBUG 30339 --- [io-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<java.lang.Integer>> com.nieyue.controller.RolePermissionController.countAll(java.lang.Integer,java.lang.Long,java.lang.Long,javax.servlet.http.HttpSession)
-2019-03-01 17:43:12.483 DEBUG 30339 --- [io-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:43:12.483 DEBUG 30339 --- [io-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@279dc66e]
-2019-03-01 17:43:12.484 DEBUG 30339 --- [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:43:12.657 DEBUG 30339 --- [io-8080-exec-11] o.s.web.servlet.DispatcherServlet        : POST "/rolePermission/list", parameters={masked}
-2019-03-01 17:43:12.658 DEBUG 30339 --- [io-8080-exec-11] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.RolePermission>> com.nieyue.controller.RolePermissionController.browsePagingRolePermission(java.lang.Integer,java.lang.Long,java.lang.Long,int,int,java.lang.String,java.lang.String)
-2019-03-01 17:43:12.744 DEBUG 30339 --- [io-8080-exec-11] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:43:12.744 DEBUG 30339 --- [io-8080-exec-11] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@21630de]
-2019-03-01 17:43:12.755 DEBUG 30339 --- [io-8080-exec-11] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:43:15.774 DEBUG 30339 --- [io-8080-exec-12] o.s.web.servlet.DispatcherServlet        : POST "/permission/count", parameters={masked}
-2019-03-01 17:43:15.776 DEBUG 30339 --- [io-8080-exec-12] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<java.lang.Integer>> com.nieyue.controller.PermissionController.count(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
-2019-03-01 17:43:15.779 DEBUG 30339 --- [io-8080-exec-12] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:43:15.779 DEBUG 30339 --- [io-8080-exec-12] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@775cc134]
-2019-03-01 17:43:15.780 DEBUG 30339 --- [io-8080-exec-12] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:43:15.959 DEBUG 30339 --- [io-8080-exec-13] o.s.web.servlet.DispatcherServlet        : POST "/permission/list", parameters={masked}
-2019-03-01 17:43:15.960 DEBUG 30339 --- [io-8080-exec-13] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Permission>> com.nieyue.controller.PermissionController.browsePagingPermission(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,int,int,java.lang.String,java.lang.String)
-2019-03-01 17:43:15.965 DEBUG 30339 --- [io-8080-exec-13] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:43:15.965 DEBUG 30339 --- [io-8080-exec-13] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@64fa0bd3]
-2019-03-01 17:43:15.966 DEBUG 30339 --- [io-8080-exec-13] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:43:16.275 DEBUG 30339 --- [io-8080-exec-14] o.s.web.servlet.DispatcherServlet        : POST "/role/count", parameters={masked}
-2019-03-01 17:43:16.277 DEBUG 30339 --- [io-8080-exec-14] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<java.lang.Integer>> com.nieyue.controller.RoleController.count(javax.servlet.http.HttpSession)
-2019-03-01 17:43:16.279 DEBUG 30339 --- [io-8080-exec-14] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:43:16.279 DEBUG 30339 --- [io-8080-exec-14] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@2d8f5649]
-2019-03-01 17:43:16.280 DEBUG 30339 --- [io-8080-exec-14] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:43:16.461 DEBUG 30339 --- [io-8080-exec-15] o.s.web.servlet.DispatcherServlet        : POST "/role/list", parameters={masked}
-2019-03-01 17:43:16.462 DEBUG 30339 --- [io-8080-exec-15] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Role>> com.nieyue.controller.RoleController.list(int,int,java.lang.String,java.lang.String)
-2019-03-01 17:43:16.465 DEBUG 30339 --- [io-8080-exec-15] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:43:16.465 DEBUG 30339 --- [io-8080-exec-15] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@3dd57cdd]
-2019-03-01 17:43:16.466 DEBUG 30339 --- [io-8080-exec-15] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:43:17.548 DEBUG 30339 --- [io-8080-exec-16] o.s.web.servlet.DispatcherServlet        : POST "/role/load?roleId=1002", parameters={masked}
-2019-03-01 17:43:17.550 DEBUG 30339 --- [io-8080-exec-16] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Role>> com.nieyue.controller.RoleController.loadRole(java.lang.Long,javax.servlet.http.HttpSession)
-2019-03-01 17:43:17.556 DEBUG 30339 --- [io-8080-exec-16] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:43:17.556 DEBUG 30339 --- [io-8080-exec-16] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@394b9427]
-2019-03-01 17:43:17.557 DEBUG 30339 --- [io-8080-exec-16] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:43:17.755 DEBUG 30339 --- [io-8080-exec-17] o.s.web.servlet.DispatcherServlet        : POST "/permission/count", parameters={masked}
-2019-03-01 17:43:17.756 DEBUG 30339 --- [io-8080-exec-17] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<java.lang.Integer>> com.nieyue.controller.PermissionController.count(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
-2019-03-01 17:43:17.758 DEBUG 30339 --- [io-8080-exec-17] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:43:17.758 DEBUG 30339 --- [io-8080-exec-17] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@5a3c188b]
-2019-03-01 17:43:17.759 DEBUG 30339 --- [io-8080-exec-17] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:43:17.931 DEBUG 30339 --- [io-8080-exec-18] o.s.web.servlet.DispatcherServlet        : POST "/permission/list", parameters={masked}
-2019-03-01 17:43:17.932 DEBUG 30339 --- [io-8080-exec-18] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Permission>> com.nieyue.controller.PermissionController.browsePagingPermission(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,int,int,java.lang.String,java.lang.String)
-2019-03-01 17:43:17.941 DEBUG 30339 --- [io-8080-exec-18] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:43:17.941 DEBUG 30339 --- [io-8080-exec-18] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@20435fe1]
-2019-03-01 17:43:17.943 DEBUG 30339 --- [io-8080-exec-18] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:43:18.160 DEBUG 30339 --- [io-8080-exec-19] o.s.web.servlet.DispatcherServlet        : POST "/rolePermission/count", parameters={masked}
-2019-03-01 17:43:18.162 DEBUG 30339 --- [io-8080-exec-19] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<java.lang.Integer>> com.nieyue.controller.RolePermissionController.countAll(java.lang.Integer,java.lang.Long,java.lang.Long,javax.servlet.http.HttpSession)
-2019-03-01 17:43:18.164 DEBUG 30339 --- [io-8080-exec-19] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:43:18.165 DEBUG 30339 --- [io-8080-exec-19] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@9be3edb]
-2019-03-01 17:43:18.165 DEBUG 30339 --- [io-8080-exec-19] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:43:18.341 DEBUG 30339 --- [io-8080-exec-20] o.s.web.servlet.DispatcherServlet        : POST "/rolePermission/list", parameters={masked}
-2019-03-01 17:43:18.342 DEBUG 30339 --- [io-8080-exec-20] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.RolePermission>> com.nieyue.controller.RolePermissionController.browsePagingRolePermission(java.lang.Integer,java.lang.Long,java.lang.Long,int,int,java.lang.String,java.lang.String)
-2019-03-01 17:43:18.350 DEBUG 30339 --- [io-8080-exec-20] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:43:18.351 DEBUG 30339 --- [io-8080-exec-20] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@4d703629]
-2019-03-01 17:43:18.352 DEBUG 30339 --- [io-8080-exec-20] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:44:30.540 DEBUG 30339 --- [io-8080-exec-22] o.s.web.servlet.DispatcherServlet        : GET "/home/index.html", parameters={}
-2019-03-01 17:44:30.553 DEBUG 30339 --- [io-8080-exec-22] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
-2019-03-01 17:44:30.566 DEBUG 30339 --- [io-8080-exec-22] o.s.web.servlet.DispatcherServlet        : Completed 304 NOT_MODIFIED
-2019-03-01 17:44:30.774 DEBUG 30339 --- [io-8080-exec-23] o.s.web.servlet.DispatcherServlet        : GET "/home/resources/css/font-awesome.min.css", parameters={}
-2019-03-01 17:44:30.783 DEBUG 30339 --- [io-8080-exec-23] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
-2019-03-01 17:44:30.788 DEBUG 30339 --- [io-8080-exec-23] o.s.web.servlet.DispatcherServlet        : Completed 304 NOT_MODIFIED
-2019-03-01 17:44:30.939 DEBUG 30339 --- [io-8080-exec-24] o.s.web.servlet.DispatcherServlet        : GET "/home/resources/css/base.css", parameters={}
-2019-03-01 17:44:30.945 DEBUG 30339 --- [io-8080-exec-25] o.s.web.servlet.DispatcherServlet        : GET "/home/resources/js/jquery1.12.2.js", parameters={}
-2019-03-01 17:44:30.946 DEBUG 30339 --- [io-8080-exec-26] o.s.web.servlet.DispatcherServlet        : GET "/home/resources/js/base.js", parameters={}
-2019-03-01 17:44:30.947 DEBUG 30339 --- [io-8080-exec-24] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
-2019-03-01 17:44:30.950 DEBUG 30339 --- [io-8080-exec-24] o.s.web.servlet.DispatcherServlet        : Completed 304 NOT_MODIFIED
-2019-03-01 17:44:30.950 DEBUG 30339 --- [io-8080-exec-26] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
-2019-03-01 17:44:30.951 DEBUG 30339 --- [io-8080-exec-25] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
-2019-03-01 17:44:30.952 DEBUG 30339 --- [io-8080-exec-26] o.s.web.servlet.DispatcherServlet        : Completed 304 NOT_MODIFIED
-2019-03-01 17:44:30.954 DEBUG 30339 --- [io-8080-exec-25] o.s.web.servlet.DispatcherServlet        : Completed 304 NOT_MODIFIED
-2019-03-01 17:44:31.196 DEBUG 30339 --- [io-8080-exec-27] o.s.web.servlet.DispatcherServlet        : POST "/mer/list", parameters={masked}
-2019-03-01 17:44:31.198 DEBUG 30339 --- [io-8080-exec-27] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Mer>> com.nieyue.controller.MerController.list(java.lang.Integer,int,int,java.lang.String,java.lang.String)
-2019-03-01 17:44:31.213 DEBUG 30339 --- [io-8080-exec-27] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
-2019-03-01 17:44:31.213 DEBUG 30339 --- [io-8080-exec-27] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@3ec0ab]
-2019-03-01 17:44:31.218 DEBUG 30339 --- [io-8080-exec-28] o.s.web.servlet.DispatcherServlet        : GET "/home/resources/img/button_my.png", parameters={}
-2019-03-01 17:44:31.219 DEBUG 30339 --- [io-8080-exec-29] o.s.web.servlet.DispatcherServlet        : GET "/home/resources/img/backgroung.png", parameters={}
-2019-03-01 17:44:31.219 DEBUG 30339 --- [io-8080-exec-27] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:44:31.221 DEBUG 30339 --- [io-8080-exec-30] o.s.web.servlet.DispatcherServlet        : GET "/home/resources/img/button_chongzhi.png", parameters={}
-2019-03-01 17:44:31.222 DEBUG 30339 --- [io-8080-exec-28] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
-2019-03-01 17:44:31.224 DEBUG 30339 --- [io-8080-exec-30] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
-2019-03-01 17:44:31.224 DEBUG 30339 --- [io-8080-exec-28] o.s.web.servlet.DispatcherServlet        : Completed 304 NOT_MODIFIED
-2019-03-01 17:44:31.225 DEBUG 30339 --- [io-8080-exec-29] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
-2019-03-01 17:44:31.227 DEBUG 30339 --- [io-8080-exec-30] o.s.web.servlet.DispatcherServlet        : Completed 304 NOT_MODIFIED
-2019-03-01 17:44:31.228 DEBUG 30339 --- [io-8080-exec-29] o.s.web.servlet.DispatcherServlet        : Completed 304 NOT_MODIFIED
-2019-03-01 17:44:31.386 DEBUG 30339 --- [io-8080-exec-31] o.s.web.servlet.DispatcherServlet        : GET "/home/resources/img/button_home.png", parameters={}
-2019-03-01 17:44:31.389 DEBUG 30339 --- [io-8080-exec-31] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
-2019-03-01 17:44:31.391 DEBUG 30339 --- [io-8080-exec-31] o.s.web.servlet.DispatcherServlet        : Completed 304 NOT_MODIFIED
-2019-03-01 17:44:31.395 DEBUG 30339 --- [io-8080-exec-32] o.s.web.servlet.DispatcherServlet        : GET "/home/resources/img/button_baobaoka.png", parameters={}
-2019-03-01 17:44:31.398 DEBUG 30339 --- [io-8080-exec-32] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
-2019-03-01 17:44:31.400 DEBUG 30339 --- [io-8080-exec-32] o.s.web.servlet.DispatcherServlet        : Completed 304 NOT_MODIFIED
-2019-03-01 17:44:31.419 DEBUG 30339 --- [io-8080-exec-34] o.s.web.servlet.DispatcherServlet        : GET "/home/resources/img/banner.png", parameters={}
-2019-03-01 17:44:31.419 DEBUG 30339 --- [io-8080-exec-33] o.s.web.servlet.DispatcherServlet        : GET "/home/resources/img/bg_banner.png", parameters={}
-2019-03-01 17:44:31.422 DEBUG 30339 --- [io-8080-exec-34] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
-2019-03-01 17:44:31.422 DEBUG 30339 --- [io-8080-exec-33] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
-2019-03-01 17:44:31.424 DEBUG 30339 --- [io-8080-exec-33] o.s.web.servlet.DispatcherServlet        : Completed 304 NOT_MODIFIED
-2019-03-01 17:44:31.424 DEBUG 30339 --- [io-8080-exec-34] o.s.web.servlet.DispatcherServlet        : Completed 304 NOT_MODIFIED
-2019-03-01 17:44:31.442 DEBUG 30339 --- [io-8080-exec-35] o.s.web.servlet.DispatcherServlet        : GET "/home/resources/img/mer_wrap.png", parameters={}
-2019-03-01 17:44:31.444 DEBUG 30339 --- [io-8080-exec-35] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
-2019-03-01 17:44:31.447 DEBUG 30339 --- [io-8080-exec-35] o.s.web.servlet.DispatcherServlet        : Completed 304 NOT_MODIFIED
-2019-03-01 17:44:31.591 DEBUG 30339 --- [io-8080-exec-36] o.s.web.servlet.DispatcherServlet        : GET "/uploaderPath/img/20190228/1551426466351.png", parameters={}
-2019-03-01 17:44:31.593 DEBUG 30339 --- [io-8080-exec-36] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
-2019-03-01 17:44:31.594 DEBUG 30339 --- [io-8080-exec-36] o.s.web.servlet.DispatcherServlet        : Completed 304 NOT_MODIFIED
-2019-03-01 17:44:32.761 DEBUG 30339 --- [io-8080-exec-38] o.s.web.servlet.DispatcherServlet        : GET "/home/user.html", parameters={}
-2019-03-01 17:44:32.764 DEBUG 30339 --- [io-8080-exec-38] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
-2019-03-01 17:44:32.766 DEBUG 30339 --- [io-8080-exec-38] o.s.web.servlet.DispatcherServlet        : Completed 304 NOT_MODIFIED
-2019-03-01 17:44:32.981 DEBUG 30339 --- [io-8080-exec-39] o.s.web.servlet.DispatcherServlet        : GET "/home/resources/img/head_2.png", parameters={}
-2019-03-01 17:44:32.982 DEBUG 30339 --- [io-8080-exec-39] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
-2019-03-01 17:44:32.984 DEBUG 30339 --- [io-8080-exec-39] o.s.web.servlet.DispatcherServlet        : Completed 304 NOT_MODIFIED
-2019-03-01 17:44:33.017 DEBUG 30339 --- [io-8080-exec-40] o.s.web.servlet.DispatcherServlet        : POST "/account/islogin", parameters={}
-2019-03-01 17:44:33.018 DEBUG 30339 --- [io-8080-exec-40] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Account>> com.nieyue.controller.AccountController.isLoginAccount(javax.servlet.http.HttpSession)
-2019-03-01 17:44:33.019 DEBUG 30339 --- [io-8080-exec-41] o.s.web.servlet.DispatcherServlet        : POST "/account/load", parameters={masked}
-2019-03-01 17:44:33.020 DEBUG 30339 --- [io-8080-exec-41] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Account>> com.nieyue.controller.AccountController.loadAccount(java.lang.Long,javax.servlet.http.HttpSession)
-2019-03-01 17:44:33.020 DEBUG 30339 --- [io-8080-exec-40] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
-2019-03-01 17:44:33.020 DEBUG 30339 --- [io-8080-exec-40] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@2f952857]
-2019-03-01 17:44:33.024 DEBUG 30339 --- [io-8080-exec-40] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:44:33.031 DEBUG 30339 --- [io-8080-exec-41] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
-2019-03-01 17:44:33.032 DEBUG 30339 --- [io-8080-exec-41] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@5800534b]
-2019-03-01 17:44:33.032 DEBUG 30339 --- [io-8080-exec-41] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:44:33.222 DEBUG 30339 --- [io-8080-exec-42] o.s.web.servlet.DispatcherServlet        : POST "/number/list", parameters={masked}
-2019-03-01 17:44:33.224 DEBUG 30339 --- [io-8080-exec-42] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Number>> com.nieyue.controller.NumberController.list(java.lang.Integer,java.lang.Long,int,int,java.lang.String,java.lang.String)
-2019-03-01 17:44:33.233 DEBUG 30339 --- [io-8080-exec-42] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
-2019-03-01 17:44:33.233 DEBUG 30339 --- [io-8080-exec-42] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@72b0649b]
-2019-03-01 17:44:33.236 DEBUG 30339 --- [io-8080-exec-42] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:44:34.417 DEBUG 30339 --- [io-8080-exec-44] o.s.web.servlet.DispatcherServlet        : GET "/home/recharge.html", parameters={}
-2019-03-01 17:44:34.419 DEBUG 30339 --- [io-8080-exec-44] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
-2019-03-01 17:44:34.422 DEBUG 30339 --- [io-8080-exec-44] o.s.web.servlet.DispatcherServlet        : Completed 304 NOT_MODIFIED
-2019-03-01 17:44:34.667 DEBUG 30339 --- [io-8080-exec-45] o.s.web.servlet.DispatcherServlet        : POST "/account/islogin", parameters={}
-2019-03-01 17:44:34.667 DEBUG 30339 --- [io-8080-exec-45] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Account>> com.nieyue.controller.AccountController.isLoginAccount(javax.servlet.http.HttpSession)
-2019-03-01 17:44:34.668 DEBUG 30339 --- [io-8080-exec-45] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
-2019-03-01 17:44:34.668 DEBUG 30339 --- [io-8080-exec-45] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@47efeeec]
-2019-03-01 17:44:34.669 DEBUG 30339 --- [io-8080-exec-45] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:44:34.669 DEBUG 30339 --- [io-8080-exec-46] o.s.web.servlet.DispatcherServlet        : POST "/rechargeTerm/list", parameters={masked}
-2019-03-01 17:44:34.670 DEBUG 30339 --- [io-8080-exec-46] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.RechargeTerm>> com.nieyue.controller.RechargeTermController.list(java.lang.Integer,int,int,java.lang.String,java.lang.String)
-2019-03-01 17:44:34.680 DEBUG 30339 --- [io-8080-exec-46] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
-2019-03-01 17:44:34.681 DEBUG 30339 --- [io-8080-exec-46] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@d49f84c]
-2019-03-01 17:44:34.684 DEBUG 30339 --- [io-8080-exec-46] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:44:34.874 DEBUG 30339 --- [io-8080-exec-47] o.s.web.servlet.DispatcherServlet        : GET "/home/resources/img/icon_Coin.png", parameters={}
-2019-03-01 17:44:34.876 DEBUG 30339 --- [io-8080-exec-47] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
-2019-03-01 17:44:34.877 DEBUG 30339 --- [io-8080-exec-47] o.s.web.servlet.DispatcherServlet        : Completed 304 NOT_MODIFIED
-2019-03-01 17:44:34.880 DEBUG 30339 --- [io-8080-exec-48] o.s.web.servlet.DispatcherServlet        : GET "/home/resources/img/bg_huoqucishu.png", parameters={}
-2019-03-01 17:44:34.882 DEBUG 30339 --- [io-8080-exec-48] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
-2019-03-01 17:44:34.883 DEBUG 30339 --- [io-8080-exec-48] o.s.web.servlet.DispatcherServlet        : Completed 304 NOT_MODIFIED
-2019-03-01 17:44:49.635 DEBUG 30339 --- [io-8080-exec-50] o.s.web.servlet.DispatcherServlet        : POST "/payment/bYPay", parameters={masked}
-2019-03-01 17:44:49.636 DEBUG 30339 --- [io-8080-exec-50] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public java.lang.String com.nieyue.controller.PaymentController.weXinUnifiedOrder(java.lang.Long,java.lang.Long,java.lang.Double,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
-2019-03-01 17:44:50.398  WARN 30339 --- [io-8080-exec-50] c.baomidou.mybatisplus.toolkit.Sequence  :  getDatacenterId: mocarlmo5: mocarlmo5: Name or service not known
-2019-03-01 17:44:50.500 DEBUG 30339 --- [io-8080-exec-50] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json, text/plain, */*]
-2019-03-01 17:44:50.500 DEBUG 30339 --- [io-8080-exec-50] m.m.a.RequestResponseBodyMethodProcessor : Writing ["http://api.antsquare.com.cn/hbPay.jhtml?jnlNo=110051320190301174453088340252"]
-2019-03-01 17:44:50.501 DEBUG 30339 --- [io-8080-exec-50] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:45:12.545 DEBUG 30339 --- [io-8080-exec-51] o.s.web.servlet.DispatcherServlet        : POST "/account/islogin", parameters={}
-2019-03-01 17:45:12.545 DEBUG 30339 --- [io-8080-exec-52] o.s.web.servlet.DispatcherServlet        : POST "/rechargeTerm/list", parameters={masked}
-2019-03-01 17:45:12.545 DEBUG 30339 --- [io-8080-exec-51] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Account>> com.nieyue.controller.AccountController.isLoginAccount(javax.servlet.http.HttpSession)
-2019-03-01 17:45:12.545 DEBUG 30339 --- [io-8080-exec-52] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.RechargeTerm>> com.nieyue.controller.RechargeTermController.list(java.lang.Integer,int,int,java.lang.String,java.lang.String)
-2019-03-01 17:45:12.546 DEBUG 30339 --- [io-8080-exec-51] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
-2019-03-01 17:45:12.546 DEBUG 30339 --- [io-8080-exec-51] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@631e173d]
-2019-03-01 17:45:12.547 DEBUG 30339 --- [io-8080-exec-51] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:45:12.550 DEBUG 30339 --- [io-8080-exec-52] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
-2019-03-01 17:45:12.550 DEBUG 30339 --- [io-8080-exec-52] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@20461fe0]
-2019-03-01 17:45:12.551 DEBUG 30339 --- [io-8080-exec-52] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:45:36.104 DEBUG 30339 --- [io-8080-exec-56] o.s.web.servlet.DispatcherServlet        : GET "/config/list", parameters={}
-2019-03-01 17:45:36.104 DEBUG 30339 --- [io-8080-exec-55] o.s.web.servlet.DispatcherServlet        : POST "/tool/getVerificationCode", parameters={}
-2019-03-01 17:45:36.105 DEBUG 30339 --- [io-8080-exec-56] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Config>> com.nieyue.controller.ConfigController.browsePagingConfig(int,int,java.lang.String,java.lang.String)
-2019-03-01 17:45:36.105 DEBUG 30339 --- [io-8080-exec-55] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public void com.nieyue.controller.ToolController.getVerificationCode(javax.servlet.http.HttpSession,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
-2019-03-01 17:45:36.115 DEBUG 30339 --- [io-8080-exec-56] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:45:36.115 DEBUG 30339 --- [io-8080-exec-56] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@2bf03e74]
-2019-03-01 17:45:36.118 DEBUG 30339 --- [io-8080-exec-56] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:45:36.296 DEBUG 30339 --- [io-8080-exec-55] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:45:42.639 DEBUG 30339 --- [io-8080-exec-57] o.s.web.servlet.DispatcherServlet        : POST "/account/login", parameters={masked}
-2019-03-01 17:45:42.640 DEBUG 30339 --- [io-8080-exec-57] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<java.util.Map<java.lang.String, java.lang.Object>>> com.nieyue.controller.AccountController.loginAccount(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpSession) throws com.nieyue.exception.MySessionException
-2019-03-01 17:45:42.858 DEBUG 30339 --- [io-8080-exec-57] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:45:42.858 DEBUG 30339 --- [io-8080-exec-57] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@20dd6ea3]
-2019-03-01 17:45:42.866 DEBUG 30339 --- [io-8080-exec-57] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:45:43.431 DEBUG 30339 --- [io-8080-exec-58] o.s.web.servlet.DispatcherServlet        : POST "/account/islogin", parameters={}
-2019-03-01 17:45:43.431 DEBUG 30339 --- [io-8080-exec-59] o.s.web.servlet.DispatcherServlet        : GET "/config/list", parameters={}
-2019-03-01 17:45:43.432 DEBUG 30339 --- [io-8080-exec-58] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Account>> com.nieyue.controller.AccountController.isLoginAccount(javax.servlet.http.HttpSession)
-2019-03-01 17:45:43.432 DEBUG 30339 --- [io-8080-exec-59] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Config>> com.nieyue.controller.ConfigController.browsePagingConfig(int,int,java.lang.String,java.lang.String)
-2019-03-01 17:45:43.434 DEBUG 30339 --- [io-8080-exec-58] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:45:43.434 DEBUG 30339 --- [io-8080-exec-58] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@3069cb44]
-2019-03-01 17:45:43.434 DEBUG 30339 --- [io-8080-exec-58] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:45:43.436 DEBUG 30339 --- [io-8080-exec-59] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:45:43.436 DEBUG 30339 --- [io-8080-exec-59] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@2d25ec4b]
-2019-03-01 17:45:43.437 DEBUG 30339 --- [io-8080-exec-59] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:45:46.236 DEBUG 30339 --- [io-8080-exec-60] o.s.web.servlet.DispatcherServlet        : POST "/role/count", parameters={masked}
-2019-03-01 17:45:46.236 DEBUG 30339 --- [io-8080-exec-60] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<java.lang.Integer>> com.nieyue.controller.RoleController.count(javax.servlet.http.HttpSession)
-2019-03-01 17:45:46.238 DEBUG 30339 --- [io-8080-exec-60] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:45:46.238 DEBUG 30339 --- [io-8080-exec-60] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@671ec1]
-2019-03-01 17:45:46.239 DEBUG 30339 --- [io-8080-exec-60] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:45:46.417 DEBUG 30339 --- [io-8080-exec-61] o.s.web.servlet.DispatcherServlet        : POST "/role/list", parameters={masked}
-2019-03-01 17:45:46.418 DEBUG 30339 --- [io-8080-exec-61] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Role>> com.nieyue.controller.RoleController.list(int,int,java.lang.String,java.lang.String)
-2019-03-01 17:45:46.422 DEBUG 30339 --- [io-8080-exec-61] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:45:46.422 DEBUG 30339 --- [io-8080-exec-61] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@6565b899]
-2019-03-01 17:45:46.422 DEBUG 30339 --- [io-8080-exec-61] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:45:47.242 DEBUG 30339 --- [io-8080-exec-62] o.s.web.servlet.DispatcherServlet        : POST "/permission/count", parameters={masked}
-2019-03-01 17:45:47.244 DEBUG 30339 --- [io-8080-exec-62] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<java.lang.Integer>> com.nieyue.controller.PermissionController.count(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
-2019-03-01 17:45:47.246 DEBUG 30339 --- [io-8080-exec-62] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:45:47.246 DEBUG 30339 --- [io-8080-exec-62] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@513e81d0]
-2019-03-01 17:45:47.247 DEBUG 30339 --- [io-8080-exec-62] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:45:47.439 DEBUG 30339 --- [io-8080-exec-63] o.s.web.servlet.DispatcherServlet        : POST "/permission/list", parameters={masked}
-2019-03-01 17:45:47.439 DEBUG 30339 --- [io-8080-exec-63] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Permission>> com.nieyue.controller.PermissionController.browsePagingPermission(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,int,int,java.lang.String,java.lang.String)
-2019-03-01 17:45:47.442 DEBUG 30339 --- [io-8080-exec-63] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:45:47.442 DEBUG 30339 --- [io-8080-exec-63] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@44ba277e]
-2019-03-01 17:45:47.443 DEBUG 30339 --- [io-8080-exec-63] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:45:48.936 DEBUG 30339 --- [io-8080-exec-64] o.s.web.servlet.DispatcherServlet        : POST "/role/count", parameters={masked}
-2019-03-01 17:45:48.936 DEBUG 30339 --- [io-8080-exec-64] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<java.lang.Integer>> com.nieyue.controller.RoleController.count(javax.servlet.http.HttpSession)
-2019-03-01 17:45:48.938 DEBUG 30339 --- [io-8080-exec-64] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:45:48.938 DEBUG 30339 --- [io-8080-exec-64] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@7eb376db]
-2019-03-01 17:45:48.939 DEBUG 30339 --- [io-8080-exec-64] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:45:49.118 DEBUG 30339 --- [io-8080-exec-65] o.s.web.servlet.DispatcherServlet        : POST "/role/list", parameters={masked}
-2019-03-01 17:45:49.118 DEBUG 30339 --- [io-8080-exec-65] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Role>> com.nieyue.controller.RoleController.list(int,int,java.lang.String,java.lang.String)
-2019-03-01 17:45:49.121 DEBUG 30339 --- [io-8080-exec-65] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:45:49.121 DEBUG 30339 --- [io-8080-exec-65] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@49f4974b]
-2019-03-01 17:45:49.121 DEBUG 30339 --- [io-8080-exec-65] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:45:50.309 DEBUG 30339 --- [io-8080-exec-66] o.s.web.servlet.DispatcherServlet        : POST "/role/load?roleId=1002", parameters={masked}
-2019-03-01 17:45:50.310 DEBUG 30339 --- [io-8080-exec-66] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Role>> com.nieyue.controller.RoleController.loadRole(java.lang.Long,javax.servlet.http.HttpSession)
-2019-03-01 17:45:50.311 DEBUG 30339 --- [io-8080-exec-66] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:45:50.312 DEBUG 30339 --- [io-8080-exec-66] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@505e5453]
-2019-03-01 17:45:50.312 DEBUG 30339 --- [io-8080-exec-66] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:45:50.499 DEBUG 30339 --- [io-8080-exec-67] o.s.web.servlet.DispatcherServlet        : POST "/permission/count", parameters={masked}
-2019-03-01 17:45:50.499 DEBUG 30339 --- [io-8080-exec-67] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<java.lang.Integer>> com.nieyue.controller.PermissionController.count(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
-2019-03-01 17:45:50.502 DEBUG 30339 --- [io-8080-exec-67] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:45:50.502 DEBUG 30339 --- [io-8080-exec-67] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@5de48d63]
-2019-03-01 17:45:50.502 DEBUG 30339 --- [io-8080-exec-67] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:45:50.679 DEBUG 30339 --- [io-8080-exec-68] o.s.web.servlet.DispatcherServlet        : POST "/permission/list", parameters={masked}
-2019-03-01 17:45:50.680 DEBUG 30339 --- [io-8080-exec-68] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Permission>> com.nieyue.controller.PermissionController.browsePagingPermission(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,int,int,java.lang.String,java.lang.String)
-2019-03-01 17:45:50.688 DEBUG 30339 --- [io-8080-exec-68] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:45:50.688 DEBUG 30339 --- [io-8080-exec-68] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@34ab3442]
-2019-03-01 17:45:50.690 DEBUG 30339 --- [io-8080-exec-68] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:45:50.947 DEBUG 30339 --- [io-8080-exec-69] o.s.web.servlet.DispatcherServlet        : POST "/rolePermission/count", parameters={masked}
-2019-03-01 17:45:50.948 DEBUG 30339 --- [io-8080-exec-69] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<java.lang.Integer>> com.nieyue.controller.RolePermissionController.countAll(java.lang.Integer,java.lang.Long,java.lang.Long,javax.servlet.http.HttpSession)
-2019-03-01 17:45:50.950 DEBUG 30339 --- [io-8080-exec-69] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:45:50.950 DEBUG 30339 --- [io-8080-exec-69] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@528b284f]
-2019-03-01 17:45:50.951 DEBUG 30339 --- [io-8080-exec-69] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:45:51.127 DEBUG 30339 --- [io-8080-exec-70] o.s.web.servlet.DispatcherServlet        : POST "/rolePermission/list", parameters={masked}
-2019-03-01 17:45:51.127 DEBUG 30339 --- [io-8080-exec-70] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.RolePermission>> com.nieyue.controller.RolePermissionController.browsePagingRolePermission(java.lang.Integer,java.lang.Long,java.lang.Long,int,int,java.lang.String,java.lang.String)
-2019-03-01 17:45:51.140 DEBUG 30339 --- [io-8080-exec-70] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:45:51.141 DEBUG 30339 --- [io-8080-exec-70] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@63c46cc5]
-2019-03-01 17:45:51.141 DEBUG 30339 --- [io-8080-exec-70] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:45:54.149 DEBUG 30339 --- [io-8080-exec-71] o.s.web.servlet.DispatcherServlet        : POST "/role/count", parameters={masked}
-2019-03-01 17:45:54.149 DEBUG 30339 --- [io-8080-exec-71] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<java.lang.Integer>> com.nieyue.controller.RoleController.count(javax.servlet.http.HttpSession)
-2019-03-01 17:45:54.151 DEBUG 30339 --- [io-8080-exec-71] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:45:54.151 DEBUG 30339 --- [io-8080-exec-71] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@3955f737]
-2019-03-01 17:45:54.152 DEBUG 30339 --- [io-8080-exec-71] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:45:54.327 DEBUG 30339 --- [io-8080-exec-72] o.s.web.servlet.DispatcherServlet        : POST "/role/list", parameters={masked}
-2019-03-01 17:45:54.327 DEBUG 30339 --- [io-8080-exec-72] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Role>> com.nieyue.controller.RoleController.list(int,int,java.lang.String,java.lang.String)
-2019-03-01 17:45:54.329 DEBUG 30339 --- [io-8080-exec-72] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:45:54.329 DEBUG 30339 --- [io-8080-exec-72] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@f6b410b]
-2019-03-01 17:45:54.330 DEBUG 30339 --- [io-8080-exec-72] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:45:54.714 DEBUG 30339 --- [io-8080-exec-73] o.s.web.servlet.DispatcherServlet        : POST "/permission/count", parameters={masked}
-2019-03-01 17:45:54.715 DEBUG 30339 --- [io-8080-exec-73] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<java.lang.Integer>> com.nieyue.controller.PermissionController.count(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
-2019-03-01 17:45:54.716 DEBUG 30339 --- [io-8080-exec-73] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:45:54.716 DEBUG 30339 --- [io-8080-exec-73] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@6fe15bba]
-2019-03-01 17:45:54.717 DEBUG 30339 --- [io-8080-exec-73] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:45:54.899 DEBUG 30339 --- [io-8080-exec-74] o.s.web.servlet.DispatcherServlet        : POST "/permission/list", parameters={masked}
-2019-03-01 17:45:54.899 DEBUG 30339 --- [io-8080-exec-74] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Permission>> com.nieyue.controller.PermissionController.browsePagingPermission(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,int,int,java.lang.String,java.lang.String)
-2019-03-01 17:45:54.904 DEBUG 30339 --- [io-8080-exec-74] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:45:54.904 DEBUG 30339 --- [io-8080-exec-74] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@20589aec]
-2019-03-01 17:45:54.905 DEBUG 30339 --- [io-8080-exec-74] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:46:09.459 DEBUG 30339 --- [io-8080-exec-75] o.s.web.servlet.DispatcherServlet        : POST "/role/count", parameters={masked}
-2019-03-01 17:46:09.459 DEBUG 30339 --- [io-8080-exec-75] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<java.lang.Integer>> com.nieyue.controller.RoleController.count(javax.servlet.http.HttpSession)
-2019-03-01 17:46:09.461 DEBUG 30339 --- [io-8080-exec-75] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:46:09.461 DEBUG 30339 --- [io-8080-exec-75] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@6b5fe580]
-2019-03-01 17:46:09.462 DEBUG 30339 --- [io-8080-exec-75] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:46:09.640 DEBUG 30339 --- [io-8080-exec-76] o.s.web.servlet.DispatcherServlet        : POST "/role/list", parameters={masked}
-2019-03-01 17:46:09.641 DEBUG 30339 --- [io-8080-exec-76] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Role>> com.nieyue.controller.RoleController.list(int,int,java.lang.String,java.lang.String)
-2019-03-01 17:46:09.643 DEBUG 30339 --- [io-8080-exec-76] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:46:09.643 DEBUG 30339 --- [io-8080-exec-76] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@30c0518d]
-2019-03-01 17:46:09.644 DEBUG 30339 --- [io-8080-exec-76] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:46:10.674 DEBUG 30339 --- [io-8080-exec-77] o.s.web.servlet.DispatcherServlet        : POST "/permission/count", parameters={masked}
-2019-03-01 17:46:10.674 DEBUG 30339 --- [io-8080-exec-77] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<java.lang.Integer>> com.nieyue.controller.PermissionController.count(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
-2019-03-01 17:46:10.676 DEBUG 30339 --- [io-8080-exec-77] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:46:10.676 DEBUG 30339 --- [io-8080-exec-77] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@10bca0f9]
-2019-03-01 17:46:10.677 DEBUG 30339 --- [io-8080-exec-77] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:46:10.859 DEBUG 30339 --- [io-8080-exec-78] o.s.web.servlet.DispatcherServlet        : POST "/permission/list", parameters={masked}
-2019-03-01 17:46:10.859 DEBUG 30339 --- [io-8080-exec-78] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Permission>> com.nieyue.controller.PermissionController.browsePagingPermission(java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,int,int,java.lang.String,java.lang.String)
-2019-03-01 17:46:10.862 DEBUG 30339 --- [io-8080-exec-78] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:46:10.863 DEBUG 30339 --- [io-8080-exec-78] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@2a4c8781]
-2019-03-01 17:46:10.863 DEBUG 30339 --- [io-8080-exec-78] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:46:12.675 DEBUG 30339 --- [io-8080-exec-79] o.s.web.servlet.DispatcherServlet        : POST "/mer/count", parameters={masked}
-2019-03-01 17:46:12.677 DEBUG 30339 --- [io-8080-exec-79] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<java.lang.Integer>> com.nieyue.controller.MerController.count(java.lang.Integer,javax.servlet.http.HttpSession)
-2019-03-01 17:46:12.679 DEBUG 30339 --- [io-8080-exec-79] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:46:12.680 DEBUG 30339 --- [io-8080-exec-79] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@3584eb76]
-2019-03-01 17:46:12.680 DEBUG 30339 --- [io-8080-exec-79] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:46:12.858 DEBUG 30339 --- [io-8080-exec-80] o.s.web.servlet.DispatcherServlet        : POST "/mer/list", parameters={masked}
-2019-03-01 17:46:12.859 DEBUG 30339 --- [io-8080-exec-80] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Mer>> com.nieyue.controller.MerController.list(java.lang.Integer,int,int,java.lang.String,java.lang.String)
-2019-03-01 17:46:12.866 DEBUG 30339 --- [io-8080-exec-80] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:46:12.866 DEBUG 30339 --- [io-8080-exec-80] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@6a54ed22]
-2019-03-01 17:46:12.869 DEBUG 30339 --- [io-8080-exec-80] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:46:15.570 DEBUG 30339 --- [io-8080-exec-81] o.s.web.servlet.DispatcherServlet        : POST "/finance/count", parameters={masked}
-2019-03-01 17:46:15.570 DEBUG 30339 --- [io-8080-exec-81] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<java.lang.Integer>> com.nieyue.controller.FinanceController.count(java.lang.Long,javax.servlet.http.HttpSession)
-2019-03-01 17:46:15.578 DEBUG 30339 --- [io-8080-exec-81] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:46:15.578 DEBUG 30339 --- [io-8080-exec-81] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@32d86e50]
-2019-03-01 17:46:15.579 DEBUG 30339 --- [io-8080-exec-81] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:46:15.753 DEBUG 30339 --- [io-8080-exec-82] o.s.web.servlet.DispatcherServlet        : POST "/finance/list", parameters={masked}
-2019-03-01 17:46:15.754 DEBUG 30339 --- [io-8080-exec-82] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Finance>> com.nieyue.controller.FinanceController.list(java.lang.Long,int,int,java.lang.String,java.lang.String)
-2019-03-01 17:46:15.759 DEBUG 30339 --- [io-8080-exec-82] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:46:15.759 DEBUG 30339 --- [io-8080-exec-82] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@3bf832d8]
-2019-03-01 17:46:15.762 DEBUG 30339 --- [io-8080-exec-82] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:46:16.490 DEBUG 30339 --- [io-8080-exec-83] o.s.web.servlet.DispatcherServlet        : POST "/rechargeTerm/count", parameters={masked}
-2019-03-01 17:46:16.491 DEBUG 30339 --- [io-8080-exec-83] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<java.lang.Integer>> com.nieyue.controller.RechargeTermController.count(java.lang.Integer,javax.servlet.http.HttpSession)
-2019-03-01 17:46:16.495 DEBUG 30339 --- [io-8080-exec-83] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:46:16.495 DEBUG 30339 --- [io-8080-exec-83] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@a1e6d17]
-2019-03-01 17:46:16.496 DEBUG 30339 --- [io-8080-exec-83] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:46:16.674 DEBUG 30339 --- [io-8080-exec-84] o.s.web.servlet.DispatcherServlet        : POST "/rechargeTerm/list", parameters={masked}
-2019-03-01 17:46:16.674 DEBUG 30339 --- [io-8080-exec-84] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.RechargeTerm>> com.nieyue.controller.RechargeTermController.list(java.lang.Integer,int,int,java.lang.String,java.lang.String)
-2019-03-01 17:46:16.679 DEBUG 30339 --- [io-8080-exec-84] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:46:16.679 DEBUG 30339 --- [io-8080-exec-84] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@12fb31ea]
-2019-03-01 17:46:16.679 DEBUG 30339 --- [io-8080-exec-84] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:46:17.959 DEBUG 30339 --- [io-8080-exec-85] o.s.web.servlet.DispatcherServlet        : POST "/role/count", parameters={masked}
-2019-03-01 17:46:17.960 DEBUG 30339 --- [io-8080-exec-85] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<java.lang.Integer>> com.nieyue.controller.RoleController.count(javax.servlet.http.HttpSession)
-2019-03-01 17:46:17.961 DEBUG 30339 --- [io-8080-exec-85] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:46:17.961 DEBUG 30339 --- [io-8080-exec-85] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@1e404a4a]
-2019-03-01 17:46:17.962 DEBUG 30339 --- [io-8080-exec-85] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:46:18.151 DEBUG 30339 --- [io-8080-exec-86] o.s.web.servlet.DispatcherServlet        : POST "/role/list", parameters={masked}
-2019-03-01 17:46:18.151 DEBUG 30339 --- [io-8080-exec-86] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Role>> com.nieyue.controller.RoleController.list(int,int,java.lang.String,java.lang.String)
-2019-03-01 17:46:18.154 DEBUG 30339 --- [io-8080-exec-86] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:46:18.154 DEBUG 30339 --- [io-8080-exec-86] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@4396fd3]
-2019-03-01 17:46:18.154 DEBUG 30339 --- [io-8080-exec-86] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:46:18.340 DEBUG 30339 --- [io-8080-exec-87] o.s.web.servlet.DispatcherServlet        : POST "/account/count", parameters={masked}
-2019-03-01 17:46:18.341 DEBUG 30339 --- [io-8080-exec-87] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<java.lang.Integer>> com.nieyue.controller.AccountController.countAll(java.lang.Long,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Long,java.lang.Long,java.lang.Integer,java.util.Date,java.util.Date,javax.servlet.http.HttpSession)
-2019-03-01 17:46:18.345 DEBUG 30339 --- [io-8080-exec-87] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:46:18.345 DEBUG 30339 --- [io-8080-exec-87] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@5d8386fd]
-2019-03-01 17:46:18.345 DEBUG 30339 --- [io-8080-exec-87] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:46:18.532 DEBUG 30339 --- [io-8080-exec-88] o.s.web.servlet.DispatcherServlet        : POST "/account/list", parameters={masked}
-2019-03-01 17:46:18.533 DEBUG 30339 --- [io-8080-exec-88] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Account>> com.nieyue.controller.AccountController.browsePagingAccount(java.lang.Long,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Long,java.lang.Long,java.lang.Integer,java.util.Date,java.util.Date,int,int,java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
-2019-03-01 17:46:18.542 DEBUG 30339 --- [io-8080-exec-88] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:46:18.542 DEBUG 30339 --- [io-8080-exec-88] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@2de877d4]
-2019-03-01 17:46:18.543 DEBUG 30339 --- [io-8080-exec-88] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:46:22.010 DEBUG 30339 --- [io-8080-exec-89] o.s.web.servlet.DispatcherServlet        : POST "/config/count", parameters={masked}
-2019-03-01 17:46:22.010 DEBUG 30339 --- [io-8080-exec-89] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<java.lang.Integer>> com.nieyue.controller.ConfigController.count(javax.servlet.http.HttpSession)
-2019-03-01 17:46:22.013 DEBUG 30339 --- [io-8080-exec-89] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:46:22.013 DEBUG 30339 --- [io-8080-exec-89] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@543910a3]
-2019-03-01 17:46:22.014 DEBUG 30339 --- [io-8080-exec-89] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:46:22.184 DEBUG 30339 --- [io-8080-exec-90] o.s.web.servlet.DispatcherServlet        : POST "/config/list", parameters={masked}
-2019-03-01 17:46:22.184 DEBUG 30339 --- [io-8080-exec-90] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Config>> com.nieyue.controller.ConfigController.browsePagingConfig(int,int,java.lang.String,java.lang.String)
-2019-03-01 17:46:22.187 DEBUG 30339 --- [io-8080-exec-90] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:46:22.187 DEBUG 30339 --- [io-8080-exec-90] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@4de0fcc4]
-2019-03-01 17:46:22.187 DEBUG 30339 --- [io-8080-exec-90] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:46:24.676 DEBUG 30339 --- [io-8080-exec-91] o.s.web.servlet.DispatcherServlet        : POST "/config/load?configId=1000", parameters={masked}
-2019-03-01 17:46:24.676 DEBUG 30339 --- [io-8080-exec-91] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Config>> com.nieyue.controller.ConfigController.loadConfig(java.lang.Long,javax.servlet.http.HttpSession)
-2019-03-01 17:46:24.680 DEBUG 30339 --- [io-8080-exec-91] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:46:24.680 DEBUG 30339 --- [io-8080-exec-91] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@1fd645a9]
-2019-03-01 17:46:24.681 DEBUG 30339 --- [io-8080-exec-91] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:46:44.602 DEBUG 30339 --- [io-8080-exec-93] o.s.web.servlet.DispatcherServlet        : POST "/account/load?accountId=1000", parameters={masked}
-2019-03-01 17:46:44.603 DEBUG 30339 --- [io-8080-exec-93] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Account>> com.nieyue.controller.AccountController.loadAccount(java.lang.Long,javax.servlet.http.HttpSession)
-2019-03-01 17:46:44.607 DEBUG 30339 --- [io-8080-exec-93] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:46:44.607 DEBUG 30339 --- [io-8080-exec-93] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@18d16037]
-2019-03-01 17:46:44.608 DEBUG 30339 --- [io-8080-exec-93] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:46:46.948 DEBUG 30339 --- [io-8080-exec-94] o.s.web.servlet.DispatcherServlet        : POST "/account/update", parameters={masked}
-2019-03-01 17:46:46.948 DEBUG 30339 --- [io-8080-exec-94] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Account>> com.nieyue.controller.AccountController.updateAccount(com.nieyue.bean.Account,javax.servlet.http.HttpSession)
-2019-03-01 17:46:47.028 DEBUG 30339 --- [io-8080-exec-94] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:46:47.028 DEBUG 30339 --- [io-8080-exec-94] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@498704d6]
-2019-03-01 17:46:47.030 DEBUG 30339 --- [io-8080-exec-94] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:47:39.969 DEBUG 30339 --- [io-8080-exec-95] o.s.web.servlet.DispatcherServlet        : POST "/account/islogin", parameters={}
-2019-03-01 17:47:39.970 DEBUG 30339 --- [io-8080-exec-95] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Account>> com.nieyue.controller.AccountController.isLoginAccount(javax.servlet.http.HttpSession)
-2019-03-01 17:47:39.972 DEBUG 30339 --- [io-8080-exec-95] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:47:39.972 DEBUG 30339 --- [io-8080-exec-95] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@70e60c0e]
-2019-03-01 17:47:39.973 DEBUG 30339 --- [io-8080-exec-95] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:47:40.143 DEBUG 30339 --- [io-8080-exec-96] o.s.web.servlet.DispatcherServlet        : GET "/config/list", parameters={}
-2019-03-01 17:47:40.144 DEBUG 30339 --- [io-8080-exec-96] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Config>> com.nieyue.controller.ConfigController.browsePagingConfig(int,int,java.lang.String,java.lang.String)
-2019-03-01 17:47:40.146 DEBUG 30339 --- [io-8080-exec-96] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2019-03-01 17:47:40.146 DEBUG 30339 --- [io-8080-exec-96] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@34a40e14]
-2019-03-01 17:47:40.147 DEBUG 30339 --- [io-8080-exec-96] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:48:50.903 DEBUG 30339 --- [io-8080-exec-99] o.s.web.servlet.DispatcherServlet        : POST "/mer/list", parameters={masked}
-2019-03-01 17:48:50.904 DEBUG 30339 --- [io-8080-exec-99] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Mer>> com.nieyue.controller.MerController.list(java.lang.Integer,int,int,java.lang.String,java.lang.String)
-2019-03-01 17:48:50.909 DEBUG 30339 --- [io-8080-exec-99] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
-2019-03-01 17:48:50.909 DEBUG 30339 --- [io-8080-exec-99] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@5c8015a5]
-2019-03-01 17:48:50.910 DEBUG 30339 --- [io-8080-exec-99] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:48:52.549 DEBUG 30339 --- [o-8080-exec-101] o.s.web.servlet.DispatcherServlet        : POST "/account/islogin", parameters={}
-2019-03-01 17:48:52.550 DEBUG 30339 --- [o-8080-exec-101] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Account>> com.nieyue.controller.AccountController.isLoginAccount(javax.servlet.http.HttpSession)
-2019-03-01 17:48:52.551 DEBUG 30339 --- [o-8080-exec-101] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
-2019-03-01 17:48:52.551 DEBUG 30339 --- [o-8080-exec-101] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@15cf5b0b]
-2019-03-01 17:48:52.551 DEBUG 30339 --- [o-8080-exec-102] o.s.web.servlet.DispatcherServlet        : POST "/rechargeTerm/list", parameters={masked}
-2019-03-01 17:48:52.551 DEBUG 30339 --- [o-8080-exec-102] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.RechargeTerm>> com.nieyue.controller.RechargeTermController.list(java.lang.Integer,int,int,java.lang.String,java.lang.String)
-2019-03-01 17:48:52.553 DEBUG 30339 --- [o-8080-exec-101] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:48:52.558 DEBUG 30339 --- [o-8080-exec-102] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
-2019-03-01 17:48:52.558 DEBUG 30339 --- [o-8080-exec-102] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@7e3e8ed]
-2019-03-01 17:48:52.560 DEBUG 30339 --- [o-8080-exec-102] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:48:55.228 DEBUG 30339 --- [o-8080-exec-104] o.s.web.servlet.DispatcherServlet        : POST "/payment/bYPay", parameters={masked}
-2019-03-01 17:48:55.230 DEBUG 30339 --- [o-8080-exec-104] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public java.lang.String com.nieyue.controller.PaymentController.weXinUnifiedOrder(java.lang.Long,java.lang.Long,java.lang.Double,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
-2019-03-01 17:48:55.880 DEBUG 30339 --- [o-8080-exec-104] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json, text/plain, */*]
-2019-03-01 17:48:55.880 DEBUG 30339 --- [o-8080-exec-104] m.m.a.RequestResponseBodyMethodProcessor : Writing ["http://api.antsquare.com.cn/hbPay.jhtml?jnlNo=110051320190301174858510759360"]
-2019-03-01 17:48:55.880 DEBUG 30339 --- [o-8080-exec-104] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:49:22.399 DEBUG 30339 --- [o-8080-exec-105] o.s.web.servlet.DispatcherServlet        : POST "/payment/bYPayNotifyUrl", parameters={}
-2019-03-01 17:49:22.399 DEBUG 30339 --- [o-8080-exec-105] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public java.lang.String com.nieyue.controller.PaymentController.BYPayNotifyUrl(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
-2019-03-01 17:49:22.404 DEBUG 30339 --- [o-8080-exec-105] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json] and supported [application/json, application/*+json, text/plain, */*]
-2019-03-01 17:49:22.404 DEBUG 30339 --- [o-8080-exec-105] m.m.a.RequestResponseBodyMethodProcessor : Writing ["FAIL"]
-2019-03-01 17:49:22.405 DEBUG 30339 --- [o-8080-exec-105] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:50:23.975 DEBUG 30339 --- [o-8080-exec-106] o.s.web.servlet.DispatcherServlet        : POST "/payment/bYPayNotifyUrl", parameters={}
-2019-03-01 17:50:23.975 DEBUG 30339 --- [o-8080-exec-106] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public java.lang.String com.nieyue.controller.PaymentController.BYPayNotifyUrl(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
-2019-03-01 17:50:23.978 DEBUG 30339 --- [o-8080-exec-106] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json] and supported [application/json, application/*+json, text/plain, */*]
-2019-03-01 17:50:23.978 DEBUG 30339 --- [o-8080-exec-106] m.m.a.RequestResponseBodyMethodProcessor : Writing ["FAIL"]
-2019-03-01 17:50:23.978 DEBUG 30339 --- [o-8080-exec-106] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:51:26.166 DEBUG 30339 --- [o-8080-exec-107] o.s.web.servlet.DispatcherServlet        : POST "/rechargeTerm/list", parameters={masked}
-2019-03-01 17:51:26.167 DEBUG 30339 --- [o-8080-exec-107] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.RechargeTerm>> com.nieyue.controller.RechargeTermController.list(java.lang.Integer,int,int,java.lang.String,java.lang.String)
-2019-03-01 17:51:26.171 DEBUG 30339 --- [o-8080-exec-107] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
-2019-03-01 17:51:26.171 DEBUG 30339 --- [o-8080-exec-107] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@1ae5f433]
-2019-03-01 17:51:26.172 DEBUG 30339 --- [o-8080-exec-107] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:51:26.174 DEBUG 30339 --- [o-8080-exec-108] o.s.web.servlet.DispatcherServlet        : POST "/account/islogin", parameters={}
-2019-03-01 17:51:26.174 DEBUG 30339 --- [o-8080-exec-108] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Account>> com.nieyue.controller.AccountController.isLoginAccount(javax.servlet.http.HttpSession)
-2019-03-01 17:51:26.175 DEBUG 30339 --- [o-8080-exec-108] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
-2019-03-01 17:51:26.175 DEBUG 30339 --- [o-8080-exec-108] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@2368e672]
-2019-03-01 17:51:26.176 DEBUG 30339 --- [o-8080-exec-108] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:51:28.071 DEBUG 30339 --- [o-8080-exec-110] o.s.web.servlet.DispatcherServlet        : GET "/home/card.html", parameters={}
-2019-03-01 17:51:28.072 DEBUG 30339 --- [o-8080-exec-110] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
-2019-03-01 17:51:28.074 DEBUG 30339 --- [o-8080-exec-110] o.s.web.servlet.DispatcherServlet        : Completed 304 NOT_MODIFIED
-2019-03-01 17:51:28.349 DEBUG 30339 --- [o-8080-exec-111] o.s.web.servlet.DispatcherServlet        : POST "/account/islogin", parameters={}
-2019-03-01 17:51:28.350 DEBUG 30339 --- [o-8080-exec-111] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Account>> com.nieyue.controller.AccountController.isLoginAccount(javax.servlet.http.HttpSession)
-2019-03-01 17:51:28.350 DEBUG 30339 --- [o-8080-exec-111] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
-2019-03-01 17:51:28.350 DEBUG 30339 --- [o-8080-exec-111] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@47315e4b]
-2019-03-01 17:51:28.351 DEBUG 30339 --- [o-8080-exec-111] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:51:28.353 DEBUG 30339 --- [o-8080-exec-112] o.s.web.servlet.DispatcherServlet        : POST "/card/list", parameters={masked}
-2019-03-01 17:51:28.354 DEBUG 30339 --- [o-8080-exec-112] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Card>> com.nieyue.controller.CardController.list(java.lang.Long,java.lang.Long,int,int,java.lang.String,java.lang.String)
-2019-03-01 17:51:28.366 DEBUG 30339 --- [o-8080-exec-112] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
-2019-03-01 17:51:28.366 DEBUG 30339 --- [o-8080-exec-112] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@c871abb]
-2019-03-01 17:51:28.370 DEBUG 30339 --- [o-8080-exec-112] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:51:28.573 DEBUG 30339 --- [o-8080-exec-115] o.s.web.servlet.DispatcherServlet        : GET "/home/resources/img/card_mianliao.png", parameters={}
-2019-03-01 17:51:28.574 DEBUG 30339 --- [o-8080-exec-114] o.s.web.servlet.DispatcherServlet        : GET "/home/resources/img/card_daishen.png", parameters={}
-2019-03-01 17:51:28.575 DEBUG 30339 --- [o-8080-exec-115] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
-2019-03-01 17:51:28.575 DEBUG 30339 --- [o-8080-exec-114] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
-2019-03-01 17:51:28.577 DEBUG 30339 --- [o-8080-exec-115] o.s.web.servlet.DispatcherServlet        : Completed 304 NOT_MODIFIED
-2019-03-01 17:51:28.578 DEBUG 30339 --- [o-8080-exec-114] o.s.web.servlet.DispatcherServlet        : Completed 304 NOT_MODIFIED
-2019-03-01 17:51:28.762 DEBUG 30339 --- [o-8080-exec-116] o.s.web.servlet.DispatcherServlet        : POST "/mer/list", parameters={masked}
-2019-03-01 17:51:28.763 DEBUG 30339 --- [o-8080-exec-116] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Mer>> com.nieyue.controller.MerController.list(java.lang.Integer,int,int,java.lang.String,java.lang.String)
-2019-03-01 17:51:28.766 DEBUG 30339 --- [o-8080-exec-116] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
-2019-03-01 17:51:28.766 DEBUG 30339 --- [o-8080-exec-116] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@257c45ba]
-2019-03-01 17:51:28.767 DEBUG 30339 --- [o-8080-exec-116] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:51:30.307 DEBUG 30339 --- [o-8080-exec-118] o.s.web.servlet.DispatcherServlet        : POST "/account/islogin", parameters={}
-2019-03-01 17:51:30.308 DEBUG 30339 --- [o-8080-exec-118] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Account>> com.nieyue.controller.AccountController.isLoginAccount(javax.servlet.http.HttpSession)
-2019-03-01 17:51:30.308 DEBUG 30339 --- [o-8080-exec-118] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
-2019-03-01 17:51:30.308 DEBUG 30339 --- [o-8080-exec-118] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@61921332]
-2019-03-01 17:51:30.309 DEBUG 30339 --- [o-8080-exec-119] o.s.web.servlet.DispatcherServlet        : POST "/card/list", parameters={masked}
-2019-03-01 17:51:30.309 DEBUG 30339 --- [o-8080-exec-118] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:51:30.309 DEBUG 30339 --- [o-8080-exec-119] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Card>> com.nieyue.controller.CardController.list(java.lang.Long,java.lang.Long,int,int,java.lang.String,java.lang.String)
-2019-03-01 17:51:30.313 DEBUG 30339 --- [o-8080-exec-119] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
-2019-03-01 17:51:30.313 DEBUG 30339 --- [o-8080-exec-119] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@480716d4]
-2019-03-01 17:51:30.314 DEBUG 30339 --- [o-8080-exec-119] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:51:30.499 DEBUG 30339 --- [o-8080-exec-121] o.s.web.servlet.DispatcherServlet        : GET "/home/resources/img/card_daishen.png", parameters={}
-2019-03-01 17:51:30.501 DEBUG 30339 --- [o-8080-exec-121] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
-2019-03-01 17:51:30.503 DEBUG 30339 --- [o-8080-exec-122] o.s.web.servlet.DispatcherServlet        : GET "/home/resources/img/card_mianliao.png", parameters={}
-2019-03-01 17:51:30.505 DEBUG 30339 --- [o-8080-exec-122] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
-2019-03-01 17:51:30.506 DEBUG 30339 --- [o-8080-exec-123] o.s.web.servlet.DispatcherServlet        : GET "/home/resources/img/card_wujin.png", parameters={}
-2019-03-01 17:51:30.507 DEBUG 30339 --- [o-8080-exec-121] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:51:30.507 DEBUG 30339 --- [o-8080-exec-122] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:51:30.507 DEBUG 30339 --- [o-8080-exec-123] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
-2019-03-01 17:51:30.511 DEBUG 30339 --- [o-8080-exec-123] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:51:30.518 DEBUG 30339 --- [o-8080-exec-124] o.s.web.servlet.DispatcherServlet        : GET "/home/resources/img/card_shouwan.png", parameters={}
-2019-03-01 17:51:30.519 DEBUG 30339 --- [o-8080-exec-124] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
-2019-03-01 17:51:30.521 DEBUG 30339 --- [o-8080-exec-124] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:51:30.681 DEBUG 30339 --- [o-8080-exec-125] o.s.web.servlet.DispatcherServlet        : GET "/home/resources/img/card_bunenghecheng.png", parameters={}
-2019-03-01 17:51:30.682 DEBUG 30339 --- [o-8080-exec-125] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
-2019-03-01 17:51:30.684 DEBUG 30339 --- [o-8080-exec-125] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-01 17:53:31.695 DEBUG 30339 --- [o-8080-exec-126] o.s.web.servlet.DispatcherServlet        : POST "/payment/bYPayNotifyUrl", parameters={}
-2019-03-01 17:53:31.696 DEBUG 30339 --- [o-8080-exec-126] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public java.lang.String com.nieyue.controller.PaymentController.BYPayNotifyUrl(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession)
-2019-03-01 17:53:31.698 DEBUG 30339 --- [o-8080-exec-126] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json] and supported [application/json, application/*+json, text/plain, */*]
-2019-03-01 17:53:31.698 DEBUG 30339 --- [o-8080-exec-126] m.m.a.RequestResponseBodyMethodProcessor : Writing ["FAIL"]
-2019-03-01 17:53:31.699 DEBUG 30339 --- [o-8080-exec-126] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-03-04 17:50:35.135 DEBUG 19748 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/home/register.html", parameters={}
+2019-03-04 17:50:35.154 DEBUG 19748 --- [nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
+2019-03-04 17:50:35.170 DEBUG 19748 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-03-04 17:50:35.382 DEBUG 19748 --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/home/resources/css/base.css", parameters={}
+2019-03-04 17:50:35.390 DEBUG 19748 --- [nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
+2019-03-04 17:50:35.392 DEBUG 19748 --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-03-04 17:50:35.397 DEBUG 19748 --- [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/home/resources/js/jquery1.12.2.js", parameters={}
+2019-03-04 17:50:35.403 DEBUG 19748 --- [nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
+2019-03-04 17:50:35.407 DEBUG 19748 --- [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-03-04 17:50:35.561 DEBUG 19748 --- [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/home/resources/js/base.js", parameters={}
+2019-03-04 17:50:35.565 DEBUG 19748 --- [nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
+2019-03-04 17:50:35.567 DEBUG 19748 --- [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-03-04 17:50:35.594 DEBUG 19748 --- [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/home/resources/img/background.png", parameters={}
+2019-03-04 17:50:35.598 DEBUG 19748 --- [nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
+2019-03-04 17:50:35.601 DEBUG 19748 --- [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-03-04 17:50:41.339 DEBUG 19748 --- [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : POST "/account/validCode", parameters={masked}
+2019-03-04 17:50:41.340 DEBUG 19748 --- [nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<java.lang.String>> com.nieyue.controller.AccountController.validCode(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,java.lang.String,java.lang.Integer) throws com.nieyue.exception.AccountIsExistException,com.nieyue.exception.RequestLimitException,com.nieyue.exception.CommonNotRollbackException
+InvalidTimeStamp.Expired : Specified time stamp or date value is expired.
+RequestId : 341D7CFA-AA07-4BCB-BE92-562DAA218117
+2019-03-04 17:50:42.180 DEBUG 19748 --- [nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler public com.nieyue.util.StateResult com.nieyue.exception.MyExceptionAdvice.accountMessageExceptionHandler(java.lang.Exception) throws java.lang.Exception
+2019-03-04 17:50:42.184 DEBUG 19748 --- [nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
+2019-03-04 17:50:42.184 DEBUG 19748 --- [nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResult@51ca8337]
+2019-03-04 17:50:42.186 DEBUG 19748 --- [nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.nieyue.exception.AccountMessageException]
+2019-03-04 17:50:42.186 DEBUG 19748 --- [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
