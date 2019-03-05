@@ -78,6 +78,7 @@ public class CardServiceImpl extends BaseServiceImpl<Card,Long> implements CardS
         merOrder.setAccountId(accountId);
         merOrder.setCreateDate(new Date());
         merOrder.setUpdateDate(new Date());
+        merOrder.setStatus(1);//订单状态，1待发货，2已发货
         merOrder.setOrderNumber(SnowflakeIdWorker.getId().toString());
         merOrderService.add(merOrder);
         MerOrderDetail merOrderDetail=new MerOrderDetail();
@@ -87,7 +88,6 @@ public class CardServiceImpl extends BaseServiceImpl<Card,Long> implements CardS
         merOrderDetail.setMerName(mer.getName());
         merOrderDetail.setImgAddress(mer.getImgAddress());
         merOrderDetail.setMerOrderId(merOrder.getMerOrderId());
-        merOrderDetail.setStatus(1);//订单状态，1待发货，2已发货
         merOrderDetailService.add(merOrderDetail);
         return card;
     }

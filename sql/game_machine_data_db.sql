@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50621
 File Encoding         : 65001
 
-Date: 2019-03-01 18:35:52
+Date: 2019-03-05 15:00:58
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -54,9 +54,10 @@ CREATE TABLE `account_tb` (
 -- ----------------------------
 -- Records of account_tb
 -- ----------------------------
-INSERT INTO `account_tb` VALUES ('1000', '1000', '11874bb6149dd45428da628c9766b252', '聂跃', null, '0', null, null, '1000@qq.com', '1001', null, null, null, null, '2019-02-25 14:06:13', '2019-03-01 14:38:08', '0', '1000', null);
+INSERT INTO `account_tb` VALUES ('1000', '1000', '11874bb6149dd45428da628c9766b252', '??', null, '0', null, 'sdfsd', '1000@qq.com', '1001', null, null, null, null, '2019-02-25 14:06:13', '2019-03-04 22:56:08', '0', '1000', null);
 INSERT INTO `account_tb` VALUES ('1099957358295506945', '15111336588', '11874bb6149dd45428da628c9766b252', null, null, '0', null, 'dsfds', null, '6dmOBfcP', null, null, null, null, '2019-02-25 17:00:45', '2019-02-25 17:00:45', '0', '1002', null);
-INSERT INTO `account_tb` VALUES ('1100211858902032386', '15111336586', '11874bb6149dd45428da628c9766b252', null, null, '0', null, null, null, null, null, '0', null, null, '2019-02-26 09:52:03', '2019-03-01 15:33:35', '0', '1002', null);
+INSERT INTO `account_tb` VALUES ('1100211858902032386', '15111336586', '11874bb6149dd45428da628c9766b252', null, null, '0', null, null, null, null, null, '0', null, null, '2019-02-26 09:52:03', '2019-03-04 22:56:20', '0', '1002', null);
+INSERT INTO `account_tb` VALUES ('1102512950389788674', '18684648787', '93d12654a890c4831540498e4cbef2f9', null, null, '0', null, null, null, null, null, '0', null, null, '2019-03-04 02:15:46', '2019-03-04 02:15:46', '0', '1002', null);
 
 -- ----------------------------
 -- Table structure for `card_tb`
@@ -77,13 +78,17 @@ CREATE TABLE `card_tb` (
   KEY `INDEX_ACCOUNTID` (`account_id`) USING BTREE,
   KEY `INDEX_CREATEDATE` (`create_date`) USING BTREE,
   KEY `INDEX_UPDATEDATE` (`update_date`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=1101378108462141442 DEFAULT CHARSET=utf8 COMMENT='卡片表';
+) ENGINE=InnoDB AUTO_INCREMENT=1102633029471358978 DEFAULT CHARSET=utf8 COMMENT='卡片表';
 
 -- ----------------------------
 -- Records of card_tb
 -- ----------------------------
-INSERT INTO `card_tb` VALUES ('1101374266563563522', '0', '1', '0', '1', '2019-03-01 14:51:02', '2019-03-01 15:41:59', '1100578748119875585', '1100211858902032386');
-INSERT INTO `card_tb` VALUES ('1101378108462141441', '0', '0', '0', '1', '2019-03-01 15:06:18', '2019-03-01 15:06:18', '1099972517915254785', '1100211858902032386');
+INSERT INTO `card_tb` VALUES ('1101374266563563522', '0', '1', '1', '1', '2019-03-01 14:51:02', '2019-03-01 20:20:34', '1100578748119875585', '1100211858902032386');
+INSERT INTO `card_tb` VALUES ('1101378108462141441', '1', '0', '0', '1', '2019-03-01 15:06:18', '2019-03-01 20:19:56', '1099972517915254785', '1100211858902032386');
+INSERT INTO `card_tb` VALUES ('1101698725597728769', '0', '0', '0', '1', '2019-03-01 20:20:19', '2019-03-01 20:20:19', '1100578788909481986', '1100211858902032386');
+INSERT INTO `card_tb` VALUES ('1101698852114714626', '0', '1', '0', '0', '2019-03-01 20:20:50', '2019-03-01 20:20:50', '1100578654272323585', '1100211858902032386');
+INSERT INTO `card_tb` VALUES ('1102513119810310145', '1', '0', '0', '0', '2019-03-04 02:16:26', '2019-03-04 02:16:26', '1100577889931722754', '1102512950389788674');
+INSERT INTO `card_tb` VALUES ('1102633029471358977', '0', '0', '1', '0', '2019-03-04 10:12:55', '2019-03-04 10:12:55', '1100577889931722754', '1100211858902032386');
 
 -- ----------------------------
 -- Table structure for `config_tb`
@@ -123,14 +128,15 @@ CREATE TABLE `finance_tb` (
   `account_id` bigint(20) DEFAULT NULL COMMENT '账户id外键',
   PRIMARY KEY (`finance_id`),
   KEY `INDEX_ACCOUNTID` (`account_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=1100211858990112771 DEFAULT CHARSET=utf8 COMMENT='财务表';
+) ENGINE=InnoDB AUTO_INCREMENT=1102512950620475395 DEFAULT CHARSET=utf8 COMMENT='财务表';
 
 -- ----------------------------
 -- Records of finance_tb
 -- ----------------------------
 INSERT INTO `finance_tb` VALUES ('1', '11874bb6149dd45428da628c9766b252', '2100.00', '2100.00', '0.00', '0.00', '0.00', '0.00', '0.00', '2019-02-25 15:37:34', '1000');
 INSERT INTO `finance_tb` VALUES ('1099957358345838594', null, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '2019-02-25 17:00:45', '1099957358295506945');
-INSERT INTO `finance_tb` VALUES ('1100211858990112770', null, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '2019-02-26 09:52:03', '1100211858902032386');
+INSERT INTO `finance_tb` VALUES ('1100211858990112770', null, '0.00', '10.00', '0.00', '0.00', '0.00', '0.00', '0.00', '2019-03-04 17:28:52', '1100211858902032386');
+INSERT INTO `finance_tb` VALUES ('1102512950620475394', null, '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '0.00', '2019-03-04 02:15:46', '1102512950389788674');
 
 -- ----------------------------
 -- Table structure for `mer_order_detail_tb`
@@ -145,18 +151,16 @@ CREATE TABLE `mer_order_detail_tb` (
   `address` varchar(255) DEFAULT NULL COMMENT '收货地址',
   `create_date` datetime DEFAULT NULL COMMENT '创建时间',
   `update_date` datetime DEFAULT NULL COMMENT '更新时间',
-  `status` tinyint(4) DEFAULT NULL COMMENT '订单状态，1待发货，1已发货',
   `mer_order_id` bigint(20) DEFAULT NULL COMMENT '商品订单ID',
   PRIMARY KEY (`mer_order_detail_id`),
-  KEY `INDEX_MERORDERID` (`mer_order_id`) USING BTREE,
-  KEY `INDEX_STATUS` (`status`) USING BTREE
+  KEY `INDEX_MERORDERID` (`mer_order_id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=1101387087166717954 DEFAULT CHARSET=utf8 COMMENT='商品订单详情表';
 
 -- ----------------------------
 -- Records of mer_order_detail_tb
 -- ----------------------------
-INSERT INTO `mer_order_detail_tb` VALUES ('1101385397453631490', '和舰科技', 'http://localhost:8080/uploaderPath/img/20190227/1551233394388.png', null, null, '北京市北京市东城区', '2019-03-01 15:35:16', '2019-03-01 15:35:16', '1', '1101385397394911234');
-INSERT INTO `mer_order_detail_tb` VALUES ('1101387087166717953', '和舰科技', 'http://localhost:8080/uploaderPath/img/20190227/1551233394388.png', null, null, '北京市北京市东城区', '2019-03-01 15:41:59', '2019-03-01 15:41:59', '1', '1101387087112192002');
+INSERT INTO `mer_order_detail_tb` VALUES ('1101385397453631490', '和舰科技', 'http://localhost:8080/uploaderPath/img/20190227/1551233394388.png', null, null, '北京市北京市东城区', '2019-03-01 15:35:16', '2019-03-01 15:35:16', '1101385397394911234');
+INSERT INTO `mer_order_detail_tb` VALUES ('1101387087166717953', '和舰科技', 'http://localhost:8080/uploaderPath/img/20190227/1551233394388.png', null, null, '北京市北京市东城区', '2019-03-01 15:41:59', '2019-03-04 19:58:40', '1101387087112192002');
 
 -- ----------------------------
 -- Table structure for `mer_order_tb`
@@ -167,6 +171,7 @@ CREATE TABLE `mer_order_tb` (
   `order_number` varchar(255) DEFAULT NULL COMMENT '订单号',
   `create_date` datetime DEFAULT NULL COMMENT '创建时间',
   `update_date` datetime DEFAULT NULL COMMENT '更新时间',
+  `status` tinyint(4) DEFAULT '1' COMMENT '订单状态，1待发货，2已发货',
   `account_id` bigint(20) DEFAULT NULL COMMENT '下单人',
   PRIMARY KEY (`mer_order_id`),
   KEY `INDEX_ACCOUNTID` (`account_id`) USING BTREE,
@@ -177,8 +182,8 @@ CREATE TABLE `mer_order_tb` (
 -- ----------------------------
 -- Records of mer_order_tb
 -- ----------------------------
-INSERT INTO `mer_order_tb` VALUES ('1101385397394911234', '551064923459813376', '2019-03-01 15:35:16', '2019-03-01 15:35:16', '1100211858902032386');
-INSERT INTO `mer_order_tb` VALUES ('1101387087112192002', '551066612984184832', '2019-03-01 15:41:59', '2019-03-01 15:41:59', '1100211858902032386');
+INSERT INTO `mer_order_tb` VALUES ('1101385397394911234', '551064923459813376', '2019-03-01 15:35:16', '2019-03-01 15:35:16', '1', '1100211858902032386');
+INSERT INTO `mer_order_tb` VALUES ('1101387087112192002', '551066612984184832', '2019-03-01 15:41:59', '2019-03-04 22:55:22', '2', '1100211858902032386');
 
 -- ----------------------------
 -- Table structure for `mer_tb`
@@ -198,19 +203,19 @@ CREATE TABLE `mer_tb` (
 -- ----------------------------
 -- Records of mer_tb
 -- ----------------------------
-INSERT INTO `mer_tb` VALUES ('1099972517915254785', 'sadf', 'http://localhost:8080/uploaderPath/img/20190225/1551088857161.jpg', '1', '2019-02-25 18:00:59', '2019-02-25 18:00:59');
-INSERT INTO `mer_tb` VALUES ('1100577889931722754', 'sdfsd', 'http://localhost:8080/uploaderPath/img/20190227/1551233189855.jpg', '1', '2019-02-27 10:06:31', '2019-02-27 10:06:31');
-INSERT INTO `mer_tb` VALUES ('1100577967568289794', 'dfsgfds梵蒂冈', 'http://localhost:8080/uploaderPath/img/20190227/1551233208405.jpg', '1', '2019-02-27 10:06:50', '2019-02-27 10:06:50');
-INSERT INTO `mer_tb` VALUES ('1100578341536628738', '的是否规范', 'http://localhost:8080/uploaderPath/img/20190227/1551233297974.png', '1', '2019-02-27 10:08:19', '2019-02-27 10:08:19');
-INSERT INTO `mer_tb` VALUES ('1100578371295215617', 'sd敢达发生', 'http://localhost:8080/uploaderPath/img/20190227/1551233305627.png', '1', '2019-02-27 10:08:26', '2019-02-27 10:08:26');
-INSERT INTO `mer_tb` VALUES ('1100578416765665281', '鬼地方个', 'http://localhost:8080/uploaderPath/img/20190227/1551233316776.png', '1', '2019-02-27 10:08:37', '2019-02-27 10:08:37');
-INSERT INTO `mer_tb` VALUES ('1100578482935005186', '广东省法规', 'http://localhost:8080/uploaderPath/img/20190227/1551233331715.png', '1', '2019-02-27 10:08:53', '2019-02-27 10:08:53');
-INSERT INTO `mer_tb` VALUES ('1100578520482414594', '法规和德国', 'http://localhost:8080/uploaderPath/img/20190227/1551233340547.png', '1', '2019-02-27 10:09:02', '2019-02-27 10:09:02');
-INSERT INTO `mer_tb` VALUES ('1100578560579960833', '环境', 'http://localhost:8080/uploaderPath/img/20190227/1551233349378.png', '1', '2019-02-27 10:09:11', '2019-02-27 10:09:11');
-INSERT INTO `mer_tb` VALUES ('1100578619413463042', '建行卡号进口', 'http://localhost:8080/uploaderPath/img/20190227/1551233364768.jpg', '1', '2019-02-27 10:09:25', '2019-02-27 10:09:25');
-INSERT INTO `mer_tb` VALUES ('1100578654272323585', 'v刹变成v', 'http://localhost:8080/uploaderPath/img/20190227/155123337221.jpg', '1', '2019-02-27 10:09:34', '2019-02-27 10:09:34');
-INSERT INTO `mer_tb` VALUES ('1100578748119875585', '和舰科技', 'http://localhost:8080/uploaderPath/img/20190227/1551233394388.png', '1', '2019-02-27 10:09:56', '2019-02-27 10:09:56');
-INSERT INTO `mer_tb` VALUES ('1100578788909481986', 'iu偶偶', 'http://localhost:8080/uploaderPath/img/20190227/1551233404487.png', '1', '2019-02-27 10:10:06', '2019-02-27 10:10:06');
+INSERT INTO `mer_tb` VALUES ('1099972517915254785', 'sadf', 'http://198.2.201.167:8080/uploaderPath/img/20190228/1551426466351.png', '1', '2019-02-25 18:00:59', '2019-02-28 23:55:31');
+INSERT INTO `mer_tb` VALUES ('1100577889931722754', 'sdfsd', 'http://198.2.201.167:8080/uploaderPath/img/20190228/1551426466351.png', '1', '2019-02-27 10:06:31', '2019-02-28 23:55:27');
+INSERT INTO `mer_tb` VALUES ('1100577967568289794', 'dfsgfds梵蒂冈', 'http://198.2.201.167:8080/uploaderPath/img/20190228/1551426466351.png', '1', '2019-02-27 10:06:50', '2019-02-28 23:55:23');
+INSERT INTO `mer_tb` VALUES ('1100578341536628738', '测试2', 'http://198.2.201.167:8080/uploaderPath/img/20190228/1551426466351.png', '1', '2019-02-27 10:08:19', '2019-02-28 23:53:10');
+INSERT INTO `mer_tb` VALUES ('1100578371295215617', 'sd是的刚刚', 'http://198.2.201.167:8080/uploaderPath/img/20190228/1551426466351.png', '1', '2019-02-27 10:08:26', '2019-02-28 23:53:17');
+INSERT INTO `mer_tb` VALUES ('1100578416765665281', '发的规范', 'http://198.2.201.167:8080/uploaderPath/img/20190228/1551426466351.png', '1', '2019-02-27 10:08:37', '2019-02-28 23:53:21');
+INSERT INTO `mer_tb` VALUES ('1100578482935005186', '大范甘迪发', 'http://198.2.201.167:8080/uploaderPath/img/20190228/1551426466351.png', '1', '2019-02-27 10:08:53', '2019-02-28 23:53:26');
+INSERT INTO `mer_tb` VALUES ('1100578520482414594', '是大法官', 'http://198.2.201.167:8080/uploaderPath/img/20190228/1551426466351.png', '1', '2019-02-27 10:09:02', '2019-02-28 23:53:31');
+INSERT INTO `mer_tb` VALUES ('1100578560579960833', '法规和', 'http://198.2.201.167:8080/uploaderPath/img/20190228/1551426466351.png', '1', '2019-02-27 10:09:11', '2019-02-28 23:53:36');
+INSERT INTO `mer_tb` VALUES ('1100578619413463042', '规划局规划', 'http://198.2.201.167:8080/uploaderPath/img/20190228/1551426466351.png', '1', '2019-02-27 10:09:25', '2019-02-28 23:53:40');
+INSERT INTO `mer_tb` VALUES ('1100578654272323585', '建行卡', 'http://198.2.201.167:8080/uploaderPath/img/20190228/1551426466351.png', '1', '2019-02-27 10:09:34', '2019-02-28 23:53:46');
+INSERT INTO `mer_tb` VALUES ('1100578748119875585', '形成v型陈', 'http://198.2.201.167:8080/uploaderPath/img/20190228/1551426466351.png', '1', '2019-02-27 10:09:56', '2019-02-28 23:53:51');
+INSERT INTO `mer_tb` VALUES ('1100578788909481986', 'v不能', 'http://198.2.201.167:8080/uploaderPath/img/20190228/1551426466351.png', '1', '2019-02-27 10:10:06', '2019-02-28 23:53:55');
 
 -- ----------------------------
 -- Table structure for `number_tb`
@@ -230,14 +235,15 @@ CREATE TABLE `number_tb` (
   PRIMARY KEY (`number_id`),
   KEY `INDEX_USENUMBER` (`use_number`) USING BTREE,
   KEY `INDEX_ACCOUNTID` (`account_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=1100211859032055811 DEFAULT CHARSET=utf8 COMMENT='次数表';
+) ENGINE=InnoDB AUTO_INCREMENT=1102512950695972867 DEFAULT CHARSET=utf8 COMMENT='次数表';
 
 -- ----------------------------
 -- Records of number_tb
 -- ----------------------------
 INSERT INTO `number_tb` VALUES ('1', '聂跃', null, '3', '0', '0', '3', '2019-02-25 16:51:14', '2019-02-25 16:51:14', '1000');
 INSERT INTO `number_tb` VALUES ('1099957358396170242', null, null, '3', '0', '0', '3', '2019-02-25 17:00:45', '2019-02-25 17:00:45', '1099957358295506945');
-INSERT INTO `number_tb` VALUES ('1100211859032055810', null, null, '33', '0', '7', '26', '2019-02-26 09:52:03', '2019-03-01 15:06:18', '1100211858902032386');
+INSERT INTO `number_tb` VALUES ('1100211859032055810', null, null, '33', '0', '14', '19', '2019-02-26 09:52:03', '2019-03-04 10:12:58', '1100211858902032386');
+INSERT INTO `number_tb` VALUES ('1102512950695972866', null, null, '3', '0', '1', '2', '2019-03-04 02:15:46', '2019-03-04 02:16:26', '1102512950389788674');
 
 -- ----------------------------
 -- Table structure for `payment_tb`
@@ -267,13 +273,20 @@ CREATE TABLE `payment_tb` (
   KEY `INDEX_STATUS` (`status`) USING BTREE,
   KEY `INDEX_CREATEDATE` (`create_date`) USING BTREE,
   KEY `INDEX_UPDATEDATE` (`update_date`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=1101053776770887683 DEFAULT CHARSET=utf8 COMMENT='支付表';
+) ENGINE=InnoDB AUTO_INCREMENT=1102742605646630914 DEFAULT CHARSET=utf8 COMMENT='支付表';
 
 -- ----------------------------
 -- Records of payment_tb
 -- ----------------------------
-INSERT INTO `payment_tb` VALUES ('1101053561494040577', '欢乐抓娃娃', '欢乐抓娃娃', 'http://nieyue.ngrok.xiaomiqiu.cn/payment/bYPayNotifyUrl', '6', '550733084274720768', '94.00', '1', '1', '1099980752516800514', 'http://nieyue.ngrok.xiaomiqiu.cn/home/user.html', '1100211858902032386', '2019-02-28 17:36:39', '2019-02-28 17:36:39');
-INSERT INTO `payment_tb` VALUES ('1101053776770887682', '欢乐抓娃娃', '欢乐抓娃娃', 'http://nieyue.ngrok.xiaomiqiu.cn/payment/bYPayNotifyUrl', '6', '550733111462199296', '94.00', '1', '1', '1099980752516800514', 'http://nieyue.ngrok.xiaomiqiu.cn/home/user.html', '1100211858902032386', '2019-02-28 17:36:46', '2019-02-28 17:36:46');
+INSERT INTO `payment_tb` VALUES ('1101387981593362433', '欢乐抓娃娃', '欢乐抓娃娃', 'http://localhost:8080/payment/bYPayNotifyUrl', '6', '551067504932290560', '10.00', '1', '1', '1100701513678192642', 'http://localhost:8080/home/user.html', '1100211858902032386', '2019-02-28 23:45:32', '2019-02-28 23:45:32');
+INSERT INTO `payment_tb` VALUES ('1101399898294599682', '欢乐抓娃娃', '欢乐抓娃娃', 'http://localhost:8080/payment/bYPayNotifyUrl', '6', '551079421478436864', '10.00', '1', '1', '1100701513678192642', 'http://localhost:8080/home/user.html', '1100211858902032386', '2019-03-01 00:32:53', '2019-03-01 00:32:53');
+INSERT INTO `payment_tb` VALUES ('1101410742579511297', '欢乐抓娃娃', '欢乐抓娃娃', 'http://localhost:8080/payment/bYPayNotifyUrl', '6', '551090265973063680', '10.00', '1', '1', '1100701513678192642', 'http://localhost:8080/home/user.html', '1100211858902032386', '2019-03-01 01:15:58', '2019-03-01 01:15:58');
+INSERT INTO `payment_tb` VALUES ('1101659596876988417', '欢乐抓娃娃', '欢乐抓娃娃', 'http://zbb.tea18.cn/payment/bYPayNotifyUrl', '6', '551339120199204864', '10.00', '1', '1', '1100701513678192642', 'http://zbb.tea18.cn/home/user.html', '1100211858902032386', '2019-03-01 17:44:50', '2019-03-01 17:44:50');
+INSERT INTO `payment_tb` VALUES ('1101660626134024194', '欢乐抓娃娃', '欢乐抓娃娃', 'http://zbb.tea18.cn/payment/bYPayNotifyUrl', '6', '551340150278324224', '10.00', '1', '1', '1100701513678192642', 'http://zbb.tea18.cn/home/user.html', '1100211858902032386', '2019-03-01 17:48:55', '2019-03-01 17:48:55');
+INSERT INTO `payment_tb` VALUES ('1102713579225796610', '欢乐抓娃娃', '欢乐抓娃娃', 'http://zbb.tea18.cn/payment/bYPayNotifyUrl', '6', '552393102296350720', '10.00', '1', '1', '1100701513678192642', 'http://zbb.tea18.cn/home/user.html', '1100211858902032386', '2019-03-04 15:32:59', '2019-03-04 15:32:59');
+INSERT INTO `payment_tb` VALUES ('1102724174377439233', '欢乐抓娃娃', '欢乐抓娃娃', 'http://zbb.tea18.cn/payment/bYPayNotifyUrl', '6', '552403697557045248', '10.00', '1', '1', '1100701513678192642', 'http://zbb.tea18.cn/home/user.html', '1100211858902032386', '2019-03-04 16:15:05', '2019-03-04 16:15:05');
+INSERT INTO `payment_tb` VALUES ('1102737878242422785', '欢乐抓娃娃', '欢乐抓娃娃', 'http://zbb.tea18.cn/payment/bYPayNotifyUrl', '6', '552417400964775936', '10.00', '1', '1', '1100701513678192642', 'http://zbb.tea18.cn/home/user.html', '1100211858902032386', '2019-03-04 17:09:32', '2019-03-04 17:09:32');
+INSERT INTO `payment_tb` VALUES ('1102742605646630913', '欢乐抓娃娃', '欢乐抓娃娃', 'http://zbb.tea18.cn/payment/bYPayNotifyUrl', '6', '552422129006542848', '10.00', '2', '1', '1100701513678192642', 'http://zbb.tea18.cn/home/user.html', '1100211858902032386', '2019-03-04 17:28:19', '2019-03-04 17:28:19');
 
 -- ----------------------------
 -- Table structure for `permission_tb`
@@ -292,7 +305,7 @@ CREATE TABLE `permission_tb` (
   KEY `INDEX_MANAGERNAME` (`manager_name`) USING BTREE,
   KEY `INDEX_NAME` (`name`) USING BTREE,
   KEY `INDEX_ROUTE` (`route`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=1101384225292427267 DEFAULT CHARSET=utf8 COMMENT='权限表';
+) ENGINE=InnoDB AUTO_INCREMENT=1101387301860261891 DEFAULT CHARSET=utf8 COMMENT='权限表';
 
 -- ----------------------------
 -- Records of permission_tb
@@ -411,8 +424,8 @@ INSERT INTO `permission_tb` VALUES ('1101038747677777922', '1', '支付管理', 
 INSERT INTO `permission_tb` VALUES ('1101038747711332353', '0', '支付管理', '支付列表', '/payment/list', '2019-02-28 16:37:48');
 INSERT INTO `permission_tb` VALUES ('1101038747736498177', '0', '支付管理', '支付单个加载', '/payment/load', '2019-02-28 16:37:48');
 INSERT INTO `permission_tb` VALUES ('1101038747761664002', '1', '支付管理', '支付修改', '/payment/update', '2019-02-28 16:37:48');
-INSERT INTO `permission_tb` VALUES ('1101353793880498177', '1', '商品管理', '商品抓取', '/mer/catch', '2019-03-01 13:29:41');
-INSERT INTO `permission_tb` VALUES ('1101384225292427266', '1', '卡片管理', '卡片合成', '/card/compose', '2019-03-01 15:30:37');
+INSERT INTO `permission_tb` VALUES ('1101387301113675777', '1', '卡片管理', '卡片合成', '/card/compose', '2019-03-01 01:19:10');
+INSERT INTO `permission_tb` VALUES ('1101387301860261890', '1', '商品管理', '商品抓取', '/mer/catch', '2019-03-01 17:39:37');
 
 -- ----------------------------
 -- Table structure for `receipt_info_tb`
@@ -453,11 +466,12 @@ CREATE TABLE `recharge_record_tb` (
   PRIMARY KEY (`recharge_record_id`),
   KEY `INDEX_ACCOUNTID` (`account_id`) USING BTREE,
   KEY `INDEX_STATUS` (`status`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='充值记录表 ';
+) ENGINE=InnoDB AUTO_INCREMENT=1102742742926200835 DEFAULT CHARSET=utf8 COMMENT='充值记录表 ';
 
 -- ----------------------------
 -- Records of recharge_record_tb
 -- ----------------------------
+INSERT INTO `recharge_record_tb` VALUES ('1102742742926200834', '6', '10.00', '2', '2019-03-04 17:28:53', '2019-03-04 17:28:53', '1', '1100211858902032386');
 
 -- ----------------------------
 -- Table structure for `recharge_term_tb`
@@ -481,8 +495,8 @@ CREATE TABLE `recharge_term_tb` (
 INSERT INTO `recharge_term_tb` VALUES ('1099980611181338626', '10次机会', '20.00', '10', '2019-02-25 18:33:09', '2019-02-25 18:33:09', '1');
 INSERT INTO `recharge_term_tb` VALUES ('1099980679573659649', '20次机会', '38.00', '20', '2019-02-25 18:33:25', '2019-02-25 18:33:25', '1');
 INSERT INTO `recharge_term_tb` VALUES ('1099980752516800514', '50次机会', '94.00', '50', '2019-02-25 18:33:43', '2019-02-25 18:33:43', '1');
-INSERT INTO `recharge_term_tb` VALUES ('1099980825296363521', '100次机会', '186.00', '100', '2019-02-25 18:34:00', '2019-02-25 18:34:17', '1');
-INSERT INTO `recharge_term_tb` VALUES ('1100701513678192642', '10元两次', '10.00', '2', '2019-02-27 18:17:45', '2019-02-27 18:17:45', '1');
+INSERT INTO `recharge_term_tb` VALUES ('1099980825296363521', '100次机会', '186.00', '100', '2019-02-25 18:34:00', '2019-02-28 23:56:24', '2');
+INSERT INTO `recharge_term_tb` VALUES ('1100701513678192642', '2次机会', '10.00', '2', '2019-02-27 18:17:45', '2019-02-28 23:56:16', '1');
 
 -- ----------------------------
 -- Table structure for `role_permission_tb`
@@ -499,7 +513,7 @@ CREATE TABLE `role_permission_tb` (
   KEY `INDEX_REGION` (`region`) USING BTREE,
   KEY `INDEX_ROLEID` (`role_id`) USING BTREE,
   KEY `INDEX_PERMISSIONID` (`permission_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=1101384624179126275 DEFAULT CHARSET=utf8 COMMENT='角色权限表';
+) ENGINE=InnoDB AUTO_INCREMENT=1101411703125458947 DEFAULT CHARSET=utf8 COMMENT='角色权限表';
 
 -- ----------------------------
 -- Records of role_permission_tb
@@ -563,10 +577,10 @@ INSERT INTO `role_permission_tb` VALUES ('1101039982619267074', '1', '1001', '20
 INSERT INTO `role_permission_tb` VALUES ('1101039983286161409', '1', '1001', '2019-02-28 16:42:43', '1101038747535171585');
 INSERT INTO `role_permission_tb` VALUES ('1101039983697203202', '1', '1001', '2019-02-28 16:42:43', '1101038747400953858');
 INSERT INTO `role_permission_tb` VALUES ('1101040062420094977', '2', '1002', '2019-02-28 16:43:02', '1101038747535171585');
-INSERT INTO `role_permission_tb` VALUES ('1101371108542058497', '1', '1001', '2019-03-01 14:38:29', '1101353793880498177');
-INSERT INTO `role_permission_tb` VALUES ('1101371147544891394', '2', '1002', '2019-03-01 14:38:39', '1101353793880498177');
-INSERT INTO `role_permission_tb` VALUES ('1101384578356355074', '1', '1001', '2019-03-01 15:32:01', '1101384225292427266');
-INSERT INTO `role_permission_tb` VALUES ('1101384624179126274', '2', '1002', '2019-03-01 15:34:34', '1101384225292427266');
+INSERT INTO `role_permission_tb` VALUES ('1101411592412610561', '1', '1001', '2019-03-01 01:19:22', '1101387301860261890');
+INSERT INTO `role_permission_tb` VALUES ('1101411613337993217', '1', '1001', '2019-03-01 01:19:27', '1101387301113675777');
+INSERT INTO `role_permission_tb` VALUES ('1101411685656182785', '2', '1002', '2019-03-01 01:19:44', '1101387301860261890');
+INSERT INTO `role_permission_tb` VALUES ('1101411703125458946', '2', '1002', '2019-03-01 01:19:48', '1101387301113675777');
 
 -- ----------------------------
 -- Table structure for `role_tb`

@@ -77,11 +77,11 @@
                             var merName = merOrder.merOrderDetailList[0].merName;
                             var imgAddress = merOrder.merOrderDetailList[0].imgAddress;
                             var createDate = merOrder.merOrderDetailList[0].createDate;
-                            var status = merOrder.merOrderDetailList[0].status==1?'待发货':'已发货';
+                            var status = merOrder.status==1?'待发货':'已发货';
 
                             var color1='blue';
                             var color2='red';
-                            if(merOrder.merOrderDetailList[0].status==2){
+                            if(merOrder.status==2){
                                 color1='green';
                                 color2='white';
                             }
@@ -93,7 +93,7 @@
                                 '            <div style="position:absolute;left:0;top:10px;">'+merName+'</div>\n' +
                                 '            <div style="position:absolute;left:0;bottom:10px;width:100%;" >\n' +
                                 '                <div  style="display: inline-block;">'+createDate.substring(0,10)+'</div>\n' +
-                                '                <div style="display: inline-block;position:absolute;right:0;bottom:0px;background:linear-gradient(to top, blue, red);width:35%;color:#fff;vertical-align: top;margin-top:2%;padding:4% 0;text-align:center;border-radius:30px;">\n' +
+                                '                <div style="display: inline-block;position:absolute;right:0;bottom:0px;background:linear-gradient(to top, '+color1+', '+color2+');width:35%;color:#fff;vertical-align: top;margin-top:2%;padding:4% 0;text-align:center;border-radius:30px;">\n' +
                                 '                    '+status+'\n' +
                                 '                </div>\n' +
                                 '            </div>\n' +

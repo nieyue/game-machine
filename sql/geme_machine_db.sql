@@ -191,9 +191,11 @@ mer_order_id bigint(20) NOT NULL AUTO_INCREMENT COMMENT '商品订单id',
 order_number varchar(255) COMMENT '订单号',
 create_date datetime  COMMENT '创建时间',
 update_date datetime  COMMENT '更新时间',
+status tinyint(4) COMMENT '订单状态，1待发货，2已发货',
 account_id bigint(20) COMMENT '下单人',
 PRIMARY KEY (mer_order_id),
 INDEX INDEX_ACCOUNTID (account_id) USING BTREE,
+INDEX INDEX_STATUS (status) USING BTREE,
 INDEX INDEX_CREATEDATE (create_date) USING BTREE,
 INDEX INDEX_UPDATEDATE (update_date) USING BTREE
 )ENGINE = InnoDB  DEFAULT CHARSET=utf8 COMMENT='商品订单表';
@@ -208,11 +210,9 @@ phone varchar(255) COMMENT '收货地址手机号',
 address varchar(255) COMMENT '收货地址',
 create_date datetime  COMMENT '创建时间',
 update_date datetime  COMMENT '更新时间',
-status tinyint(4) COMMENT '订单状态，1待发货，2已发货',
 mer_order_id bigint(20) COMMENT '商品订单ID',
 PRIMARY KEY (mer_order_detail_id),
-INDEX INDEX_MERORDERID (mer_order_id) USING BTREE,
-INDEX INDEX_STATUS (status) USING BTREE
+INDEX INDEX_MERORDERID (mer_order_id) USING BTREE
 )ENGINE = InnoDB DEFAULT CHARSET=utf8 COMMENT='商品订单详情表';
 
 #创建支付表

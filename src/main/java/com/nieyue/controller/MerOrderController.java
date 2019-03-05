@@ -44,6 +44,7 @@ public class MerOrderController extends BaseController<MerOrder,Long> {
 	 */
 	@ApiOperation(value = "商品订单列表", notes = "商品订单分页浏览")
 	@ApiImplicitParams({
+			@ApiImplicitParam(name="status",value="订单状态，1待发货，2已发货",dataType="int", paramType = "query"),
 			@ApiImplicitParam(name="accountId",value="下单人",dataType="long", paramType = "query"),
 	  		@ApiImplicitParam(name="pageNum",value="页头数位",dataType="int", paramType = "query",defaultValue="1"),
 			@ApiImplicitParam(name="pageSize",value="每页数目",dataType="int", paramType = "query",defaultValue="10"),
@@ -52,6 +53,7 @@ public class MerOrderController extends BaseController<MerOrder,Long> {
 	  })
 	@RequestMapping(value = "/list", method = {RequestMethod.GET,RequestMethod.POST})
 	public @ResponseBody StateResultList<List<MerOrder>> list(
+			@RequestParam(value="status",required=false)Integer status,
 			@RequestParam(value="accountId",required=false)Long accountId,
 			@RequestParam(value="pageNum",defaultValue="1",required=false)int pageNum,
 			@RequestParam(value="pageSize",defaultValue="10",required=false) int pageSize,
@@ -60,6 +62,7 @@ public class MerOrderController extends BaseController<MerOrder,Long> {
 
 			Wrapper<MerOrder> wrapper=new EntityWrapper<>();
 			Map<String,Object> map=new HashMap<String,Object>();
+			map.put("status", status);
 			map.put("account_id", accountId);
 			wrapper.allEq(MyDom4jUtil.getNoNullMap(map));
 		List<MerOrder> merOrderList = merOrderService.list(pageNum, pageSize, orderName, orderWay,wrapper);
@@ -69,7 +72,7 @@ public class MerOrderController extends BaseController<MerOrder,Long> {
 				Wrapper<MerOrderDetail> wrapper2=new EntityWrapper<>();
 				Map<String,Object> map2=new HashMap<String,Object>();
 				map2.put("mer_order_id", merOrder.getMerOrderId());
-				wrapper.allEq(MyDom4jUtil.getNoNullMap(map));
+				wrapper2.allEq(MyDom4jUtil.getNoNullMap(map2));
 				List<MerOrderDetail> merOrderDetailList = merOrderDetailService.simplelist(wrapper2);
 				if(merOrderDetailList.size()>0){
 					merOrder.setMerOrderDetailList(merOrderDetailList);
@@ -122,14 +125,17 @@ public class MerOrderController extends BaseController<MerOrder,Long> {
 	 */
 	@ApiOperation(value = "商品订单数量", notes = "商品订单数量查询")
 	@ApiImplicitParams({
+			@ApiImplicitParam(name="status",value="订单状态，1待发货，2已发货",dataType="int", paramType = "query"),
 			@ApiImplicitParam(name="accountId",value="下单人",dataType="long", paramType = "query"),
 	})
 	@RequestMapping(value = "/count", method = {RequestMethod.GET,RequestMethod.POST})
 	public @ResponseBody StateResultList<List<Integer>> count(
+			@RequestParam(value="status",required=false)Integer status,
 			@RequestParam(value="accountId",required=false)Long accountId,
 			HttpSession session)  {
 		Wrapper<MerOrder> wrapper=new EntityWrapper<>();
 		Map<String,Object> map=new HashMap<String,Object>();
+		map.put("status", status);
 		map.put("account_id", accountId);
 		wrapper.allEq(MyDom4jUtil.getNoNullMap(map));
 		StateResultList<List<Integer>> c = super.count(wrapper);

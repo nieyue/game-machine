@@ -64,11 +64,7 @@ public class MerOrderDetail implements Serializable {
 	 */
 	@ApiModelProperty(value="更新时间")
 	private Date updateDate;
-	/**
-	 * 订单状态，1待发货，1已发货
-	 */
-	@ApiModelProperty(value="订单状态，1待发货，2已发货")
-	private Integer status;
+
 	/**
 	 * 商品订单ID
 	 */

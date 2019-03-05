@@ -40,7 +40,6 @@ public class MerOrderDetailController extends BaseController<MerOrderDetail,Long
 	 */
 	@ApiOperation(value = "商品订单详情列表", notes = "商品订单详情分页浏览")
 	@ApiImplicitParams({
-			@ApiImplicitParam(name="status",value="订单状态，1待发货，2已发货",dataType="int", paramType = "query"),
 			@ApiImplicitParam(name="merOrderId",value="商品订单ID",dataType="long", paramType = "query"),
 			@ApiImplicitParam(name="pageNum",value="页头数位",dataType="int", paramType = "query",defaultValue="1"),
 			@ApiImplicitParam(name="pageSize",value="每页数目",dataType="int", paramType = "query",defaultValue="10"),
@@ -49,7 +48,6 @@ public class MerOrderDetailController extends BaseController<MerOrderDetail,Long
 	})
 	@RequestMapping(value = "/list", method = {RequestMethod.GET,RequestMethod.POST})
 	public @ResponseBody StateResultList<List<MerOrderDetail>> list(
-			@RequestParam(value="status",required=false)Integer status,
 			@RequestParam(value="merOrderId",required=false)Long merOrderId,
 			@RequestParam(value="pageNum",defaultValue="1",required=false)int pageNum,
 			@RequestParam(value="pageSize",defaultValue="10",required=false) int pageSize,
@@ -58,7 +56,6 @@ public class MerOrderDetailController extends BaseController<MerOrderDetail,Long
 
 		Wrapper<MerOrderDetail> wrapper=new EntityWrapper<>();
 		Map<String,Object> map=new HashMap<String,Object>();
-		map.put("status", status);
 		map.put("mer_order_id", merOrderId);
 		wrapper.allEq(MyDom4jUtil.getNoNullMap(map));
 		StateResultList<List<MerOrderDetail>> rl = super.list(pageNum, pageSize, orderName, orderWay,wrapper);
@@ -106,17 +103,14 @@ public class MerOrderDetailController extends BaseController<MerOrderDetail,Long
 	 */
 	@ApiOperation(value = "商品订单详情数量", notes = "商品订单详情数量查询")
 	@ApiImplicitParams({
-			@ApiImplicitParam(name="status",value="订单状态，1待发货，2已发货",dataType="int", paramType = "query"),
 			@ApiImplicitParam(name="merOrderId",value="商品订单ID",dataType="long", paramType = "query"),
 	})
 	@RequestMapping(value = "/count", method = {RequestMethod.GET,RequestMethod.POST})
 	public @ResponseBody StateResultList<List<Integer>> count(
-			@RequestParam(value="status",required=false)Integer status,
 			@RequestParam(value="merOrderId",required=false)Long merOrderId,
 			HttpSession session)  {
 		Wrapper<MerOrderDetail> wrapper=new EntityWrapper<>();
 		Map<String,Object> map=new HashMap<String,Object>();
-		map.put("status", status);
 		map.put("mer_order_id", merOrderId);
 		wrapper.allEq(MyDom4jUtil.getNoNullMap(map));
 		StateResultList<List<Integer>> c = super.count(wrapper);
