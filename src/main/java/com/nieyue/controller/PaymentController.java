@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.mapper.Wrapper;
 import com.nieyue.bean.Payment;
 import com.nieyue.business.BYPayBusiness;
 import com.nieyue.business.OrderBusiness;
+import com.nieyue.business.WeiXinBusiness;
 import com.nieyue.comments.IPCountUtil;
 import com.nieyue.service.PaymentService;
 import com.nieyue.util.*;
@@ -38,6 +39,8 @@ public class PaymentController extends BaseController<Payment,Long>{
 	private PaymentService paymentService;
 	@Autowired
 	private BYPayBusiness bYPayBusiness;
+	@Autowired
+	private WeiXinBusiness weiXinBusiness;
 
 	
 	/**
@@ -148,7 +151,53 @@ public class PaymentController extends BaseController<Payment,Long>{
 		String pm = bYPayBusiness.bYPayNotify(request);
 		return pm;
 	}
+	@ApiOperation(value = "微信支付统一下单", notes = "微信支付统一下单")
+	@RequestMapping("/weXinUnifiedOrder")
+	@ApiImplicitParams({
+			@ApiImplicitParam(name="accountId",value="账户ID",dataType="long", paramType = "query",required = true),
+			@ApiImplicitParam(name="rechargeTermId",value="充值项Id",dataType="long", paramType = "query",required = true),
+			@ApiImplicitParam(name="money",value="金额",dataType="double", paramType = "query",required = true),
+			@ApiImplicitParam(name="type",value="微信支付类型，1公众号支付，2扫码支付，3app支付,4h5支付，5小程序支付",dataType="string", paramType = "query"),
+	})
+	//@ResponseBody
+	public String weXinUnifiedOrder(
+			@RequestParam(value="type",required = false,defaultValue = "1")Integer type,
+			@RequestParam(value="accountId")Long accountId,
+			@RequestParam(value="rechargeTermId")Long rechargeTermId,
+			@RequestParam(value="money")Double money,
+			HttpServletRequest request,
+			HttpServletResponse response
+	) throws Exception {
+		Payment payment=new Payment();
+		payment.setSubject("欢乐抓娃娃");
+		payment.setBody("欢乐抓娃娃");
+		payment.setOrderNumber(SnowflakeIdWorker.getId().toString());
+		payment.setMoney(money);
+		payment.setStatus(1);//已下单
+		payment.setType(2);//支付类型，1支付宝，2微信,3百度钱包,4Paypal,5网银,6保盈
+		payment.setBusinessType(1);//业务类型，1充值，2提现，3退款
+		payment.setNotifyUrl(projectDomainUrl+"/payment/weiXinPayNotifyUrl");//支付回调
+		payment.setBusinessNotifyUrl(projectDomainUrl+"/home/user.html");//站内回调
+		payment.setCreateDate(new Date());
+		payment.setUpdateDate(new Date());
+		payment.setAccountId(accountId);
+		payment.setBusinessId(rechargeTermId);
+		String result = weiXinBusiness.getPayment(payment, type, request, response);
+		return result;
 
+	}
+	/**
+	 * 微信支付回调
+	 * @return
+	 * @throws Exception
+	 */
+	@ApiOperation(value = "微信支付回调", notes = "微信支付回调")
+	@RequestMapping(value = "/weiXinPayNotifyUrl", method = {RequestMethod.GET,RequestMethod.POST})
+	public @ResponseBody String weiXinPayNotifyUrl(
+			HttpServletRequest request, HttpSession session) {
+		String pm = weiXinBusiness.getNotifyUrl(request);
+		return pm;
+	}
 	/**
 	 * 支付增加
 	 * @return 

@@ -11,6 +11,7 @@ import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.*;
+import java.util.Date;
 import java.util.EnumMap;
 import java.util.Hashtable;
 
@@ -18,12 +19,12 @@ import java.util.Hashtable;
  * 二维码
  */
 public class MyQRcode {
-    
+
     private static final int BLACK = 0xFF000000;
     private static final int WHITE = 0xFFFFFFFF;
     private static final int margin = 0;
     private static final int LogoPart = 4;
-    
+
     /**
      * 生成二维码矩阵信息
      * @param content 二维码图片内容
@@ -67,13 +68,13 @@ public class MyQRcode {
         }
         return content;
     }
-    /** 
+    /**
      * 将二维码图片输出
      * @param matrix 二维码矩阵信息
      * @param format 图片格式
      * @param outStream 输出流
      * @param logoPath logo图片路径
-     */  
+     */
     public static void writeToFile(BitMatrix matrix, String format, OutputStream outStream, String logoPath) throws IOException {
         BufferedImage image = toBufferedImage(matrix);
         // 加入LOGO水印效果
@@ -82,7 +83,7 @@ public class MyQRcode {
         }
         ImageIO.write(image, format, outStream);
     }
-    
+
     /**
      * 生成二维码图片
      * @param matrix 二维码矩阵信息
@@ -98,7 +99,7 @@ public class MyQRcode {
         }
         return image;
     }
-    
+
     /**
      * 在二维码图片中添加logo图片
      * @param image 二维码图片
@@ -188,6 +189,36 @@ public class MyQRcode {
             e.printStackTrace();
         }
     }
+
+    /**
+     * 创建二维码
+     * @param originPath 跳转链接
+     * @param logoPath logo本地路径，
+     * @param format 格式，如jpg
+     * @param width 宽
+     * @param height 高
+     * @param height 高
+     * @param outputStream 输出流，也可以写入本地地址
+     *
+     */
+    public static void createQrcode(String originPath,String logoPath,String format,int width,int height,OutputStream outputStream){
+        BitMatrix bitMatrix = setBitMatrix(originPath, width, height);
+        try {
+            writeToFile(bitMatrix, format, outputStream, logoPath);
+            outputStream.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    public static void createQrcode(String originPath,OutputStream outputStream){
+        BitMatrix bitMatrix = setBitMatrix(originPath, 300, 300);
+        try {
+            writeToFile(bitMatrix, "jpg", outputStream, null);
+            outputStream.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     static  void test(){
         String content = "http://www.baidu.com";
         String logoPath = "D:\\nieyue\\uploaderPath\\img\\20180908\\1536409840752.png";
@@ -216,15 +247,19 @@ public class MyQRcode {
         System.out.println(decodeQR(withTextPath));
     }
     public static void main(String[] args) throws IOException {
-       // test();
-        imgAddQrcode("D:\\nieyue\\uploaderPath\\img\\20180908\\test.jpg"
+        // test();
+        /*imgAddQrcode("D:\\nieyue\\uploaderPath\\img\\20180908\\test.jpg"
                 ,"D:\\nieyue\\uploaderPath\\img\\20180908\\logo3.png"
                 ,"D:\\nieyue\\uploaderPath\\img\\20180908\\testout.png"
                 ,150
                 ,150
                 ,460
                 ,920
-        );
+        );*/
+        String result="";
+        FileOutputStream fos=new FileOutputStream(new File("c:/a.png"));
+
+        createQrcode("http://www.baidu.com",fos);
 
     }
 }

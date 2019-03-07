@@ -4,7 +4,7 @@ var business={
 
     domainurl:'',
 	//domainurl:'http://119.27.177.29:8080',
-	//domainurl:'http://www.ctdc.xyz',
+	//domainurl:'http://zbb.tea18.cn',
     /**
      * 验证规则
      */
@@ -162,6 +162,18 @@ var business={
             },1000);
             //$(imgelement).attr("src",file.value);
         }
+    },
+    /**
+     * 判断是否微信浏览器
+     */
+    isWeiXinBrowse:function(){
+        var wx=navigator.userAgent.match(/MicroMessenger/);
+        if(wx){
+            if(wx[0]==='MicroMessenger'){
+                return true;
+            }
+        }
+        return false;
     },
     /**
      * 判断是否滑动到底部
@@ -349,6 +361,25 @@ var business={
             hide(this);
         }
     },
+    /**
+     * 自定义template
+     */
+    myTemplate : function(value) {
+        var myTemplateWidth= 330;
+        var myTemplateMarginWidth= 165;
+        if(document.querySelector("html").offsetWidth>640){
+            myTemplateWidth= 860;
+            myTemplateMarginWidth= 430;
+        }
+        $("body")
+            .append(
+                "<div id='myTemplateDiv' style='position:fixed;width:100%;height:100%;background-color:#ccc;opacity:0.5;left:0;top:0;z-index:9998;'></div><div id='myTemplate' style='z-index:9999;color:#000;background-color:#fff;text-align:center;line-height:30px;border:1px solid #fff;border-radius:5px;height:300px;width:"+myTemplateWidth+"px;margin:-100px -"+myTemplateMarginWidth+"px;top:50%;left:50%;position:fixed;font-size:20px;'>"
+                + "<div style='position:absolute;top:20px;width:100%;text-align:center;'>"+value+"</div><div class='btn btn-default' style='position:absolute;right:15px;bottom:15px;width:80px;' id='myTemplateNo'>关闭</div></div>");
+        $('#myTemplateNo').click(function(){
+            $('#myTemplateDiv').remove();
+            $('#myTemplate').remove();
+        });
+    },
 	//返回
 	goback:function(){
 		history.back()
@@ -410,6 +441,7 @@ if(location.href.indexOf("login.html")<=-1
     &&location.href.indexOf("index.html")<=-1
     &&location.href.indexOf("mer_detail.html")<=-1
     &&location.href.indexOf("demo.html")<=-1
+    &&location.href.indexOf("mp.html")<=-1
 ){
     //1自动登录
     business.ajax({

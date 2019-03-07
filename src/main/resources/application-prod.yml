@@ -80,6 +80,25 @@ myPugin:
       templateCodeWithdrawalsPasswordUpdate: SMS_158051607
       templateCodePhoneUpdate: SMS_158051607
       templateCodeAuthenticationBind: SMS_158051607
+  weixin:
+    mp:
+      #微信公众号或者小程序等的appid
+      appId: wx4d2cb896c1256cbe
+      #微信公众号或者小程序等的secret
+      secret: fc1eeae1ae1c69caa68d87d5e55f7659
+    pay:
+      #微信公众号或者小程序等的appid
+      appId: wx4d2cb896c1256cbe
+      #微信支付商户号
+      mchId: 1513989441
+      #微信支付商户密钥
+      mchKey: zk0yd2n2e4velz2afqnyiknbnburrjdh
+      #服务商模式下的子商户公众账号ID
+      subAppId:
+      #服务商模式下的子商户号
+      subMchId:
+      # p12证书的位置，可以指定绝对路径，也可以指定类路径（以classpath:开头）
+      keyPath:
   shiro:
     anon:
-      locations: / , /*.txt  , /swagger-resources/** , /swagger-ui.html , /webjars/** , /v2/** , /home/** , /resources/** ,/uploaderPath/**
+      locations: /** , /*.txt  , /swagger-resources/** , /swagger-ui.html , /webjars/** , /v2/** , /home/** , /resources/** , /uploaderPath/** , /weixin/**, /wechat/**

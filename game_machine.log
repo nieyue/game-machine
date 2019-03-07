@@ -7,83 +7,83 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v2.1.3.RELEASE)
 
-2019-03-04 17:49:43.035  INFO 19748 --- [           main] com.nieyue.Application                   : Starting Application with PID 19748 (/home/default/game_machine/BOOT-INF/classes started by root in /)
-2019-03-04 17:49:43.039  INFO 19748 --- [           main] com.nieyue.Application                   : The following profiles are active: prod
-2019-03-04 17:49:45.066  INFO 19748 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2019-03-04 17:49:45.071  INFO 19748 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-03-04 17:49:45.141  INFO 19748 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48ms. Found 0 repository interfaces.
-2019-03-04 17:49:45.735  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'myLifecycleBeanPostProcessor' of type [com.nieyue.shiro.MyLifecycleBeanPostProcessor$$EnhancerBySpringCGLIB$$c87fbc7c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:45.809  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$51af5ec2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:46.189  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-plus-com.baomidou.mybatisplus.spring.boot.starter.MybatisPlusProperties' of type [com.baomidou.mybatisplus.spring.boot.starter.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:46.210  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8b43a094] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:46.271  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'com.baomidou.mybatisplus.spring.boot.starter.MybatisPlusAutoConfiguration' of type [com.baomidou.mybatisplus.spring.boot.starter.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$d8e33ef1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:46.279  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'druidConfiguration' of type [com.nieyue.druid.DruidConfiguration$$EnhancerBySpringCGLIB$$311869fb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:46.287  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'com.nieyue.druid.DruidConfiguration$IDataSourceProperties' of type [com.nieyue.druid.DruidConfiguration$IDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:46.361  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:46.396  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:46.407  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:46.834  INFO 19748 --- [           main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2019-03-04 17:49:47.205  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:47.212  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:47.275  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'permissionDao' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:47.279  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'permissionDao' of type [com.sun.proxy.$Proxy80] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:47.388  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'rolePermissionDao' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:47.390  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'rolePermissionDao' of type [com.sun.proxy.$Proxy85] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:47.391  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'rolePermissionServiceImpl' of type [com.nieyue.service.impl.RolePermissionServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:47.421  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroService' of type [com.nieyue.shiro.ShiroService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:47.429  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroUtil' of type [com.nieyue.shiro.ShiroUtil$$EnhancerBySpringCGLIB$$aa93cdcd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:47.430  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'permissionServiceImpl' of type [com.nieyue.service.impl.PermissionServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:47.431  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfiguration' of type [com.nieyue.shiro.ShiroConfiguration$$EnhancerBySpringCGLIB$$9cc6e25d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:47.624  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'accountDao' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:47.627  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'accountDao' of type [com.sun.proxy.$Proxy86] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:47.635  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'roleDao' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:47.638  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'roleDao' of type [com.sun.proxy.$Proxy87] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:47.639  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'roleServiceImpl' of type [com.nieyue.service.impl.RoleServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:47.700  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'financeDao' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:47.703  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'financeDao' of type [com.sun.proxy.$Proxy88] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:47.716  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'financeServiceImpl' of type [com.nieyue.service.impl.FinanceServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:47.776  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'numberDao' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:47.778  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'numberDao' of type [com.sun.proxy.$Proxy89] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:47.779  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'numberServiceImpl' of type [com.nieyue.service.impl.NumberServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:47.841  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'configDao' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:47.843  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'configDao' of type [com.sun.proxy.$Proxy90] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:47.844  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'configServiceImpl' of type [com.nieyue.service.impl.ConfigServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:47.851  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'accountServiceImpl' of type [com.nieyue.service.impl.AccountServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:47.856  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration$$EnhancerBySpringCGLIB$$80dacbd0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:47.874  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:47.878  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration$$EnhancerBySpringCGLIB$$a05d5ede] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:48.153  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'lettuceClientResources' of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:48.317  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:48.342  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'stringRedisTemplate' of type [org.springframework.data.redis.core.StringRedisTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:48.349  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'orderBusiness' of type [com.nieyue.business.OrderBusiness$$EnhancerBySpringCGLIB$$abcf423b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:48.350  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'accountBusiness' of type [com.nieyue.business.AccountBusiness$$EnhancerBySpringCGLIB$$3b5369fa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:48.350  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'accountRealm' of type [com.nieyue.shiro.AccountRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:48.358  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'redisManager' of type [org.crazycake.shiro.RedisManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:48.360  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'redisSessionDAO' of type [org.crazycake.shiro.RedisSessionDAO] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:48.363  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'simpleCookie1' of type [org.apache.shiro.web.servlet.SimpleCookie] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:48.364  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'sessionManager' of type [org.apache.shiro.web.session.mgt.DefaultWebSessionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:48.369  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'cacheManager' of type [org.crazycake.shiro.RedisCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:48.372  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'simpleCookie2' of type [org.apache.shiro.web.servlet.SimpleCookie] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:48.374  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'rememberMeManager' of type [org.apache.shiro.web.mgt.CookieRememberMeManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:48.376  INFO 19748 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-04 17:49:49.119  INFO 19748 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-03-04 17:49:49.170  INFO 19748 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-03-04 17:49:49.170  INFO 19748 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
-2019-03-04 17:49:49.189  INFO 19748 --- [           main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
-2019-03-04 17:49:49.320  INFO 19748 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-03-04 17:49:49.320 DEBUG 19748 --- [           main] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
-2019-03-04 17:49:49.320  INFO 19748 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6206 ms
-2019-03-04 17:49:49.351  INFO 19748 --- [           main] com.nieyue.druid.DruidConfiguration      : init Druid Servlet Configuration 
-2019-03-04 17:49:51.321 DEBUG 19748 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 122 mappings in 'requestMappingHandlerMapping'
-2019-03-04 17:49:51.399  INFO 19748 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
-2019-03-04 17:49:51.494 DEBUG 19748 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/**] in 'resourceHandlerMapping'
-2019-03-04 17:49:51.624 DEBUG 19748 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2019-03-04 17:49:51.689 DEBUG 19748 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
-2019-03-04 17:49:52.336  INFO 19748 --- [           main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
-2019-03-04 17:49:52.355  INFO 19748 --- [           main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2019-03-04 17:49:52.357  INFO 19748 --- [           main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.2.1 created.
-2019-03-04 17:49:52.358  INFO 19748 --- [           main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
-2019-03-04 17:49:52.359  INFO 19748 --- [           main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.2.1) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+2019-03-07 03:06:08.377  INFO 20851 --- [           main] com.nieyue.Application                   : Starting Application with PID 20851 (/home/default/game_machine/BOOT-INF/classes started by root in /)
+2019-03-07 03:06:08.380  INFO 20851 --- [           main] com.nieyue.Application                   : The following profiles are active: prod
+2019-03-07 03:06:10.462  INFO 20851 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-03-07 03:06:10.466  INFO 20851 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-03-07 03:06:10.536  INFO 20851 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48ms. Found 0 repository interfaces.
+2019-03-07 03:06:11.139  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'myLifecycleBeanPostProcessor' of type [com.nieyue.shiro.MyLifecycleBeanPostProcessor$$EnhancerBySpringCGLIB$$108817c5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:11.212  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$99b7ba0b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:11.589  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-plus-com.baomidou.mybatisplus.spring.boot.starter.MybatisPlusProperties' of type [com.baomidou.mybatisplus.spring.boot.starter.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:11.607  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d34bfbdd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:11.661  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'com.baomidou.mybatisplus.spring.boot.starter.MybatisPlusAutoConfiguration' of type [com.baomidou.mybatisplus.spring.boot.starter.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$20eb9a3a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:11.668  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'druidConfiguration' of type [com.nieyue.druid.DruidConfiguration$$EnhancerBySpringCGLIB$$7920c544] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:11.674  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'com.nieyue.druid.DruidConfiguration$IDataSourceProperties' of type [com.nieyue.druid.DruidConfiguration$IDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:11.749  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:11.783  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:11.793  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:12.208  INFO 20851 --- [           main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-03-07 03:06:12.585  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:12.591  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:12.657  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'permissionDao' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:12.661  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'permissionDao' of type [com.sun.proxy.$Proxy81] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:12.771  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'rolePermissionDao' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:12.774  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'rolePermissionDao' of type [com.sun.proxy.$Proxy86] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:12.775  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'rolePermissionServiceImpl' of type [com.nieyue.service.impl.RolePermissionServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:12.806  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroService' of type [com.nieyue.shiro.ShiroService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:12.814  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroUtil' of type [com.nieyue.shiro.ShiroUtil$$EnhancerBySpringCGLIB$$f29c2916] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:12.815  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'permissionServiceImpl' of type [com.nieyue.service.impl.PermissionServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:12.816  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfiguration' of type [com.nieyue.shiro.ShiroConfiguration$$EnhancerBySpringCGLIB$$e4cf3da6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:13.024  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'accountDao' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:13.027  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'accountDao' of type [com.sun.proxy.$Proxy87] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:13.040  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'roleDao' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:13.042  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'roleDao' of type [com.sun.proxy.$Proxy88] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:13.044  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'roleServiceImpl' of type [com.nieyue.service.impl.RoleServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:13.142  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'financeDao' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:13.144  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'financeDao' of type [com.sun.proxy.$Proxy89] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:13.158  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'financeServiceImpl' of type [com.nieyue.service.impl.FinanceServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:13.233  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'numberDao' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:13.236  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'numberDao' of type [com.sun.proxy.$Proxy90] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:13.237  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'numberServiceImpl' of type [com.nieyue.service.impl.NumberServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:13.303  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'configDao' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:13.305  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'configDao' of type [com.sun.proxy.$Proxy91] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:13.306  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'configServiceImpl' of type [com.nieyue.service.impl.ConfigServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:13.313  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'accountServiceImpl' of type [com.nieyue.service.impl.AccountServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:13.318  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration$$EnhancerBySpringCGLIB$$c8e32719] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:13.336  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:13.341  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration$$EnhancerBySpringCGLIB$$e865ba27] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:13.623  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'lettuceClientResources' of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:13.793  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:13.819  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'stringRedisTemplate' of type [org.springframework.data.redis.core.StringRedisTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:13.825  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'orderBusiness' of type [com.nieyue.business.OrderBusiness$$EnhancerBySpringCGLIB$$f3d79d84] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:13.826  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'accountBusiness' of type [com.nieyue.business.AccountBusiness$$EnhancerBySpringCGLIB$$835bc543] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:13.827  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'accountRealm' of type [com.nieyue.shiro.AccountRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:13.835  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'redisManager' of type [org.crazycake.shiro.RedisManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:13.836  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'redisSessionDAO' of type [org.crazycake.shiro.RedisSessionDAO] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:13.838  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'simpleCookie1' of type [org.apache.shiro.web.servlet.SimpleCookie] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:13.840  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'sessionManager' of type [org.apache.shiro.web.session.mgt.DefaultWebSessionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:13.844  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'cacheManager' of type [org.crazycake.shiro.RedisCacheManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:13.847  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'simpleCookie2' of type [org.apache.shiro.web.servlet.SimpleCookie] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:13.849  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'rememberMeManager' of type [org.apache.shiro.web.mgt.CookieRememberMeManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:13.851  INFO 20851 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-03-07 03:06:14.611  INFO 20851 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-03-07 03:06:14.661  INFO 20851 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-03-07 03:06:14.661  INFO 20851 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-03-07 03:06:14.678  INFO 20851 --- [           main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2019-03-07 03:06:14.802  INFO 20851 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-03-07 03:06:14.802 DEBUG 20851 --- [           main] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2019-03-07 03:06:14.802  INFO 20851 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6335 ms
+2019-03-07 03:06:14.810  INFO 20851 --- [           main] com.nieyue.druid.DruidConfiguration      : init Druid Servlet Configuration 
+2019-03-07 03:06:17.200 DEBUG 20851 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 127 mappings in 'requestMappingHandlerMapping'
+2019-03-07 03:06:17.283  INFO 20851 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-03-07 03:06:17.391 DEBUG 20851 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/**] in 'resourceHandlerMapping'
+2019-03-07 03:06:17.528 DEBUG 20851 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2019-03-07 03:06:17.594 DEBUG 20851 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2019-03-07 03:06:18.300  INFO 20851 --- [           main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2019-03-07 03:06:18.322  INFO 20851 --- [           main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-03-07 03:06:18.323  INFO 20851 --- [           main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.2.1 created.
+2019-03-07 03:06:18.324  INFO 20851 --- [           main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2019-03-07 03:06:18.325  INFO 20851 --- [           main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.2.1) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -91,127 +91,135 @@
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-2019-03-04 17:49:52.359  INFO 19748 --- [           main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
-2019-03-04 17:49:52.359  INFO 19748 --- [           main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.2.1
-2019-03-04 17:49:52.359  INFO 19748 --- [           main] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@6ab72419
-2019-03-04 17:49:52.382  INFO 19748 --- [           main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
-2019-03-04 17:49:52.544  INFO 19748 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2019-03-04 17:49:52.568  INFO 19748 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2019-03-04 17:49:52.593  INFO 19748 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2019-03-04 17:49:53.629  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_1
-2019-03-04 17:49:53.633  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_1
-2019-03-04 17:49:53.681  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingGET_1
-2019-03-04 17:49:53.687  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_1
-2019-03-04 17:49:53.706  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_2
-2019-03-04 17:49:53.711  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_2
-2019-03-04 17:49:53.719  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingGET_1
-2019-03-04 17:49:53.724  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingPOST_1
-2019-03-04 17:49:53.732  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_1
-2019-03-04 17:49:53.738  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingPOST_1
-2019-03-04 17:49:53.770  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingGET_1
-2019-03-04 17:49:53.775  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_1
-2019-03-04 17:49:53.786  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingGET_2
-2019-03-04 17:49:53.791  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_2
-2019-03-04 17:49:53.797  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_3
-2019-03-04 17:49:53.802  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_3
-2019-03-04 17:49:53.809  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingGET_2
-2019-03-04 17:49:53.813  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingPOST_2
-2019-03-04 17:49:53.821  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_2
-2019-03-04 17:49:53.825  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingPOST_2
-2019-03-04 17:49:53.857  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingGET_2
-2019-03-04 17:49:53.861  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_2
-2019-03-04 17:49:53.881  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingGET_3
-2019-03-04 17:49:53.886  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_3
-2019-03-04 17:49:53.891  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_4
-2019-03-04 17:49:53.895  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_4
-2019-03-04 17:49:53.900  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingGET_3
-2019-03-04 17:49:53.904  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingPOST_3
-2019-03-04 17:49:53.910  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_3
-2019-03-04 17:49:53.914  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingPOST_3
-2019-03-04 17:49:53.929  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingGET_3
-2019-03-04 17:49:53.933  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_3
-2019-03-04 17:49:53.962  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingGET_4
-2019-03-04 17:49:53.965  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_4
-2019-03-04 17:49:53.971  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_5
-2019-03-04 17:49:53.974  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_5
-2019-03-04 17:49:53.979  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingGET_4
-2019-03-04 17:49:53.983  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingPOST_4
-2019-03-04 17:49:53.989  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_4
-2019-03-04 17:49:53.993  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingPOST_4
-2019-03-04 17:49:54.007  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingGET_4
-2019-03-04 17:49:54.011  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_4
-2019-03-04 17:49:54.019  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingGET_5
-2019-03-04 17:49:54.023  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_5
-2019-03-04 17:49:54.028  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_6
-2019-03-04 17:49:54.032  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_6
-2019-03-04 17:49:54.037  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingGET_5
-2019-03-04 17:49:54.040  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingPOST_5
-2019-03-04 17:49:54.047  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_5
-2019-03-04 17:49:54.051  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingPOST_5
-2019-03-04 17:49:54.066  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingGET_5
-2019-03-04 17:49:54.069  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_5
-2019-03-04 17:49:54.124  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countAllUsingGET_1
-2019-03-04 17:49:54.129  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countAllUsingPOST_1
-2019-03-04 17:49:54.232  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_7
-2019-03-04 17:49:54.235  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_7
-2019-03-04 17:49:54.282  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingGET_6
-2019-03-04 17:49:54.286  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_6
-2019-03-04 17:49:54.291  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_8
-2019-03-04 17:49:54.295  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_8
-2019-03-04 17:49:54.300  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingGET_6
-2019-03-04 17:49:54.304  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingPOST_6
-2019-03-04 17:49:54.310  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_6
-2019-03-04 17:49:54.314  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingPOST_6
-2019-03-04 17:49:54.327  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingGET_6
-2019-03-04 17:49:54.331  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_6
-2019-03-04 17:49:54.342  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingGET_7
-2019-03-04 17:49:54.346  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_7
-2019-03-04 17:49:54.351  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_9
-2019-03-04 17:49:54.355  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_9
-2019-03-04 17:49:54.360  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingGET_7
-2019-03-04 17:49:54.363  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingPOST_7
-2019-03-04 17:49:54.369  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_7
-2019-03-04 17:49:54.373  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingPOST_7
-2019-03-04 17:49:54.386  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingGET_7
-2019-03-04 17:49:54.390  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_7
-2019-03-04 17:49:54.402  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingGET_8
-2019-03-04 17:49:54.407  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_8
-2019-03-04 17:49:54.416  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_10
-2019-03-04 17:49:54.421  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_10
-2019-03-04 17:49:54.427  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingGET_8
-2019-03-04 17:49:54.430  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingPOST_8
-2019-03-04 17:49:54.435  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_8
-2019-03-04 17:49:54.438  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingPOST_8
-2019-03-04 17:49:54.449  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingGET_8
-2019-03-04 17:49:54.452  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_8
-2019-03-04 17:49:54.459  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingGET_9
-2019-03-04 17:49:54.461  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_9
-2019-03-04 17:49:54.465  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_11
-2019-03-04 17:49:54.468  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_11
-2019-03-04 17:49:54.472  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingGET_9
-2019-03-04 17:49:54.474  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingPOST_9
-2019-03-04 17:49:54.479  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_9
-2019-03-04 17:49:54.482  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingPOST_9
-2019-03-04 17:49:54.492  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingGET_9
-2019-03-04 17:49:54.495  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_9
-2019-03-04 17:49:54.523  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countAllUsingGET_2
-2019-03-04 17:49:54.526  INFO 19748 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countAllUsingPOST_2
-2019-03-04 17:49:54.597  INFO 19748 --- [           main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
-2019-03-04 17:49:54.598  INFO 19748 --- [           main] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
-2019-03-04 17:49:54.657  INFO 19748 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2019-03-04 17:49:54.660  INFO 19748 --- [           main] com.nieyue.Application                   : Started Application in 12.302 seconds (JVM running for 12.986)
-2019-03-04 17:49:55.157  INFO 19748 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-03-04 17:49:55.158  INFO 19748 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-03-04 17:49:55.158 DEBUG 19748 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
-2019-03-04 17:49:55.171 DEBUG 19748 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-2019-03-04 17:49:55.171  INFO 19748 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
-2019-03-04 17:49:55.200  INFO 19748 --- [nio-8080-exec-1] a.s.s.m.AbstractValidatingSessionManager : Enabling session validation scheduler...
-2019-03-04 17:49:55.217 DEBUG 19748 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/v2/api-docs", parameters={}
-2019-03-04 17:49:55.227 DEBUG 19748 --- [nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
-2019-03-04 17:49:55.492 DEBUG 19748 --- [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/hal+json]
-2019-03-04 17:49:55.495 DEBUG 19748 --- [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [springfox.documentation.spring.web.json.Json@2cfe9077]
-2019-03-04 17:49:55.513 DEBUG 19748 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-04 17:50:35.081 ERROR 19748 --- [nio-8080-exec-2] redis.clients.jedis.HostAndPort          : cant resolve localhost address
+2019-03-07 03:06:18.326  INFO 20851 --- [           main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2019-03-07 03:06:18.326  INFO 20851 --- [           main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.2.1
+2019-03-07 03:06:18.326  INFO 20851 --- [           main] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@33aa93c
+2019-03-07 03:06:18.351  INFO 20851 --- [           main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-03-07 03:06:18.552  INFO 20851 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-03-07 03:06:18.578  INFO 20851 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-03-07 03:06:18.604  INFO 20851 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-03-07 03:06:19.680  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_1
+2019-03-07 03:06:19.685  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_1
+2019-03-07 03:06:19.738  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingGET_1
+2019-03-07 03:06:19.745  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_1
+2019-03-07 03:06:19.769  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_2
+2019-03-07 03:06:19.774  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_2
+2019-03-07 03:06:19.783  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingGET_1
+2019-03-07 03:06:19.789  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingPOST_1
+2019-03-07 03:06:19.799  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_1
+2019-03-07 03:06:19.805  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingPOST_1
+2019-03-07 03:06:19.843  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingGET_1
+2019-03-07 03:06:19.848  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_1
+2019-03-07 03:06:19.860  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingGET_2
+2019-03-07 03:06:19.865  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_2
+2019-03-07 03:06:19.873  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_3
+2019-03-07 03:06:19.878  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_3
+2019-03-07 03:06:19.886  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingGET_2
+2019-03-07 03:06:19.892  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingPOST_2
+2019-03-07 03:06:19.900  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_2
+2019-03-07 03:06:19.906  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingPOST_2
+2019-03-07 03:06:19.944  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingGET_2
+2019-03-07 03:06:19.950  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_2
+2019-03-07 03:06:19.971  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingGET_3
+2019-03-07 03:06:19.977  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_3
+2019-03-07 03:06:19.984  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_4
+2019-03-07 03:06:19.989  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_4
+2019-03-07 03:06:19.997  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingGET_3
+2019-03-07 03:06:20.002  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingPOST_3
+2019-03-07 03:06:20.011  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_3
+2019-03-07 03:06:20.016  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingPOST_3
+2019-03-07 03:06:20.037  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingGET_3
+2019-03-07 03:06:20.042  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_3
+2019-03-07 03:06:20.052  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingGET_4
+2019-03-07 03:06:20.058  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_4
+2019-03-07 03:06:20.065  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_5
+2019-03-07 03:06:20.069  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_5
+2019-03-07 03:06:20.077  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingGET_4
+2019-03-07 03:06:20.081  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingPOST_4
+2019-03-07 03:06:20.090  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_4
+2019-03-07 03:06:20.095  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingPOST_4
+2019-03-07 03:06:20.114  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingGET_4
+2019-03-07 03:06:20.119  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_4
+2019-03-07 03:06:20.130  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingGET_5
+2019-03-07 03:06:20.135  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_5
+2019-03-07 03:06:20.143  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_6
+2019-03-07 03:06:20.148  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_6
+2019-03-07 03:06:20.156  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingGET_5
+2019-03-07 03:06:20.161  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingPOST_5
+2019-03-07 03:06:20.170  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_5
+2019-03-07 03:06:20.175  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingPOST_5
+2019-03-07 03:06:20.196  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingGET_5
+2019-03-07 03:06:20.201  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_5
+2019-03-07 03:06:20.280  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countAllUsingGET_1
+2019-03-07 03:06:20.287  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countAllUsingPOST_1
+2019-03-07 03:06:20.408  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: weXinUnifiedOrderUsingGET_1
+2019-03-07 03:06:20.415  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: weXinUnifiedOrderUsingHEAD_1
+2019-03-07 03:06:20.422  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: weXinUnifiedOrderUsingPOST_1
+2019-03-07 03:06:20.429  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: weXinUnifiedOrderUsingPUT_1
+2019-03-07 03:06:20.436  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: weXinUnifiedOrderUsingPATCH_1
+2019-03-07 03:06:20.443  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: weXinUnifiedOrderUsingDELETE_1
+2019-03-07 03:06:20.449  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: weXinUnifiedOrderUsingOPTIONS_1
+2019-03-07 03:06:20.456  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: weXinUnifiedOrderUsingTRACE_1
+2019-03-07 03:06:20.515  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_7
+2019-03-07 03:06:20.520  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_7
+2019-03-07 03:06:20.585  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingGET_6
+2019-03-07 03:06:20.590  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_6
+2019-03-07 03:06:20.598  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_8
+2019-03-07 03:06:20.602  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_8
+2019-03-07 03:06:20.609  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingGET_6
+2019-03-07 03:06:20.614  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingPOST_6
+2019-03-07 03:06:20.621  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_6
+2019-03-07 03:06:20.626  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingPOST_6
+2019-03-07 03:06:20.644  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingGET_6
+2019-03-07 03:06:20.649  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_6
+2019-03-07 03:06:20.662  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingGET_7
+2019-03-07 03:06:20.667  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_7
+2019-03-07 03:06:20.674  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_9
+2019-03-07 03:06:20.679  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_9
+2019-03-07 03:06:20.685  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingGET_7
+2019-03-07 03:06:20.690  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingPOST_7
+2019-03-07 03:06:20.697  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_7
+2019-03-07 03:06:20.702  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingPOST_7
+2019-03-07 03:06:20.719  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingGET_7
+2019-03-07 03:06:20.724  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_7
+2019-03-07 03:06:20.736  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingGET_8
+2019-03-07 03:06:20.740  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_8
+2019-03-07 03:06:20.746  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_10
+2019-03-07 03:06:20.750  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_10
+2019-03-07 03:06:20.756  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingGET_8
+2019-03-07 03:06:20.760  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingPOST_8
+2019-03-07 03:06:20.767  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_8
+2019-03-07 03:06:20.771  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingPOST_8
+2019-03-07 03:06:20.787  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingGET_8
+2019-03-07 03:06:20.791  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_8
+2019-03-07 03:06:20.799  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingGET_9
+2019-03-07 03:06:20.803  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addUsingPOST_9
+2019-03-07 03:06:20.809  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingGET_11
+2019-03-07 03:06:20.812  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countUsingPOST_11
+2019-03-07 03:06:20.818  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingGET_9
+2019-03-07 03:06:20.822  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingPOST_9
+2019-03-07 03:06:20.828  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_9
+2019-03-07 03:06:20.832  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingPOST_9
+2019-03-07 03:06:20.847  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingGET_9
+2019-03-07 03:06:20.851  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPOST_9
+2019-03-07 03:06:20.885  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countAllUsingGET_2
+2019-03-07 03:06:20.889  INFO 20851 --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: countAllUsingPOST_2
+2019-03-07 03:06:21.014  INFO 20851 --- [           main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2019-03-07 03:06:21.014  INFO 20851 --- [           main] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2019-03-07 03:06:21.100  INFO 20851 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-03-07 03:06:21.103  INFO 20851 --- [           main] com.nieyue.Application                   : Started Application in 13.418 seconds (JVM running for 14.121)
+2019-03-07 03:06:21.267  INFO 20851 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-07 03:06:21.268  INFO 20851 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-03-07 03:06:21.268 DEBUG 20851 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2019-03-07 03:06:21.284 DEBUG 20851 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2019-03-07 03:06:21.284  INFO 20851 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2019-03-07 03:06:21.316  INFO 20851 --- [nio-8080-exec-1] a.s.s.m.AbstractValidatingSessionManager : Enabling session validation scheduler...
+2019-03-07 03:06:21.334 DEBUG 20851 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/v2/api-docs", parameters={}
+2019-03-07 03:06:21.344 DEBUG 20851 --- [nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2019-03-07 03:06:21.617 DEBUG 20851 --- [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/hal+json]
+2019-03-07 03:06:21.619 DEBUG 20851 --- [nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [springfox.documentation.spring.web.json.Json@4fd51348]
+2019-03-07 03:06:21.639 DEBUG 20851 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-03-07 03:06:34.221 ERROR 20851 --- [nio-8080-exec-2] redis.clients.jedis.HostAndPort          : cant resolve localhost address
 
 java.net.UnknownHostException: mocarlmo5: mocarlmo5: Name or service not known
 	at java.net.InetAddress.getLocalHost(InetAddress.java:1506) ~[na:1.8.0_191]
@@ -284,27 +292,74 @@ Caused by: java.net.UnknownHostException: mocarlmo5: Name or service not known
 	at java.net.InetAddress.getLocalHost(InetAddress.java:1501) ~[na:1.8.0_191]
 	... 62 common frames omitted
 
-2019-03-04 17:50:35.135 DEBUG 19748 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/home/register.html", parameters={}
-2019-03-04 17:50:35.154 DEBUG 19748 --- [nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
-2019-03-04 17:50:35.170 DEBUG 19748 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-04 17:50:35.382 DEBUG 19748 --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/home/resources/css/base.css", parameters={}
-2019-03-04 17:50:35.390 DEBUG 19748 --- [nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
-2019-03-04 17:50:35.392 DEBUG 19748 --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-04 17:50:35.397 DEBUG 19748 --- [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/home/resources/js/jquery1.12.2.js", parameters={}
-2019-03-04 17:50:35.403 DEBUG 19748 --- [nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
-2019-03-04 17:50:35.407 DEBUG 19748 --- [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-04 17:50:35.561 DEBUG 19748 --- [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/home/resources/js/base.js", parameters={}
-2019-03-04 17:50:35.565 DEBUG 19748 --- [nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
-2019-03-04 17:50:35.567 DEBUG 19748 --- [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-04 17:50:35.594 DEBUG 19748 --- [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/home/resources/img/background.png", parameters={}
-2019-03-04 17:50:35.598 DEBUG 19748 --- [nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
-2019-03-04 17:50:35.601 DEBUG 19748 --- [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2019-03-04 17:50:41.339 DEBUG 19748 --- [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : POST "/account/validCode", parameters={masked}
-2019-03-04 17:50:41.340 DEBUG 19748 --- [nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<java.lang.String>> com.nieyue.controller.AccountController.validCode(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,java.lang.String,java.lang.Integer) throws com.nieyue.exception.AccountIsExistException,com.nieyue.exception.RequestLimitException,com.nieyue.exception.CommonNotRollbackException
-InvalidTimeStamp.Expired : Specified time stamp or date value is expired.
-RequestId : 341D7CFA-AA07-4BCB-BE92-562DAA218117
-2019-03-04 17:50:42.180 DEBUG 19748 --- [nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler public com.nieyue.util.StateResult com.nieyue.exception.MyExceptionAdvice.accountMessageExceptionHandler(java.lang.Exception) throws java.lang.Exception
-2019-03-04 17:50:42.184 DEBUG 19748 --- [nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
-2019-03-04 17:50:42.184 DEBUG 19748 --- [nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResult@51ca8337]
-2019-03-04 17:50:42.186 DEBUG 19748 --- [nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.nieyue.exception.AccountMessageException]
-2019-03-04 17:50:42.186 DEBUG 19748 --- [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-03-07 03:06:34.681 DEBUG 20851 --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/home/resources/js/base.js", parameters={}
+2019-03-07 03:06:34.702 DEBUG 20851 --- [nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
+2019-03-07 03:06:34.715 DEBUG 20851 --- [nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 304 NOT_MODIFIED
+2019-03-07 03:06:34.952 DEBUG 20851 --- [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/favicon.ico", parameters={}
+2019-03-07 03:06:34.980 DEBUG 20851 --- [nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
+2019-03-07 03:06:34.982 DEBUG 20851 --- [nio-8080-exec-4] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2019-03-07 03:06:34.982 DEBUG 20851 --- [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2019-03-07 03:06:34.987 DEBUG 20851 --- [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/home/404.html", parameters={}
+2019-03-07 03:06:34.993 DEBUG 20851 --- [nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
+2019-03-07 03:06:35.000 DEBUG 20851 --- [nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2019-03-07 03:06:35.097 DEBUG 20851 --- [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/mer/list", parameters={masked}
+2019-03-07 03:06:35.100 DEBUG 20851 --- [nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Mer>> com.nieyue.controller.MerController.list(java.lang.Integer,int,int,java.lang.String,java.lang.String)
+2019-03-07 03:06:35.132 DEBUG 20851 --- [nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
+2019-03-07 03:06:35.133 DEBUG 20851 --- [nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@233bd08d]
+2019-03-07 03:06:35.139 DEBUG 20851 --- [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-03-07 03:06:36.525 DEBUG 20851 --- [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/home/recharge.html", parameters={}
+2019-03-07 03:06:36.530 DEBUG 20851 --- [nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
+2019-03-07 03:06:36.532 DEBUG 20851 --- [nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 304 NOT_MODIFIED
+2019-03-07 03:06:36.824 DEBUG 20851 --- [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/account/islogin", parameters={}
+2019-03-07 03:06:36.825 DEBUG 20851 --- [nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.Account>> com.nieyue.controller.AccountController.isLoginAccount(javax.servlet.http.HttpSession)
+2019-03-07 03:06:36.829 DEBUG 20851 --- [nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
+2019-03-07 03:06:36.829 DEBUG 20851 --- [nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@370b73f3]
+2019-03-07 03:06:36.836 DEBUG 20851 --- [nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-03-07 03:06:37.021 DEBUG 20851 --- [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : POST "/rechargeTerm/list", parameters={masked}
+2019-03-07 03:06:37.022 DEBUG 20851 --- [nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public com.nieyue.util.StateResultList<java.util.List<com.nieyue.bean.RechargeTerm>> com.nieyue.controller.RechargeTermController.list(java.lang.Integer,int,int,java.lang.String,java.lang.String)
+2019-03-07 03:06:37.035 DEBUG 20851 --- [nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, text/javascript, */*;q=0.01] and supported [application/json, application/*+json]
+2019-03-07 03:06:37.035 DEBUG 20851 --- [nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.nieyue.util.StateResultList@610d5389]
+2019-03-07 03:06:37.041 DEBUG 20851 --- [nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-03-07 03:06:38.349 DEBUG 20851 --- [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/wechat/jsapi/mp.html?accountId=1100211858902032386&rechargeTermId=1100701513678192642&money=0.01", parameters={masked}
+2019-03-07 03:06:38.354 DEBUG 20851 --- [nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
+2019-03-07 03:06:38.355 DEBUG 20851 --- [nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 304 NOT_MODIFIED
+2019-03-07 03:06:38.796 DEBUG 20851 --- [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/home/resources/js/base.js", parameters={}
+2019-03-07 03:06:38.799 DEBUG 20851 --- [io-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
+2019-03-07 03:06:38.801 DEBUG 20851 --- [io-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 304 NOT_MODIFIED
+2019-03-07 03:06:39.128 DEBUG 20851 --- [io-8080-exec-11] o.s.web.servlet.DispatcherServlet        : POST "/weiXinMp/js/connection", parameters={masked}
+2019-03-07 03:06:39.130 DEBUG 20851 --- [io-8080-exec-11] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public me.chanjar.weixin.common.bean.WxJsapiSignature com.nieyue.controller.WeiXinMpController.connectionWeiXin(java.lang.String,javax.servlet.http.HttpSession) throws me.chanjar.weixin.common.error.WxErrorException
+connection url=http%3A%2F%2Fpay.jiehao9.com%2Fwechat%2Fjsapi%2Fmp.html%3FaccountId%3D1100211858902032386%26rechargeTermId%3D1100701513678192642%26money%3D0.01
+2019-03-07 03:06:39.148 DEBUG 20851 --- [io-8080-exec-12] o.s.web.servlet.DispatcherServlet        : GET "/favicon.ico", parameters={}
+2019-03-07 03:06:39.152 DEBUG 20851 --- [io-8080-exec-12] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
+2019-03-07 03:06:39.153 DEBUG 20851 --- [io-8080-exec-12] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2019-03-07 03:06:39.153 DEBUG 20851 --- [io-8080-exec-12] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2019-03-07 03:06:39.154 DEBUG 20851 --- [io-8080-exec-12] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/home/404.html", parameters={}
+2019-03-07 03:06:39.157 DEBUG 20851 --- [io-8080-exec-13] o.s.web.servlet.DispatcherServlet        : GET "/weiXinMp/authorize", parameters={}
+2019-03-07 03:06:39.157 DEBUG 20851 --- [io-8080-exec-12] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
+2019-03-07 03:06:39.159 DEBUG 20851 --- [io-8080-exec-13] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public org.springframework.web.servlet.view.RedirectView com.nieyue.controller.WeiXinMpController.authorize(javax.servlet.http.HttpServletRequest)
+2019-03-07 03:06:39.159 DEBUG 20851 --- [io-8080-exec-12] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+authorize referer=http://pay.jiehao9.com/wechat/jsapi/mp.html?accountId=1100211858902032386&rechargeTermId=1100701513678192642&money=0.01
+2019-03-07 03:06:39.164 DEBUG 20851 --- [io-8080-exec-13] o.s.web.servlet.view.RedirectView        : View [RedirectView], model {}
+2019-03-07 03:06:39.165 DEBUG 20851 --- [io-8080-exec-13] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-03-07 03:06:40.039 DEBUG 20851 --- [io-8080-exec-14] o.s.web.servlet.DispatcherServlet        : GET "/weiXinMp/openid?code=021Pi4nd0y9F5B1wOOmd0J32nd0Pi4nt&state=http%3A%2F%2Fpay.jiehao9.com%2Fwechat%2Fjsapi%2Fmp.html%3FaccountId%3D1100211858902032386", parameters={masked}
+2019-03-07 03:06:40.041 DEBUG 20851 --- [io-8080-exec-14] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public org.springframework.web.servlet.view.RedirectView com.nieyue.controller.WeiXinMpController.openid(java.lang.String,java.lang.String,javax.servlet.http.HttpSession) throws java.io.IOException,me.chanjar.weixin.common.error.WxErrorException
+2019-03-07 03:06:40.042 DEBUG 20851 --- [io-8080-exec-14] o.s.web.servlet.view.RedirectView        : View [RedirectView], model {}
+2019-03-07 03:06:40.042 DEBUG 20851 --- [io-8080-exec-14] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-03-07 03:06:40.425 DEBUG 20851 --- [io-8080-exec-11] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2019-03-07 03:06:40.425 DEBUG 20851 --- [io-8080-exec-11] m.m.a.RequestResponseBodyMethodProcessor : Writing [WxJsapiSignature(appId=wx4d2cb896c1256cbe, nonceStr=bBwdsDCZXakkkt2m, timestamp=1551956799, url=http (truncated)...]
+2019-03-07 03:06:40.426 DEBUG 20851 --- [io-8080-exec-11] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-03-07 03:06:40.436 DEBUG 20851 --- [io-8080-exec-15] o.s.web.servlet.DispatcherServlet        : GET "/wechat/jsapi/mp.html?accountId=1100211858902032386", parameters={masked}
+2019-03-07 03:06:40.439 DEBUG 20851 --- [io-8080-exec-15] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["file:/home/", "classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/public/", "classpath:/static/"]
+2019-03-07 03:06:40.441 DEBUG 20851 --- [io-8080-exec-15] o.s.web.servlet.DispatcherServlet        : Completed 304 NOT_MODIFIED
+2019-03-07 03:06:40.841 DEBUG 20851 --- [io-8080-exec-16] o.s.web.servlet.DispatcherServlet        : POST "/weiXinMp/js/connection", parameters={masked}
+2019-03-07 03:06:40.842 DEBUG 20851 --- [io-8080-exec-16] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public me.chanjar.weixin.common.bean.WxJsapiSignature com.nieyue.controller.WeiXinMpController.connectionWeiXin(java.lang.String,javax.servlet.http.HttpSession) throws me.chanjar.weixin.common.error.WxErrorException
+connection url=http%3A%2F%2Fpay.jiehao9.com%2Fwechat%2Fjsapi%2Fmp.html%3FaccountId%3D1100211858902032386
+2019-03-07 03:06:40.843 DEBUG 20851 --- [io-8080-exec-16] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2019-03-07 03:06:40.843 DEBUG 20851 --- [io-8080-exec-16] m.m.a.RequestResponseBodyMethodProcessor : Writing [WxJsapiSignature(appId=wx4d2cb896c1256cbe, nonceStr=V6difZ1pS7LckwT0, timestamp=1551956800, url=http (truncated)...]
+2019-03-07 03:06:40.844 DEBUG 20851 --- [io-8080-exec-16] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2019-03-07 03:06:42.090 DEBUG 20851 --- [io-8080-exec-17] o.s.web.servlet.DispatcherServlet        : POST "/payment/weXinUnifiedOrder", parameters={masked}
+2019-03-07 03:06:42.091 DEBUG 20851 --- [io-8080-exec-17] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to public java.lang.String com.nieyue.controller.PaymentController.weXinUnifiedOrder(java.lang.Integer,java.lang.Long,java.lang.Long,java.lang.Double,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2019-03-07 03:06:42.106  WARN 20851 --- [io-8080-exec-17] c.baomidou.mybatisplus.toolkit.Sequence  :  getDatacenterId: mocarlmo5: mocarlmo5: Name or service not known
+2019-03-07 03:06:42.210 DEBUG 20851 --- [io-8080-exec-17] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, text/plain, */*]
+2019-03-07 03:06:42.210 DEBUG 20851 --- [io-8080-exec-17] m.m.a.RequestResponseBodyMethodProcessor : Writing [""]
+2019-03-07 03:06:42.211 DEBUG 20851 --- [io-8080-exec-17] o.s.web.servlet.DispatcherServlet        : Completed 200 OK

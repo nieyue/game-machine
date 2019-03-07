@@ -172,9 +172,7 @@ public class BYPayBusiness {
                     if(payment.getStatus()!=1){
                         return "SUCCESS";
                     }
-                    //支付成功
-                    payment.setStatus(2);//成功
-                    paymentService.update(payment);
+
                     //业务处理
                     //1金额增加
                     Wrapper<Finance> wrapper2=new EntityWrapper<>();
@@ -209,7 +207,7 @@ public class BYPayBusiness {
                     Wrapper<Number> wrapper3=new EntityWrapper<>();
                     Map<String,Object> map3=new HashMap<>();
                     map3.put("account_id", payment.getAccountId());
-                    wrapper2.allEq(MyDom4jUtil.getNoNullMap(map3));
+                    wrapper3.allEq(MyDom4jUtil.getNoNullMap(map3));
                     List<Number> numberList = numberService.simplelist(wrapper3);
                     if(numberList.size()==1){
                         Number number = numberList.get(0);
@@ -217,6 +215,9 @@ public class BYPayBusiness {
                         number.setSurplusNumber(number.getSurplusNumber()+rechargeRecord.getGiveNumber());
                         numberService.update(number);
                     }
+                    //支付成功
+                    payment.setStatus(2);//成功
+                    paymentService.update(payment);
                     return "SUCCESS";
                 }else{
                     payment.setStatus(3);//失败
