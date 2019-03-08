@@ -8,7 +8,7 @@ import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import me.chanjar.weixin.common.bean.WxJsapiSignature;
 import me.chanjar.weixin.common.error.WxErrorException;
-import me.chanjar.weixin.mp.bean.result.WxMpUser;
+import me.chanjar.weixin.mp.bean.result.WxMpOAuth2AccessToken;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -79,8 +79,8 @@ public class WeiXinMpController {
 		if(session.getAttribute("openid")!=null){
 			return new RedirectView(state);
 		}
-		WxMpUser wxMpUser = weiXinPMpServiceImpl.redirectUrl(code);
-		session.setAttribute("openid",wxMpUser.getOpenId());
+		WxMpOAuth2AccessToken wxMpOAuth2AccessToken = weiXinPMpServiceImpl.getWxMpOAuth2AccessToken(code);
+		session.setAttribute("openid",wxMpOAuth2AccessToken.getOpenId());
 		return new RedirectView(state);
 
 	}

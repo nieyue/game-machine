@@ -75,10 +75,18 @@ public class WeiXinMpServiceImpl {
      * @param  code 授权码
      * @throws WxErrorException
      */
-    public  WxMpUser redirectUrl(
+    public  WxMpOAuth2AccessToken getWxMpOAuth2AccessToken(
             String code
     ) throws WxErrorException {
         WxMpOAuth2AccessToken wxMpOAuth2AccessToken = wxMpService.oauth2getAccessToken(code);
+        return wxMpOAuth2AccessToken;
+    }
+    /**
+     * 获取用户信息
+     */
+    public  WxMpUser getWxMpUser(
+            WxMpOAuth2AccessToken wxMpOAuth2AccessToken
+    ) throws WxErrorException {
         WxMpUser wxMpUser = wxMpService.oauth2getUserInfo(wxMpOAuth2AccessToken, null);
         return wxMpUser;
     }

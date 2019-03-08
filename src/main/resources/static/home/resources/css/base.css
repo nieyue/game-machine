@@ -473,22 +473,23 @@ width:100%;
 .mer2-item{
     display: inline-block;
     margin-top:30px;
-    width:100%;
+    width:80%;
     /*border:1px solid #ececec;*/
 }
 .mer2-item-img{
-width:60%;
+width:80%;
     height: 100px;
 
 }
 .mer2-item-title{
-    padding:3%;
+    padding:0 6%;
     overflow:hidden;
     text-overflow:ellipsis;
     display:-webkit-box;
     -webkit-box-orient:vertical;
     -webkit-line-clamp:2;
     color:#fff;
+    height: 3rem;
 }
 .mer2-item-pricewrap{
     padding:3%;

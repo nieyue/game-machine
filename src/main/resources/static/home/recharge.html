@@ -62,6 +62,7 @@
 <!-- 固定栏 end-->
 <script src="resources/js/jquery1.12.2.js"></script>
 <script src="http://res2.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+<script src="resources/js/base64.js"></script>
 <script src="resources/js/base.js"></script>
 <script>
     business.ajax({
@@ -104,7 +105,7 @@
                         var p="?rechargeTermId="+params.rechargeTermId;
                         p+="&money="+params.money;
                         p+="&accountId="+params.accountId;
-                        p+="&callbackurl="+encodeURIComponent(location.href);//回调url
+                        p+="&callbackurl="+encode64(location.href);//回调url
                         location.href="http://pay.jiehao9.com/wechat/jsapi/mp.html"+p;
                         //business.wxMPPay(params)
                     }else{

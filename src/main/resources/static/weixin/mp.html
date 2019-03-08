@@ -11,6 +11,7 @@
 </div>
 <script src="../home/resources/js/jquery1.12.2.js"></script>
 <script src="http://res2.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+<script src="../home/resources/js/base64.js"></script>
 <script src="../home/resources/js/base.js"></script>
 <script>
 
@@ -193,7 +194,7 @@
         money:money,
         accountId:accountId,
         callback:function () {
-            location.href=decodeURIComponent(callbackurl)
+            location.href=decode64(callbackurl)
         }
     };
     business.wxMPPay(params)
