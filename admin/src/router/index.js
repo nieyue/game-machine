@@ -40,6 +40,11 @@ const router= new Router({
           component: resolve=>require(['@/components/main/config/Config'],resolve)
         },
         {
+          path: 'ad/:pathParams',
+          name: '广告',
+          component: resolve=>require(['@/components/main/ad/Ad'],resolve)
+        },
+        {
           path: 'account/selfAccount',
           name: '个人信息',
           component: resolve=>require(['@/components/main/account/SelfAccount'],resolve),

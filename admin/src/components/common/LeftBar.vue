@@ -16,6 +16,16 @@
                         <span>平台配置</span>
                     </MenuItem>
                 </Submenu>
+                  <Submenu name="ad">
+                    <template slot="title">
+                        <Icon type="ios-settings" />
+                        <span>广告管理</span>
+                    </template>
+                    <MenuItem :name="menu.ad.ad" v-if="isSuperAdmin">
+                        <Icon type="md-medical" />
+                        <span>广告</span>
+                    </MenuItem>
+                </Submenu>
                 <MenuItem name="/main/account/selfAccount">
                     <Icon type="ios-man" />
                     <span>个人信息</span>
@@ -144,6 +154,10 @@
             config:{
                  welcome:"/main/welcome/"+pp,
                  config:"/main/config/"+pp,
+            },
+             //广告
+            ad:{
+                 ad:"/main/ad/"+pp,
             },
             //财务
             finance:{

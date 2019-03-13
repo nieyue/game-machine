@@ -254,6 +254,26 @@ CREATE TABLE config_tb(
   PRIMARY KEY (config_id)
 )ENGINE = InnoDB  DEFAULT CHARSET=utf8 COMMENT='配置表';
 
+#自填
+#创建广告表
+CREATE TABLE ad_tb(
+  ad_id bigint(20) NOT NULL AUTO_INCREMENT COMMENT '广告id',
+  name varchar(255)  COMMENT '名称',
+  order_name varchar(255)  COMMENT '单号',
+  type_name varchar(255)  COMMENT '分类',
+  link varchar(255)  COMMENT '图文链接',
+  title varchar(255)  COMMENT '广告标题',
+  content longtext  COMMENT '广告内容',
+  start_date varchar(255)  COMMENT '开始时间',
+  send_date varchar(255)  COMMENT '发送时段',
+  send_speed varchar(255)  COMMENT '发送速度',
+  send_number varchar(255)  COMMENT '计划发送量',
+  finish_send_number varchar(255)  COMMENT '已完成发送量',
+  status varchar(255)  COMMENT '广告状态',
+  create_date datetime COMMENT '创建时间',
+  update_date datetime COMMENT '更新时间',
+  PRIMARY KEY (ad_id)
+)ENGINE = InnoDB  DEFAULT CHARSET=utf8 COMMENT='广告表';
 
 #设置初始角色
 INSERT IGNORE INTO role_tb (role_id,name,duty,update_date) 

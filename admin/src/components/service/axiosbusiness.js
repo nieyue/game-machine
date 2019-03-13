@@ -38,7 +38,7 @@ export default {
             withCredentials: true
         }).
         then(res => {
-            //console.error(res.data.data[0])
+            //console.error(res)
             params.total=res.data.data[0];
             if(params.total<=0 ){
                 $this.$Message.info('暂无更多')
@@ -64,11 +64,11 @@ export default {
                         $this.$Message.error(res.data.msg)
                     }
                 }).catch(res => {
-                   // console.log(res)
+                    console.log(res)
                     $this.$Message.error('系统异常')
                 })
             }).catch(res => {
-               // console.log(222222)
+               // console.log(res)
                     $this.$Message.error('系统异常')
                 })
    },
