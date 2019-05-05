@@ -152,7 +152,7 @@ public class PaymentController extends BaseController<Payment,Long>{
 		return pm;
 	}
 	@ApiOperation(value = "微信支付统一下单", notes = "微信支付统一下单")
-	@RequestMapping("/weXinUnifiedOrder")
+	@RequestMapping("/weiXinUnifiedOrder")
 	@ApiImplicitParams({
 			@ApiImplicitParam(name="accountId",value="账户ID",dataType="long", paramType = "query",required = true),
 			@ApiImplicitParam(name="rechargeTermId",value="充值项Id",dataType="long", paramType = "query",required = true),

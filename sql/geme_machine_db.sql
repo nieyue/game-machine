@@ -275,6 +275,18 @@ CREATE TABLE ad_tb(
   PRIMARY KEY (ad_id)
 )ENGINE = InnoDB  DEFAULT CHARSET=utf8 COMMENT='广告表';
 
+#创建客户表
+CREATE TABLE customer_tb(
+  customer_id bigint(20) NOT NULL AUTO_INCREMENT COMMENT '客户id',
+  name varchar(255)  COMMENT '名称',
+  phone varchar(255)  COMMENT '电话',
+  info varchar(255)  COMMENT '几人参加',
+  mark varchar(255)  COMMENT '是否开车/住宿',
+  create_date datetime COMMENT '创建时间',
+  update_date datetime COMMENT '更新时间',
+  PRIMARY KEY (customer_id)
+)ENGINE = InnoDB  DEFAULT CHARSET=utf8 COMMENT='广告表';
+
 #设置初始角色
 INSERT IGNORE INTO role_tb (role_id,name,duty,update_date) 
 VALUES (1000,'超级管理员','超级管理员',now());
