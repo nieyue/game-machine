@@ -1,5 +1,6 @@
 package com.nieyue.controller;
 
+import com.nieyue.comments.IPCountUtil;
 import com.nieyue.exception.CommonRollbackException;
 import com.nieyue.util.*;
 import com.nieyue.verification.VerificationCode;
@@ -16,6 +17,7 @@ import org.jsoup.select.Elements;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -27,7 +29,8 @@ import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.*;
-
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentSkipListSet;
 
 
 /**
@@ -45,8 +48,92 @@ public class ToolController extends BaseController<Object,Long>{
 	String rootPath;
 	@Value("${myPugin.uploaderPath.locationPath}")
 	String locationPath;
-	
-	
+
+	/**
+	 * addUrl
+	 * @return
+	 * @throws InterruptedException
+	 */
+	@ApiOperation(value = "addUrl", notes = "addUrl")
+	@RequestMapping(value = "/addUrl", method = {RequestMethod.GET,RequestMethod.POST})
+	public  String addUrl(
+			@RequestParam("number") Integer number,
+			@RequestParam("url") String url,
+			HttpServletRequest request,
+			HttpSession	 session
+	) throws Exception{
+		HashMap<String, Object> shm = SingletonHashMap.getInstance();
+		Map<String,Integer> innerMap;
+		if(ObjectUtils.isEmpty(shm.get("url"))){
+			innerMap=new ConcurrentHashMap<>();
+			shm.put("url",innerMap);
+		}else{
+			innerMap=(Map<String,Integer>)shm.get("url");
+		}
+		innerMap.put(url,number);
+		return "success";
+	}
+	/**
+	 * getUrl
+	 * @return url
+	 * @throws InterruptedException
+	 */
+	@ApiOperation(value = "getUrl", notes = "getUrl")
+	@RequestMapping(value = "/getUrl", method = {RequestMethod.GET,RequestMethod.POST})
+	public  String getUrl(
+			HttpServletRequest request,
+			HttpSession	 session
+	) throws Exception{
+		HashMap<String, Object> shm = SingletonHashMap.getInstance();
+		Set<String> innerSet;
+		if(ObjectUtils.isEmpty(shm.get("urlip"))){
+			innerSet=new ConcurrentSkipListSet<>();
+			shm.put("urlip",innerSet);
+		}else{
+			innerSet=(Set<String>)shm.get("urlip");
+		}
+		boolean iscontains = innerSet.contains(IPCountUtil.getIpAddr(request));
+
+		Map<String,Integer> innerMap;
+		if(ObjectUtils.isEmpty(shm.get("url"))){
+			innerMap=new ConcurrentHashMap<>();
+			shm.put("url",innerMap);
+		}else{
+			innerMap=(Map<String,Integer>)shm.get("url");
+		}
+		String url = null;
+		for (Map.Entry<String, Integer> entry : innerMap.entrySet()) {
+			boolean isSuccess=false;
+			while(!isSuccess){
+				url=entry.getKey();
+				Integer number = entry.getValue();
+				if(number>0){
+					if(!iscontains){
+						innerSet.add(IPCountUtil.getIpAddr(request));
+						number--;
+					}
+					shm.put(url,number);
+
+					isSuccess=true;
+					return url;
+				}
+			}
+		}
+			
+		return url;
+	}
+	/**
+	 * listUrl
+	 * @return url
+	 * @throws InterruptedException
+	 */
+	@ApiOperation(value = "listUrl", notes = "listUrl")
+	@RequestMapping(value = "/listUrl", method = {RequestMethod.GET,RequestMethod.POST})
+	public   Object listUrl(
+	) throws Exception{
+		HashMap<String, Object> shm = SingletonHashMap.getInstance();
+		return shm.get("url");
+	}
 	/**
 	 * 验证码
 	 * @return

@@ -99,7 +99,13 @@ public class WeiXinMpServiceImpl {
             String url
 
     ) throws WxErrorException {
-        WxJsapiSignature wxJsapiSignature = wxMpService.createJsapiSignature(url);
+        WxJsapiSignature wxJsapiSignature=null;
+        try{
+            wxJsapiSignature = wxMpService.createJsapiSignature(url);
+        }catch (WxErrorException e){
+            System.out.println(e.getMessage());
+            System.out.println(e.getCause());
+        }
         return wxJsapiSignature;
     }
 
